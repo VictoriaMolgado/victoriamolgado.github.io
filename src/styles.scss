@@ -55,9 +55,6 @@ button {
 }
 
 footer {
-  width: 90%;
-  max-width: 920px;
-  margin: 0;
   display: flex;
   align-items: flex-start;
 }
@@ -177,8 +174,14 @@ p {
   justify-content: center;
   padding: 72px 0;
 
-  .experience:not(:first-child) {
-    margin-top: 72px;
+  .experience {
+    &:not(:first-child) {
+      margin-top: 72px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 72px;
+    }
   }
 
   .experience-header {
@@ -256,49 +259,53 @@ p {
   display: flex;
   flex: 1;
   justify-content: space-between;
-}
 
-.project h4 {
-  transition: color 0.4s ease-in-out;
-  color: #dba08f;
-}
+  .project {
+    &:hover {
+      h4 {
+        color: #286ac3;
+      }
 
-.project h4:hover {
-  color: #286ac3;
-}
+      .overlay-text {
+        opacity: 0.6;
+        cursor: pointer;
+      }
+    }
 
-.project-image {
-  max-width: 244px;
-  margin-bottom: 20px;
-}
+    h4 {
+      transition: color 0.4s ease-in-out;
+      color: #dba08f;
+    }
 
-.project-interaction {
-  background-color: none;
-  position: relative;
-}
+    .project-image {
+      max-width: 244px;
+      margin-bottom: 20px;
+    }
 
-.overlay-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: all 0.3s ease;
-  background-color: #286ac3;
-}
+    .project-interaction {
+      background-color: none;
+      position: relative;
+    }
 
-.project-interaction:hover .overlay-text {
-  opacity: 0.6;
-  cursor: pointer;
-}
+    .overlay-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: all 0.3s ease;
+      background-color: #286ac3;
+    }
 
-.project-title {
-  border-top: 2px solid #286ac3;
+    .project-title {
+      border-top: 2px solid #286ac3;
+    }
+  }
 }
