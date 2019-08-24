@@ -57,10 +57,11 @@ button {
 footer {
   display: flex;
   align-items: flex-start;
-}
+  padding-bottom: 120px;
 
-footer .btn {
-  margin-top: 80px;
+  .btn {
+    margin-top: 80px;
+  }
 }
 
 /* ------------- Text --------------*/
