@@ -1,3 +1,10 @@
+@mixin custom($screen) {
+  @media (max-width: $screen + "px") {
+    @content;
+  }
+}
+
+
 @mixin sm {
   @media (max-width: "739px") {
     @content;

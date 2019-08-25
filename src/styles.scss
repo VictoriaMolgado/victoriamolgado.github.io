@@ -232,6 +232,17 @@ p {
 
 /* ------------- Xp section --------------*/
 
+.section-title {
+  text-align: left;
+  z-index: 1;
+  padding-bottom: 12px;
+  border-bottom: 2px solid rgba(40, 106, 195, 1);
+
+  &:first-of-type {
+    margin-top: 72px;
+  }
+}
+
 .experience-section {
   display: flex;
   flex-direction: column;
@@ -316,7 +327,6 @@ p {
 /* ------------- Xp section ends --------------*/
 
 .skills-section {
-  min-height: 100%;
   padding: 72px 0;
 
   .skills {
@@ -328,7 +338,6 @@ p {
       max-width: 420px;
       border-bottom: 2px solid #286ac3;
       padding-bottom: 20px;
-      margin-bottom: 80px;
 
       ul {
         margin-top: 44px;
@@ -348,10 +357,18 @@ p {
     @include md {
       flex-direction: column;
       align-items: center;
+
+      .skill:first-of-type {
+        margin-bottom: 56px;
+      }
     }
 
   }
 
+}
+
+.projects-section {
+  padding: 72px 0;
 }
 
 .projects {
@@ -359,14 +376,17 @@ p {
   flex: 1;
   justify-content: space-between;
 
-  @include sm {
+  @include custom(850) {
     display: flex;
     flex-direction: column;
   }
 
   .project-link { 
     display: inline-flex;
-    margin: 0 auto;
+    
+    @include md{
+      margin: 0 auto;
+    }
   }
 
   .project {
@@ -417,7 +437,7 @@ p {
       border-top: 2px solid #286ac3;
     }
 
-    @include sm {
+    @include custom(850) {
       margin-bottom: 120px;
     }
   }
