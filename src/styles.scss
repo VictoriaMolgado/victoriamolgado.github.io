@@ -52,6 +52,10 @@ button {
   width: 90%;
   max-width: 920px;
   margin: 0 auto;
+
+  @media screen and (max-width: 375px) {
+    max-width: 340px;
+  }
 }
 
 footer {
