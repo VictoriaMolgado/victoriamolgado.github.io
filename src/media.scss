@@ -1,0 +1,29 @@
+@mixin custom($screen) {
+  @media (min-width: $screen+"px") {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: "310px") {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: "740px") {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: "1350px") {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: "1910px") {
+    @content;
+  }
+}
