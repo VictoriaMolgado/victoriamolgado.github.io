@@ -1,29 +1,17 @@
-@mixin custom($screen) {
-  @media (min-width: $screen+"px") {
-    @content;
-  }
-}
-
 @mixin sm {
-  @media (min-width: "310px") {
+  @media (max-width: "739px") {
     @content;
   }
 }
 
 @mixin md {
-  @media (min-width: "740px") {
+  @media (max-width: "1349px") {
     @content;
   }
 }
 
 @mixin lg {
-  @media (min-width: "1350px") {
-    @content;
-  }
-}
-
-@mixin xl {
-  @media (min-width: "1910px") {
+  @media (max-width: "1909px") {
     @content;
   }
 }

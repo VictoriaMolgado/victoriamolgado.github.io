@@ -16,18 +16,10 @@ html {
   text-rendering: optimizeLegibility;
 }
 
-button {
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-  user-select: none;
-}
-
 .btn {
+  text-decoration: none;
+  user-select: none;
+  cursor: pointer;
   transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
   background-color: #f2f2f2;
   border-radius: 100px;
@@ -54,8 +46,10 @@ button {
   max-width: 920px;
   margin: 0 auto;
 
-  @media screen and (max-width: 375px) {
-    max-width: 340px;
+  @include sm {
+    width: 90%;
+    max-width: 920px;
+    margin: 0 auto;
   }
 }
 
@@ -66,7 +60,16 @@ footer {
 
   .btn {
     margin-top: 80px;
+
+    @include md {
+      margin: 0 auto;
+      
+    }
   }
+}
+
+a { 
+  text-decoration: none;
 }
 
 /* ------------- Text --------------*/
@@ -78,6 +81,12 @@ h1 {
   line-height: 100px;
   max-width: 100%;
   margin-bottom: 12%;
+
+  @include sm {
+    font-size: 52px;
+    line-height: 52px;
+  }
+
 }
 
 h2 {
@@ -86,6 +95,11 @@ h2 {
   line-height: 96px;
   color: #dba08f;
   letter-spacing: -1.2px;
+
+  @include sm {
+    font-size: 36px;
+    line-height: 48px;
+  }
 }
 
 h3 {
@@ -94,6 +108,12 @@ h3 {
   line-height: 68px;
   letter-spacing: -1.2px;
   color: #dba08f;
+
+  @include sm {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
 }
 
 h4 {
@@ -102,6 +122,12 @@ h4 {
   line-height: 48px;
   letter-spacing: -1.2px;
   color: #dba08f;
+
+  @include sm {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
 }
 
 h5 {
@@ -109,6 +135,11 @@ h5 {
   font-weight: 600;
   font-size: 24px;
   line-height: 36px;
+
+  @include sm {
+    font-size: 20px;
+    line-height: 36px;
+  }
 }
 
 h6 {
@@ -117,6 +148,12 @@ h6 {
   line-height: 36px;
   letter-spacing: -0.8px;
   color: #4f4f4f;
+
+  @include sm {
+    font-size: 16px;
+    line-height: 36px;
+  }
+
 }
 
 p {
@@ -125,6 +162,12 @@ p {
   line-height: 36px;
   letter-spacing: -0.8px;
   color: #20569f;
+
+  @include sm {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 300;
+  }
 }
 
 .more-icon {
@@ -138,12 +181,21 @@ p {
   &.close {
     transform: rotate(45deg);
   }
+
+  @include sm {
+    font-size: 48px;
+    line-height: 36px;
+  }
 }
 
 .header-section {
   display: flex;
   flex-direction: row;
   height: 100%;
+
+  @include sm {
+    height: unset;
+  }
 }
 
 /* ------------- About section --------------*/
@@ -152,6 +204,9 @@ p {
   text-align: left;
   z-index: 1;
   margin-top: 20%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 100%;
 
   p {
     margin-top: 20px;
@@ -167,6 +222,10 @@ p {
     width: 472px;
     margin-left: -146px;
   }
+
+  @include sm {
+    display: none;
+  }
 }
 
 /* ------------- About section ends --------------*/
@@ -180,9 +239,18 @@ p {
   justify-content: center;
   padding: 72px 0;
 
+  @include sm {
+    min-height: unset;
+  }
+
   .experience {
     &:not(:first-child) {
       margin-top: 72px;
+
+      @include sm {
+        margin-top: 36px;
+      }
+    
     }
 
     &:last-of-type {
@@ -195,11 +263,19 @@ p {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 12px;
+    user-select: none;
 
     &:hover h2,
     &:hover .more-icon {
       color: #286ac3;
       cursor: pointer;
+    }
+
+    @include sm {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
     }
   }
 
@@ -213,7 +289,7 @@ p {
 
     &.visible {
       border-bottom: 2px solid rgba(40, 106, 195, 1);
-      max-height: 350px;
+      max-height: 440px;
     }
 
     .job-details {
@@ -223,6 +299,16 @@ p {
     .description {
       flex: 2;
       margin-bottom: 32px;
+
+      @include sm {
+        margin-top: 20px;
+      }
+
+    }
+
+    @include sm {
+      margin-top: 20px;
+      flex-direction: column;
     }
   }
 }
@@ -258,13 +344,30 @@ p {
         }
       }
     }
+
+    @include md {
+      flex-direction: column;
+      align-items: center;
+    }
+
   }
+
 }
 
 .projects {
   display: flex;
   flex: 1;
   justify-content: space-between;
+
+  @include sm {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-link { 
+    display: inline-flex;
+    margin: 0 auto;
+  }
 
   .project {
     &:hover {
@@ -312,6 +415,10 @@ p {
 
     .project-title {
       border-top: 2px solid #286ac3;
+    }
+
+    @include sm {
+      margin-bottom: 120px;
     }
   }
 }
