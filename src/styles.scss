@@ -107,7 +107,7 @@ h3 {
   font-size: 56px;
   line-height: 68px;
   letter-spacing: -1.2px;
-  color: #red;
+  color: #286ac3;
 
   @include sm {
     font-size: 28px;
@@ -445,22 +445,55 @@ p {
 
 /* ------------- article style --------------*/
 
-.disciplines { 
-  color: red;
-}
-
 article {
-    display: grid;
-    grid-template-columns: 80px 1fr 80px;
-    column-gap: 10px;
+  display: grid;
+  grid-template-columns: 0.5fr 640px 0.5fr;
+  column-gap: 10px;
 
-  .article-text {
-    font-size: 20px;
-    line-height: 32px;
-    letter-spacing: -0.8px;
+  h3 {
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 68px;
+    letter-spacing: -1.2px;
     color: #4F4F4F;
+    margin-bottom: 40px;
+  
+    @include sm {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  
   }
+
 }
 
+article > * {
+  grid-column: 2;
+  min-width: 0;
+}
 
+.disciplines { 
+  font-size: 16px;
+  line-height: 36px;
+  letter-spacing: -0.8px;
+  color: #4F4F4F;
+}
 
+.project-details {
+  font-size: 16px;
+  line-height: 36px;
+  letter-spacing: -0.8px;
+  color: #4F4F4F;
+}
+
+.article-text {
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.8px;
+  color: #4F4F4F;
+}
+
+.project-grid {
+    grid-column: 1 / -1;
+    margin: 20px 0;
+}
