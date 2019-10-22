@@ -107,7 +107,7 @@ h3 {
   font-size: 56px;
   line-height: 68px;
   letter-spacing: -1.2px;
-  color: #dba08f;
+  color: #red;
 
   @include sm {
     font-size: 28px;
@@ -442,3 +442,25 @@ p {
     }
   }
 }
+
+/* ------------- article style --------------*/
+
+.disciplines { 
+  color: red;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 80px 1fr 80px;
+    column-gap: 10px;
+
+  .article-text {
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: -0.8px;
+    color: #4F4F4F;
+  }
+}
+
+
+
