@@ -451,12 +451,13 @@ article {
   column-gap: 10px;
 
   h3 {
+    grid-column: 1;
     font-weight: 800;
     font-size: 56px;
     line-height: 68px;
     letter-spacing: -1.2px;
     color: #4F4F4F;
-    margin: 100px 0px 40px 0px;
+    margin: 100px 0px 40px 180px;
   
     @include sm {
       font-size: 28px;
@@ -475,6 +476,13 @@ article > * {
   grid-column: 2;
   min-width: 0;
 }
+
+article > h5 {
+  grid-column: 1;
+  margin: 40px 0px 0 180px;
+  display: flex;
+}
+
 /*O asterisco indica que article soprepõe todos? Isso não faria sentido, porque eu consigo estabelecer um grid column para a imagem*/
 
 .project-context {
@@ -511,6 +519,17 @@ article > * {
   margin-top: 40px;
   display: inline-block;
 }
+
+
+/*.article-text::first-letter {
+  font-weight: 800;
+  font-size: 48px;
+  letter-spacing: -1.2px;
+  color: #4F4F4F;
+  float: left;
+  line-height: 0.4em;
+  padding: 0.1em;
+}*/
 
 .project-grid {
     grid-column: 1 / -1;
