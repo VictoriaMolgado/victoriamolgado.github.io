@@ -446,17 +446,17 @@ p {
 
 article {
   display: grid;
-  grid-template-columns: 0.5fr 640px 0.5fr;
+  grid-template-columns: 0.5fr 680px 0.5fr;
   column-gap: 10px;
 
   h3 {
-    grid-column: 1;
+    grid-column: 1 / 3;
     font-weight: 800;
     font-size: 56px;
     line-height: 68px;
     letter-spacing: -1.2px;
     color: #4F4F4F;
-    margin: 100px 0px 40px 180px;
+    margin: 100px 0px 20px 100px;
   
     @include sm {
       font-size: 28px;
@@ -478,17 +478,17 @@ article > * {
 
 article > h5 {
   grid-column: 1;
-  margin: 40px 0px 0 180px;
+  margin: 40px 0px 0 100px;
   display: flex;
 }
 
 /*O asterisco indica que article soprepõe todos? Isso não faria sentido, porque eu consigo estabelecer um grid column para a imagem*/
 
 .project-context {
-  /*display: flex;
-  justify-content: space-between;*/
   display: grid;
+  grid-column: 1 / -1;
   grid-auto-flow: column;
+  margin: 0 0 0 100px;
 }
 
 .disciplines { 
@@ -517,6 +517,14 @@ article > h5 {
   color: #4F4F4F;
   margin-top: 40px;
   display: inline-block;
+}
+
+.article-text:first-of-type {
+  margin-top: 80px;
+}
+
+h5:first-of-type {
+  margin-top: 80px;
 }
 
 
@@ -577,4 +585,5 @@ article > h5 {
 .ending-decoration {
   grid-column: 1 / -1;
   justify-self: center;
+  margin: 80px 0 120px 0;
 }
