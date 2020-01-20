@@ -117,7 +117,7 @@ h3 {
 }
 
 h4 {
-  font-weight: 800;
+  font-weight: bold;
   font-size: 32px;
   line-height: 48px;
   letter-spacing: -1.2px;
@@ -447,17 +447,19 @@ p {
 
 article {
   display: grid;
-  grid-template-columns: 0.5fr 680px 0.5fr;
+  grid-template-columns: 1fr 680px 0.3fr;
   column-gap: 10px;
+  background: #FFFCFA;
 
   h3 {
     grid-column: 1 / 3;
+    font-style: normal;
     font-weight: 800;
-    font-size: 56px;
-    line-height: 68px;
+    font-size: 76px;
+    line-height: 96px;
     letter-spacing: -1.2px;
     color: #4F4F4F;
-    margin: 196px 0px 20px 100px;
+    margin: 260px 0px 20px 160px;
   
     @include sm {
       font-size: 28px;
@@ -466,8 +468,9 @@ article {
   
   }
 
-  h5 {
-    margin: 100px 0px 0px 0px;
+  h4 {
+    margin: 96px 0px 0px 0px;
+    color: #286AC3;
   }
 
 }
@@ -477,21 +480,22 @@ article > * {
   min-width: 0;
 }
 
-article > h5 {
+article > h4 {
   grid-column: 1;
-  margin: 40px 0px 0 100px;
+  margin: 96px 0px 0 160px;
   display: flex;
 }
+
 
 /*O asterisco indica que article soprepõe todos? Isso não faria sentido, porque eu consigo estabelecer um grid column para a imagem*/
 
 .project-intro {
   grid-column: 1 / 3;
-  margin: 60px 0px 40px 100px;
+  margin: 40px 0px 40px 160px;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
-  line-height: 36px;
+  font-size: 20px;
+  line-height: 32px;
   letter-spacing: -0.8px;
   color: #20569F;
 }
@@ -500,7 +504,7 @@ article > h5 {
   display: grid;
   grid-column: 1 / -1;
   grid-auto-flow: column;
-  margin: 0 0 0 100px;
+  margin: 0 0 0 160px;
 }
 
 .disciplines { 
@@ -521,16 +525,18 @@ article > h5 {
   
 }
 
+
+
 .article-text {
   font-family: 'Merriweather', serif;
-  font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 20px;
   line-height: 38px;
   letter-spacing: 0.25px;
   color: #4F4F4F; 
-  margin-top: 40px;
   display: inline-block;
+  margin: 96px 0 0 0;
+  
 }
 
 .article-text:first-of-type {
@@ -601,3 +607,26 @@ h5:first-of-type {
   justify-self: center;
   margin: 80px 0 120px 0;
 }
+
+
+.know-more-image-anvisa {
+  display: none;
+}
+
+.know-more a {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0.25px;
+  text-decoration-line: underline;
+  color: #286AC3;
+  pointer-events: auto;
+  cursor: pointer;
+  transition-timing-function: ease-in;
+  }
+
+
+  .know-more:hover ~ .know-more-image-anvisa {
+    display: flex; 
+  }
