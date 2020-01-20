@@ -199,12 +199,109 @@ p {
   }
 }
 
+.nav-area {
+  display: grid;
+  grid-auto-flow: column;
+  min-height: 80px;
+  
+
+  .nav-itens {
+    display: grid;
+    grid-auto-flow: column;
+    list-style: none;
+    margin: 48px 0 0 0;
+    font-family: "Muli", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: -0.8px;
+    color: #286AC3;
+  }
+
+  .nav-itens {
+    a:visited { 
+    text-decoration: none;
+    color:#286AC3;
+    }
+    
+    a:hover { 
+      text-decoration: underline;
+      color:#D97B60;
+      }
+    
+  }
+
+  .home-anchor {
+    margin: 48px 0 0 0;
+    font-family: "Muli", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: -0.25px;
+    color: #4F4F4F;
+
+  }
+}
+
 /* ------------- About section --------------*/
+
+.who {
+  font-family: "Muli", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 68px;
+  line-height: 76px;
+  letter-spacing: -1.2px;
+  text-decoration-line: underline;
+  pointer-events: auto;
+  cursor: pointer;
+  color: #286AC3;
+  position: relative;
+  transition: 0.3s;
+
+  a:visited {
+    text-decoration: underline;
+    color: #286AC3;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: #fff;
+  }
+
+}
+
+.profile-image {
+  display: none;
+  position: absolute;
+}
+
+.who:hover ~ .profile-image {
+  display: flex;
+  float: right;
+  margin-left: 620px;
+  margin-top: -80px;
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+
+.hello {
+  font-family: "Muli", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 68px;
+  line-height: 76px;
+  letter-spacing: -1.2px;
+  color: #4F4F4F;
+}
 
 .presentation {
   text-align: left;
   z-index: 1;
-  margin-top: 72px;
+  margin-top: 140px;
   word-wrap: break-word;
   overflow-wrap: break-word;
   width: 100%;
@@ -214,20 +311,6 @@ p {
   }
 }
 
-.profile-image {
-  display: flex;
-  justify-content: center; /* align horizontal */
-  align-items: flex-end; /* align vertical */
-
-  img {
-    width: 472px;
-    margin-left: -146px;
-  }
-
-  @include sm {
-    display: none;
-  }
-}
 
 /* ------------- About section ends --------------*/
 
