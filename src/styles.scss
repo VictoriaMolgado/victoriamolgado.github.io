@@ -1,4 +1,9 @@
 /* ------------- Basic setup --------------*/
+
+html {
+  scroll-behavior: smooth;
+}
+
 @import "media";
 
 * {
@@ -325,6 +330,7 @@ p {
   &:first-of-type {
     margin-top: 72px;
   }
+  
 }
 
 .experience-section {
@@ -524,6 +530,8 @@ p {
       margin-bottom: 120px;
     }
   }
+
+  
 }
 
 /* ----------------------------------- article style -----------------------------------*/
