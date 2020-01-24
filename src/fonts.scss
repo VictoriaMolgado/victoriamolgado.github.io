@@ -1,0 +1,128 @@
+* {
+  p::selection { 
+    background: #286ac3;
+    color: #ffffff; }
+}
+
+h1 {
+    
+    font-family: "Muli", sans-serif;
+    font-style: normal;
+    font-weight: 800; 
+    font-size: 76px;
+    line-height: 88px;
+    letter-spacing: -1.2px;
+    color: #4F4F4F;
+    max-width: 100%;
+
+    @include sm {
+      font-size: 52px;
+      line-height: 52px;
+    }
+  
+  }
+
+  .experience-header h1 {
+    font-family: "Muli", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 120px;
+    line-height: 96px;
+    letter-spacing: -1.2px;
+    color: #286AC3;
+  }
+  
+  h2 {
+    font-family: "Muli", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 66px;
+    letter-spacing: -1.2px;
+    color: #4F4F4F;
+  
+    @include sm {
+      font-size: 36px;
+      line-height: 48px;
+    }
+  }
+  
+  h3 {
+    font-family: "Muli", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -1.2px;
+    color: #4F4F4F;
+
+  
+    @include sm {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  
+  }
+  
+  h4 {
+    font-family: "Muli", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 36px; 
+    letter-spacing: -1px;
+    color: #4F4F4F;
+  
+    @include sm {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  
+  }
+  
+  h5 {
+    font-family: "Muli", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -1px;
+    color: #4F4F4F;
+  
+    @include sm {
+      font-size: 20px;
+      line-height: 36px;
+    }
+  }
+  
+  h6 {
+font-family: "Muli", sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 30px;
+letter-spacing: -0.5px;
+color: #4F4F4F;
+
+  
+    @include sm {
+      font-size: 16px;
+      line-height: 36px;
+    }
+  
+  }
+  
+  p {
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 38px;
+    letter-spacing: 0.25px;
+    color: #4F4F4F;
+    
+    @include sm {
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 300;
+    }
+  }
