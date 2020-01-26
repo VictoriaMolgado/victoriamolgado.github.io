@@ -6,6 +6,8 @@ html {
 
 @import "media";
 @import "fonts"; 
+@import "buttons"; 
+@import "colors"; 
 
 * {
   margin: 0;
@@ -14,38 +16,14 @@ html {
 }
 
 html {
-  background-color: #fefdfc;
-  color: #286ac3;
+  background-color: $nevoa-marciatica;
+  color: $azulejo-marciano;
   font-family: "Muli", Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-weight: 300;
   text-rendering: optimizeLegibility;
 }
 
-.btn {
-  text-decoration: none;
-  user-select: none;
-  cursor: pointer;
-  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
-  background-color: #f2f2f2;
-  border-radius: 100px;
-  max-height: 52px;
-  max-width: 240px;
-  padding: 12px 32px;
-  color: #dba08f;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.btn:hover {
-  background-color: #286ac3;
-  border-radius: 100px;
-  max-height: 52px;
-  padding: 12px 32px;
-  color: #fff;
-  font-weight: bold;
-  font-size: 20px;
-}
 
 .container {
   width: 90%;
@@ -64,7 +42,7 @@ footer {
   align-items: flex-start;
   padding-bottom: 120px;
 
-  .btn {
+  .primary-btn {
     margin-top: 80px;
 
     @include md {
@@ -78,27 +56,6 @@ a {
   text-decoration: none;
 }
 
-/* ------------- Text --------------*/
-
-
-
-.more-icon {
-  font-size: 120px;
-  font-weight: 800;
-  line-height: 96px;
-  color: #286AC3;
-  letter-spacing: -1.2px;
-  transition: transform 0.2s ease-in-out, color 0.2s ease;
-
-  &.close {
-    transform: rotate(45deg);
-  }
-
-  @include sm {
-    font-size: 48px;
-    line-height: 36px;
-  }
-}
 
 .header-section {
   display: flex;
@@ -109,6 +66,8 @@ a {
     height: unset;
   }
 }
+
+/* ------------- Navbar area --------------*/
 
 .nav-area {
   display: grid;
@@ -126,18 +85,18 @@ a {
     font-size: 20px;
     line-height: 36px;
     letter-spacing: -0.8px;
-    color: #286AC3;
+    color: $azulejo-marciano;
   }
 
   .nav-itens {
     a:visited { 
     text-decoration: none;
-    color:#286AC3;
+    color:$azulejo-marciano;
     }
     
     a:hover { 
       text-decoration: underline;
-      color:#D97B60;
+      color:$dunas-de-marte;
       }
     
   }
@@ -149,7 +108,7 @@ a {
     font-size: 20px;
     line-height: 32px;
     letter-spacing: -0.25px;
-    color: #4F4F4F;
+    color: $ground-control;
 
   }
 }
@@ -166,13 +125,13 @@ a {
   text-decoration-line: underline;
   pointer-events: auto;
   cursor: pointer;
-  color: #286AC3;
+  color: $azulejo-marciano;
   position: relative;
   transition: 0.3s;
 
   a:visited {
     text-decoration: underline;
-    color: #286AC3;
+    color: $azulejo-marciano;
   }
 
   a:hover {
@@ -198,17 +157,6 @@ a {
 }
 
 
-
-.hello {
-  font-family: "Muli", sans-serif;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 68px;
-  line-height: 76px;
-  letter-spacing: -1.2px;
-  color: #4F4F4F;
-}
-
 .presentation {
   text-align: left;
   z-index: 1;
@@ -216,6 +164,16 @@ a {
   word-wrap: break-word;
   overflow-wrap: break-word;
   width: 100%;
+
+  .hello {
+    font-family: "Muli", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 68px;
+    line-height: 76px;
+    letter-spacing: -1.2px;
+    color: $ground-control;
+  }
 
   p {
     margin-top: 20px;
@@ -231,7 +189,6 @@ a {
   text-align: left;
   z-index: 1;
   padding-bottom: 12px;
-  border-bottom: 2px solid rgba(40, 106, 195, 1);
 
   &:first-of-type {
     margin-top: 72px;
@@ -273,7 +230,7 @@ a {
 
     &:hover h1,
     &:hover .more-icon {
-      color: #D97B60;;
+      color: $dunas-de-marte;;
       cursor: pointer;
     }
 
@@ -321,45 +278,8 @@ a {
 
 /* ------------- Xp section ends --------------*/
 
-.skills-section {
-  padding: 72px 0;
 
-  .skills {
-    display: flex;
-    flex: 1;
-    justify-content: space-between;
-
-    .skill {
-      max-width: 420px;
-      padding-bottom: 20px;
-
-      ul {
-        margin-top: 44px;
-        list-style: none;
-      }
-
-      li {
-        margin-bottom: 16px;
-
-        &:before {
-          content: "✢";
-          margin-right: 12px;
-        }
-      }
-    }
-
-    @include md {
-      flex-direction: column;
-      align-items: center;
-
-      .skill:first-of-type {
-        margin-bottom: 56px;
-      }
-    }
-
-  }
-
-}
+/* ------------- Projects section begins --------------*/
 
 .projects-section {
   padding: 72px 0;
@@ -386,7 +306,7 @@ a {
   .project {
     &:hover {
       h4 {
-        color: #286ac3;
+        color: $azulejo-marciano;
       }
 
       .overlay-text {
@@ -397,7 +317,7 @@ a {
 
     h4 {
       transition: color 0.4s ease-in-out;
-      color: #dba08f;
+      color: $dunas-de-marte;
     }
 
     .project-image {
@@ -424,12 +344,10 @@ a {
       width: 100%;
       opacity: 0;
       transition: all 0.3s ease;
-      background-color: #286ac3;
+      background-color: $azulejo-marciano;
     }
 
-    .project-title {
-      border-top: 2px solid #286ac3;
-    }
+
 
     @include custom(850) {
       margin-bottom: 120px;
@@ -439,13 +357,14 @@ a {
   
 }
 
+/* ----------------------------------- Projects section ends-----------------------------------*/
+
 /* ----------------------------------- article style -----------------------------------*/
 
 article {
   display: grid;
-  grid-template-columns: 1fr 680px 0.3fr;
+  grid-template-columns: 80px 1fr 680px 80px;
   column-gap: 10px;
-  background: #FFFCFA;
 
   h3 {
     grid-column: 1 / 3;
@@ -454,7 +373,7 @@ article {
     font-size: 76px;
     line-height: 96px;
     letter-spacing: -1.2px;
-    color: #4F4F4F;
+    color: $ground-control;
     margin: 260px 0px 20px 160px;
   
     @include sm {
@@ -465,28 +384,20 @@ article {
   }
 
   h4 {
-    margin: 96px 0px 0px 0px;
-    color: #286AC3;
+    grid-column: 2;
+    margin: 88px 0px 0 60px;
+    color: $azulejo-marciano;
   }
 
 }
 
-article > * {
-  grid-column: 2;
+/*article > * {
+  grid-column: 3;
   min-width: 0;
-}
-
-article > h4 {
-  grid-column: 1;
-  margin: 96px 0px 0 160px;
-  display: flex;
-}
-
-
-/*O asterisco indica que article soprepõe todos? Isso não faria sentido, porque eu consigo estabelecer um grid column para a imagem*/
+}*/ 
 
 .project-intro {
-  grid-column: 1 / 3;
+  grid-column: 1 / -1;
   margin: 40px 0px 40px 160px;
   font-style: normal;
   font-weight: normal;
@@ -507,7 +418,7 @@ article > h4 {
   font-size: 16px;
   line-height: 36px;
   letter-spacing: -0.8px;
-  color: #4F4F4F;
+  color: $ground-control;
   /*display: inline-block;*/
 
 }
@@ -516,7 +427,7 @@ article > h4 {
   font-size: 16px;
   line-height: 36px;
   letter-spacing: -0.8px;
-  color: #4F4F4F;
+  color: $ground-control;
   /*display: inline-block;*/
   
 }
@@ -529,7 +440,7 @@ article > h4 {
   font-size: 20px;
   line-height: 38px;
   letter-spacing: 0.25px;
-  color: #4F4F4F; 
+  color: $ground-control; 
   display: inline-block;
   margin: 96px 0 0 0;
   
@@ -548,7 +459,7 @@ h5:first-of-type {
   font-weight: 800;
   font-size: 48px;
   letter-spacing: -1.2px;
-  color: #4F4F4F;
+  color: $ground-control;
   float: left;
   line-height: 0.4em;
   padding: 0.1em;
@@ -616,7 +527,7 @@ h5:first-of-type {
   line-height: 32px;
   letter-spacing: 0.25px;
   text-decoration-line: underline;
-  color: #286AC3;
+  color: $azulejo-marciano;
   pointer-events: auto;
   cursor: pointer;
   transition-timing-function: ease-in;

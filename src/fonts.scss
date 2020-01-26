@@ -31,6 +31,24 @@ h1 {
     letter-spacing: -1.2px;
     color: #286AC3;
   }
+
+.more-icon {
+  font-size: 120px;
+  font-weight: 800;
+  line-height: 96px;
+  color: #286AC3;
+  letter-spacing: -1.2px;
+  transition: transform 0.2s ease-in-out, color 0.2s ease;
+
+  &.close {
+    transform: rotate(45deg);
+  }
+
+  @include sm {
+    font-size: 48px;
+    line-height: 36px;
+  }
+}
   
   h2 {
     font-family: "Muli", sans-serif;
