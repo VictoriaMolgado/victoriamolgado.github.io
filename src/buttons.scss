@@ -6,11 +6,11 @@
     text-decoration: none;
     user-select: none;
     cursor: pointer;
-    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     background-color: $nevoa-espacial;
     border-radius: 100px;
     max-height: 56px;
-    max-width: 240px;
+    max-width: fit-content;
     padding: 12px 32px;
     color: $azulejo-marciano;
     font-weight: bold;
@@ -29,15 +29,42 @@
     letter-spacing: -0.8px;
   }
 
+.secondary-btn {
+    text-decoration: underline;
+    user-select: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    background-color: none;
+    border-radius: 100px;
+    max-height: 56px;
+    max-width: fit-content;
+    padding: 12px 32px;
+    color: $azulejo-marciano;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: -0.8px;
+}
+
+.secondary-btn:hover {
+    background-color: $nevoa-espacial;
+    border-radius: 100px;
+    max-height: 56px;
+    padding: 12px 32px;
+    color: $azulejo-marciano;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: -0.8px;
+  }
+
 .dismantled-btn {
     text-decoration: none;
     user-select: none;
     cursor: pointer;
-    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     background-color: $nevoa-espacial;
     border-radius: 100px;
     max-height: 56px;
-    max-width: 240px;
+    max-width: fit-content;
     padding: 12px 32px;
     color: $azulejo-marciano;
     font-size: 20px;

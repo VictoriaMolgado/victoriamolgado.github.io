@@ -419,7 +419,6 @@ article {
   line-height: 36px;
   letter-spacing: -0.8px;
   color: $ground-control;
-  /*display: inline-block;*/
 
 }
 
@@ -428,18 +427,12 @@ article {
   line-height: 36px;
   letter-spacing: -0.8px;
   color: $ground-control;
-  /*display: inline-block;*/
   
 }
 
 
 
 .article-text {
-  font-family: 'Merriweather', serif;
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 38px;
-  letter-spacing: 0.25px;
   color: $ground-control; 
   display: inline-block;
   margin: 96px 0 0 0;
@@ -455,34 +448,20 @@ h5:first-of-type {
 }
 
 
-/*.article-text::first-letter {
-  font-weight: 800;
-  font-size: 48px;
-  letter-spacing: -1.2px;
-  color: $ground-control;
-  float: left;
-  line-height: 0.4em;
-  padding: 0.1em;
-}*/
-
 .project-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(7, 5vw);
   grid-column: 1 / -1;
   grid-gap: 15px;
-  margin: 52px 0 52px 0;
-
-      /*grid-column: repeat(auto-fit, minmax(100px, 1fr));
-      grid-auto-rows: 75px;
-      auto-fit não será usado em todos os casos de imagem*/      
+  margin: 52px 0 52px 0;     
 }
 
 .grid-item img {
     width: 100%;
     height: 100%;
     object-fit: scale-down;
-    background-color: #f2f2f2;
+    background-color: $nevoa-espacial;
 }
 
 .grid__item--1 {
@@ -490,7 +469,7 @@ h5:first-of-type {
   grid-column-end: 6;
   grid-row-start: 1;
   grid-row-end: 8;
-  border: blue solid 1px;
+
 }
 
 .grid__item--2 {
@@ -498,7 +477,6 @@ h5:first-of-type {
   grid-column-end: -1;
   grid-row-start: 1;
   grid-row-end: 5;
-  border: blue solid 1px;
 }
 
 .grid__item--3 {
@@ -506,7 +484,6 @@ h5:first-of-type {
   grid-column-end: -1;
   grid-row-start: 5;
   grid-row-end: 8;
-  border: blue solid 1px;
 }
 
 .ending-decoration {
@@ -537,3 +514,107 @@ h5:first-of-type {
   .know-more:hover ~ .know-more-image-anvisa {
     display: flex; 
   }
+
+/*----------------------------------- About style -----------------------------------*/
+
+.about-container{
+  display: grid;
+  grid-template-columns: 100px 0.8fr 680px 100px;
+  grid-column-gap: 20px;
+
+
+  .description {
+    grid-column-start: 3;
+    margin: 254px 0 0 0;
+    z-index: -1;
+  }
+
+  h1 {
+    grid-column-start: 3;
+    margin: 80px 0 0 0;
+    z-index: -1;
+  }
+
+  .h1-pink{ 
+    color: #DBA08F;
+  }
+
+  h2 {
+    grid-column-start: 3;
+    margin: 20px 0 60px 0;
+  }
+
+  h3 {
+    grid-column-start: 2;
+    color: $dunas-de-marte;
+  }
+
+  h6 { 
+    grid-column-start: 3;
+    margin: -200px 0 0 0;
+    padding: 0;
+  }
+
+  p {
+    grid-column-start: 3;
+    margin: 0 0 60px 0;
+  }
+
+  p:nth-of-type(5n) {
+    margin: -40px 0 100px 0;
+  }
+
+  .pilar {
+    grid-column-start: 3;
+    margin: 0 0 80px 0;
+  }
+ 
+
+}
+
+.go-further {
+  display: grid;
+  grid-template-columns: 100px 0.8fr 680px 100px;
+  grid-column-gap: 20px;
+  
+  .further-image {
+    grid-column-start: 2;
+    max-width: 372px;
+    z-index: -1;
+  }
+
+  h1 {
+    grid-column-start: 3;
+    margin: 80px 0 0 0;
+    z-index: -1;
+  }
+
+  p {
+    grid-column-start: 3;
+    margin: 0 0 60px 0;
+  }
+
+  .primary-btn {
+    grid-column-start: 2;
+  }
+
+  .secondary-btn {
+    grid-column-start: 3;
+  }
+
+}
+
+.branding-figures {
+  display: grid;
+  grid-template-columns: 120px 0.8fr 680px 100px;
+
+  .brand-mood {
+    max-width: 376px;
+    z-index: -1;
+  }
+
+  .brand-profile { 
+    max-width: 376px;
+    margin: 254px 0 0 0;
+  }
+}
