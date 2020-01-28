@@ -618,3 +618,25 @@ h5:first-of-type {
     margin: 254px 0 0 0;
   }
 }
+
+.key-step {
+  user-select: none;
+
+  &:hover {
+    color: $azulejo-marciano;
+    cursor: pointer;
+  }
+
+  &:active {
+    color: $azulejo-marciano;
+  }
+
+  @include sm {
+
+  }
+
+  a {
+    color: $dunas-de-marte;
+  }
+
+}
