@@ -547,6 +547,7 @@ h5:first-of-type {
   h3 {
     grid-column-start: 2;
     color: $dunas-de-marte;
+    margin: 0 0 60px 0;
   }
 
   h6 { 
@@ -635,8 +636,16 @@ h5:first-of-type {
 
   }
 
-  a {
-    color: $dunas-de-marte;
-  }
+}
 
+.active, .key-step:hover {
+  color: $azulejo-marciano;
+}
+
+.content {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
 }
