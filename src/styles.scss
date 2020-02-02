@@ -73,6 +73,7 @@ a {
   display: grid;
   grid-auto-flow: column;
   min-height: 80px;
+  z-index: 2;
   
 
   .nav-itens {
@@ -178,6 +179,17 @@ a {
   p {
     margin-top: 20px;
   }
+}
+
+.presentation-interaction {
+  margin: 120px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(5fr);
+
+    .primary-btn {
+      margin: 16px 0 0px 0;
+      grid-column-start: 6;
+    }
 }
 
 
