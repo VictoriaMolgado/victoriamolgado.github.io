@@ -90,16 +90,21 @@ a {
   }
 
   .nav-itens {
+    
+    a:link { 
+      color: $azulejo-marciano;
+    }
+  
     a:visited { 
     text-decoration: none;
-    color:$azulejo-marciano;
+    color: $azulejo-marciano;
     }
     
     a:hover { 
       text-decoration: underline;
-      color:$dunas-de-marte;
+      color: $dunas-de-marte;
       }
-    
+
   }
 
   .home-anchor {
@@ -593,7 +598,7 @@ h5:first-of-type {
   .further-image {
     grid-column-start: 2;
     max-width: 372px;
-    z-index: -1;
+    z-index: -2;
   }
 
   h1 {
@@ -602,17 +607,19 @@ h5:first-of-type {
     z-index: -1;
   }
 
-  p {
-    grid-column-start: 3;
-    margin: 0 0 60px 0;
-  }
+}
+
+.further-btn {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 40px 0 0 0;
 
   .primary-btn {
-    grid-column-start: 2;
+    grid-column-start: 1;
   }
 
   .secondary-btn {
-    grid-column-start: 3;
+    grid-column-start: 2;
   }
 
 }
