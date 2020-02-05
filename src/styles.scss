@@ -261,14 +261,14 @@ a {
 
   .experience-details {
     display: flex;
-    margin-top: 48px;
+    margin-top: 60px;
     max-height: 0px;
     border-bottom: 2px solid rgba(40, 106, 195, 0);
     overflow: hidden;
     transition: max-height 0.6s ease-in-out, border-bottom 0.2s ease-in-out 0.6s;
 
     &.visible {
-      border-bottom: 2px solid rgba(40, 106, 195, 1);
+      
       max-height: 440px;
     }
 
@@ -461,7 +461,7 @@ article {
 }
 
 h5:first-of-type {
-  margin-top: 80px;
+  margin-top: 0;
 }
 
 
