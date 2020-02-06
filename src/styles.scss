@@ -206,6 +206,7 @@ a {
   text-align: left;
   z-index: 1;
   padding-bottom: 12px;
+  margin-top: 120px;
 
   &:first-of-type {
     margin-top: 72px;
@@ -291,6 +292,16 @@ a {
       flex-direction: column;
     }
   }
+
+  p a {
+    color: $azulejo-marciano;
+    text-decoration: underline;
+
+    &:hover {
+      color: $dunas-de-marte;
+    }
+
+  }
 }
 
 /* ------------- Xp section ends --------------*/
@@ -335,6 +346,7 @@ a {
     h4 {
       transition: color 0.4s ease-in-out;
       color: $dunas-de-marte;
+      margin: 32px 0 0 0;
     }
 
     .project-image {
