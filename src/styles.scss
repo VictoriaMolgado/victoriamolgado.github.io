@@ -304,6 +304,36 @@ a {
   }
 }
 
+.sticky-bar {
+  display: grid;
+  grid-template-columns: repeat(9fr);
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 1em;
+  width: 100%;
+  background-color: #F2F2F2;
+
+  .playlist-cta {
+    grid-column-start: 2;
+  }
+
+  p {
+  color: $azulejo-marciano;
+  font-family: "Muli", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+
+  }
+
+  .playlist-link {
+    cursor: pointer;
+  }
+}
+
+
+
 /* ------------- Xp section ends --------------*/
 
 
