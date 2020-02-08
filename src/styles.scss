@@ -599,7 +599,7 @@ h5:first-of-type {
   color: $azulejo-marciano;
   pointer-events: auto;
   cursor: pointer;
-  transition-timing-function: ease-in;
+  transition: ease-in-out;
   }
 
 
