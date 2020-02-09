@@ -431,18 +431,19 @@ a {
 
 article {
   display: grid;
-  grid-template-columns: 100px 1fr 680px 100px;
+  grid-template-columns: 160px 1fr 680px 160px;
   column-gap: 10px;
 
   h3 {
     grid-column: 1 / 3;
+    grid-column-start: 2;
     font-style: normal;
     font-weight: 800;
     font-size: 76px;
     line-height: 96px;
     letter-spacing: -1.2px;
     color: $ground-control;
-    margin: 260px 0px 20px 160px;
+    margin: 260px 0px 20px 0;
   
     @include sm {
       font-size: 28px;
@@ -453,7 +454,7 @@ article {
 
   h4 {
     grid-column: 2;
-    margin: 88px 0px 0 60px;
+    margin: 88px 0px 0 0;
     color: $azulejo-marciano;
   }
 
@@ -465,8 +466,8 @@ article {
 }*/ 
 
 .project-intro {
-  grid-column: 1 / -1;
-  margin: 40px 0px 40px 160px;
+  grid-column: 2 /4;
+  margin: 40px 0px 40px 0;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -479,7 +480,8 @@ article {
   display: grid;
   grid-column: 1 / -1;
   grid-auto-flow: column;
-  margin: 0 0 0 160px;
+  grid-column-start: 2;
+  margin: 0 0 0 0;
 }
 
 .disciplines { 
