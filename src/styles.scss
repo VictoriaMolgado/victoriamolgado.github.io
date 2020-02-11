@@ -514,6 +514,11 @@ article {
   margin-top: 80px;
 }
 
+.bullet-list {
+  color: $ground-control; 
+  grid-column-start: 3;
+}
+
 h5:first-of-type {
   margin-top: 0;
 }
