@@ -517,6 +517,18 @@ article {
 .bullet-list {
   color: $ground-control; 
   grid-column-start: 3;
+  margin: 48px 0 0 0;
+  font-family: 'Merriweather', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 38px;
+  letter-spacing: 0.25px;
+  color: $ground-control;
+}
+
+.bullet-list li {
+  margin-top: 20px;
 }
 
 h5:first-of-type {
