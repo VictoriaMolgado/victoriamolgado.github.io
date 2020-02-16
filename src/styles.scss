@@ -27,7 +27,7 @@ html {
 
 .container {
   width: 90%;
-  max-width:  1056px;
+  max-width: 1056px;
   margin: 0 auto;
 
   @include sm {
@@ -213,6 +213,8 @@ a {
   word-wrap: break-word;
   overflow-wrap: break-word;
   width: 100%;
+  max-width: 890px;
+  
 
   @include md {
     margin-top: 80px;
@@ -250,7 +252,7 @@ a {
 
     .primary-btn {
       margin: 16px 0 0px 0;
-      grid-column-start: 6;
+      grid-column-end: 6;
 
       @include md { 
         margin: 0 0 0 0;
