@@ -16,6 +16,22 @@
     font-weight: bold;
     font-size: 20px;
     letter-spacing: -0.8px;
+
+    @include md {
+      text-decoration: none;
+      user-select: none;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+      background-color: $nevoa-espacial;
+      border-radius: 100px;
+      max-height: 56px;
+      max-width: fit-content;
+      padding: 12px 32px;
+      color: $azulejo-marciano;
+      font-weight: bold;
+      font-size: 16px;
+      letter-spacing: -0.8px;
+    }
 }
 
 .primary-btn:hover {
@@ -27,6 +43,18 @@
     font-weight: bold;
     font-size: 20px;
     letter-spacing: -0.8px;
+
+    @include md {
+      background-color: $azulejo-marciano;
+      border-radius: 100px;
+      max-height: 56px;
+      padding: 12px 32px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 16px;
+      letter-spacing: -0.8px;
+    }
+
   }
 
 .secondary-btn {
@@ -43,6 +71,23 @@
     font-weight: bold;
     font-size: 20px;
     letter-spacing: -0.8px;
+
+    @include md {
+      text-decoration: underline;
+      user-select: none;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+      background-color: none;
+      border-radius: 100px;
+      max-height: 56px;
+      max-width: fit-content;
+      padding: 12px 32px;
+      color: $azulejo-marciano;
+      font-weight: bold;
+      font-size: 16px;
+      letter-spacing: -0.8px;
+    }
+
 }
 
 .secondary-btn:hover {
@@ -54,6 +99,17 @@
     font-weight: bold;
     font-size: 20px;
     letter-spacing: -0.8px;
+
+    @include md {
+      background-color: $nevoa-espacial;
+      border-radius: 100px;
+      max-height: 56px;
+      padding: 12px 32px;
+      color: $azulejo-marciano;
+      font-weight: bold;
+      font-size: 16px;
+      letter-spacing: -0.8px;
+    }
   }
 
 .dismantled-btn {

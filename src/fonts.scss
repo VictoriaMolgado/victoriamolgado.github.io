@@ -113,19 +113,17 @@ h1 {
   }
   
   h6 {
-font-family: "Muli", sans-serif;
-font-style: normal;
-font-weight: bold;
-font-size: 20px;
-line-height: 30px;
-letter-spacing: -0.5px;
-color: #4F4F4F;
+      font-family: "Muli", sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: -0.5px;
+      color: #4F4F4F;
 
-  
-    @include sm {
-      font-size: 16px;
-      line-height: 36px;
-    }
+       @include sm {
+        
+      }
   
   }
   

@@ -73,6 +73,9 @@ a {
   grid-auto-flow: column;
   min-height: 80px;
   z-index: 2;
+
+  @include md {
+  }
   
 
   .nav-itens {
@@ -86,6 +89,7 @@ a {
     line-height: 36px;
     letter-spacing: -0.8px;
     color: $azulejo-marciano;
+
   }
 
   .nav-itens {
@@ -712,17 +716,29 @@ h5:first-of-type {
   grid-template-columns: 100px 0.8fr 680px 100px;
   grid-column-gap: 20px;
 
+  @include md {
+    display: grid;
+    grid-template-columns: 16px 1fr 16px;
+  }
 
   .description {
     grid-column-start: 3;
     margin: 254px 0 0 0;
     z-index: -1;
+
+    @include md {
+      grid-column-start: 2;
+    }
   }
 
   h1 {
     grid-column-start: 3;
     margin: 80px 0 0 0;
     z-index: -1;
+
+    @include md {
+      grid-column-start: 2;
+    }
   }
 
   .h1-pink{ 
@@ -732,6 +748,11 @@ h5:first-of-type {
   h2 {
     grid-column-start: 3;
     margin: 20px 0 60px 0;
+
+    @include md {
+      grid-column-start: 2;
+    }
+
   }
 
   h3 {
@@ -744,20 +765,47 @@ h5:first-of-type {
     grid-column-start: 3;
     margin: -200px 0 0 0;
     padding: 0;
+
+    @include md {
+      grid-column-start: 2;
+      margin: 40px 0 40px 0;
+    }
+
   }
 
   p {
     grid-column-start: 3;
     margin: 0 0 60px 0;
+
+    @include md {
+      grid-column-start: 2;
+      font-family: 'Merriweather', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 32px;
+      letter-spacing: 0.25px;
+      color: $ground-control;
+    }
+
   }
 
   p:nth-of-type(5n) {
-    margin: -40px 0 100px 0;
+    margin: 60px 0 100px 0;
+
+    @include md {
+      margin: 40px 0 40px 0;
+    }
+
   }
 
-  .pilar {
+  .pilar p {
     grid-column-start: 3;
     margin: 0 0 80px 0;
+
+    @include md {
+      grid-column-start: 2;
+    }
   }
  
 
@@ -767,17 +815,57 @@ h5:first-of-type {
   display: grid;
   grid-template-columns: 100px 0.8fr 680px 100px;
   grid-column-gap: 20px;
+
+  @include md {
+    display: grid;
+    grid-template-columns: 16px 1fr 16px;
+  }
   
   .further-image {
     grid-column-start: 2;
     max-width: 372px;
     z-index: -2;
+
+    @include md {
+      display: none;
+    }
   }
 
   h1 {
     grid-column-start: 3;
     margin: 80px 0 0 0;
     z-index: -1;
+
+    @include md {
+      grid-column-start: 2;
+      font-family: Muli;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 36px;
+      line-height: 40px;
+      letter-spacing: -1px;
+      color: $ground-control;
+    }
+  }
+
+
+  .call-to-further {
+
+    @include md {
+      grid-column-start: 2;
+
+      p { 
+        font-family: 'Merriweather', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: 0.25px;
+        color: $ground-control;
+        margin: 40px 0 0 0;
+      }
+
+    }
   }
 
 }
@@ -810,6 +898,10 @@ h5:first-of-type {
     max-width: 376px;
     margin: 254px 0 0 0;
   }
+
+  @include md {
+    display: none;
+  }
 }
 
 .key-step {
@@ -826,7 +918,7 @@ h5:first-of-type {
   }
 
   @include sm {
-
+    grid-column-start: 2;
   }
 
 }
@@ -837,8 +929,12 @@ h5:first-of-type {
 
 .content {
   padding: 0 18px;
-  background-color: white;
+  background-color: $nevoa-marciatica;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
+
+  @include md {
+
+  }
 }
