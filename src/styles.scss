@@ -45,9 +45,8 @@ footer {
   .primary-btn {
     margin-top: 80px;
 
-    @include md {
-      margin: 0 auto;
-      
+    @include sm {
+      margin: 80px 0 0 0;
     }
   }
 }
@@ -145,6 +144,15 @@ a {
     color: #fff;
   }
 
+  @include sm {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -1px;
+    color: $nevoa-marciatica;
+  }
+
 }
 
 .profile-image {
@@ -180,6 +188,16 @@ a {
     line-height: 76px;
     letter-spacing: -1.2px;
     color: $ground-control;
+
+    @include sm {
+      font-style: normal;
+      font-weight: 800;
+      font-size: 36px;
+      line-height: 44px;
+      letter-spacing: -1px;
+      color: #4F4F4F;
+    }
+
   }
 
   p {
@@ -212,6 +230,10 @@ a {
   &:first-of-type {
     margin-top: 72px;
   }
+
+  @include sm {
+    margin-top: 40px;
+  }
   
 }
 
@@ -224,6 +246,7 @@ a {
 
   @include sm {
     min-height: unset;
+    padding: 12px 0;
   }
 
   .experience {
@@ -238,6 +261,10 @@ a {
 
     &:last-of-type {
       margin-bottom: 72px;
+
+      @include sm {
+      margin-bottom: 44px;
+       }
     }
   }
 
@@ -260,6 +287,19 @@ a {
       margin-bottom: 12px;
     }
   }
+  
+  .company {
+    
+    @include sm {
+      font-family: "Muli", sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 68px;
+        letter-spacing: -1.2px;
+        color:$azulejo-marciano;
+    }
+  }
 
   .experience-details {
     display: flex;
@@ -270,7 +310,6 @@ a {
     transition: max-height 0.6s ease-in-out, border-bottom 0.2s ease-in-out 0.6s;
 
     &.visible {
-      
       max-height: 440px;
     }
 
@@ -278,14 +317,35 @@ a {
       flex: 1;
     }
 
+    .role {
+      @include sm {
+        font-family: 'Muli', sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: -0.5px;
+        color: $ground-control;
+      }
+    }
+
+
     .description {
       flex: 2;
       margin-bottom: 32px;
 
       @include sm {
         margin-top: 20px;
+        
+        p {  
+        font-family: Merriweather;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: 0.25px;
+        color: $ground-control;
+          } 
       }
-
     }
 
     @include sm {
@@ -340,6 +400,10 @@ a {
       text-decoration: underline;
     }
   }
+  
+  @include sm {
+    display: none;
+  }
 }
 
 
@@ -351,6 +415,11 @@ a {
 
 .projects-section {
   padding: 72px 0;
+
+  @include sm {
+    padding: 16px 0;
+  }
+
 }
 
 .projects {
@@ -385,12 +454,12 @@ a {
 
     h4 {
       transition: color 0.4s ease-in-out;
-      color: $dunas-de-marte;
+      color: $azulejo-marciano;
       margin: 32px 0 0 0;
     }
 
     .project-image {
-      max-width: 244px;
+      max-width: 325px;
       margin-bottom: 20px;
     }
 
@@ -416,10 +485,19 @@ a {
       background-color: $azulejo-marciano;
     }
 
-
-
     @include custom(850) {
-      margin-bottom: 120px;
+      margin-bottom: 100px;
+
+    }
+
+    @include md {
+      font-family: Muli;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 36px;
+      line-height: 40px;
+      letter-spacing: -1px;
+      color: $azulejo-marciano;
     }
   }
 
