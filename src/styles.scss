@@ -27,7 +27,7 @@ html {
 
 .container {
   width: 90%;
-  max-width: 920px;
+  max-width:  1056px;
   margin: 0 auto;
 
   @include sm {
@@ -75,6 +75,7 @@ a {
   z-index: 2;
 
   @include md {
+    display: none;
   }
   
 
@@ -120,6 +121,35 @@ a {
     color: $ground-control;
 
   }
+}
+
+.nav-mobile {
+  
+  @include md {
+    display: grid;
+    margin: 60px 0 0 16px;
+    font-family: "Muli", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: -0.25px;
+    color: $ground-control;
+  }
+
+  a {
+    text-decoration: none;
+    color: $ground-control;
+  }
+
+  a:visited {
+      text-decoration: none;
+      color: $ground-control;
+  }
+
+  @media (min-width: 1349px) { 
+    display: none;
+  }
+
 }
 
 /* ------------- About section --------------*/
@@ -184,6 +214,10 @@ a {
   overflow-wrap: break-word;
   width: 100%;
 
+  @include md {
+    margin-top: 80px;
+  }
+
   .hello {
     font-family: "Muli", sans-serif;
     font-style: normal;
@@ -217,6 +251,11 @@ a {
     .primary-btn {
       margin: 16px 0 0px 0;
       grid-column-start: 6;
+
+      @include md { 
+        margin: 0 0 0 0;
+      }
+
     }
 }
 
@@ -419,6 +458,8 @@ a {
 
 .projects-section {
   padding: 72px 0;
+  display: grid;
+  margin-bottom: 100px;
 
   @include sm {
     padding: 16px 0;
@@ -517,6 +558,13 @@ article {
   grid-template-columns: 160px 1fr 680px 160px;
   column-gap: 10px;
 
+  @include md {
+  display: grid;
+  grid-template-columns: 16px 1fr 16px;
+  column-gap: 12px;
+
+  }
+
   h3 {
     grid-column: 1 / 3;
     grid-column-start: 2;
@@ -528,9 +576,16 @@ article {
     color: $ground-control;
     margin: 260px 0px 20px 0;
   
-    @include sm {
-      font-size: 28px;
-      line-height: 36px;
+    @include md {
+      grid-column-start: 2;
+      font-family: 'Muli', sans-serif;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 48px;
+      line-height: 56px;
+      letter-spacing: -1.2px;
+      color: $ground-control;
+      margin: 80px 0px 20px 0;
     }
   
   }
@@ -539,6 +594,11 @@ article {
     grid-column: 3;
     margin: 88px 0px 0 0;
     color: $azulejo-marciano;
+
+    @include md {
+      grid-column-start: 2;
+      margin: 60px 0 0 0;
+    }
   }
 
 }
@@ -557,6 +617,20 @@ article {
   line-height: 36px;
   letter-spacing: -0.8px;
   color: $azulejo-marciano;
+
+  @include md {
+    grid-column-start: 2;
+    margin: 60px 0 0 0;
+    font-family:'Muli', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -0.6px;
+    color: $azulejo-marciano;
+
+
+  }
 }
 
 .project-context {
@@ -565,6 +639,8 @@ article {
   grid-auto-flow: column;
   grid-column-start: 2;
   margin: 0 0 0 0;
+
+
 }
 
 .disciplines { 
@@ -573,6 +649,10 @@ article {
   letter-spacing: -0.8px;
   color: $ground-control;
 
+  @include md {
+  
+  }
+
 }
 
 .project-details {
@@ -580,6 +660,10 @@ article {
   line-height: 36px;
   letter-spacing: -0.8px;
   color: $ground-control;
+
+  @include md {
+    display: none;
+  }
   
 }
 
@@ -590,16 +674,26 @@ article {
   display: inline-block;
   margin: 20px 0 0 0;
   grid-column-start: 3;
+
+  @include md {
+    grid-column-start: 2;
+    margin: 20px 0 0 0;
+
+  }
   
 }
 
 .article-text:first-of-type {
   margin-top: 80px;
+
+  @include md {
+    margin: 20px 0 0 0;
+  }
 }
 
 .bullet-list {
-  color: $ground-control; 
   grid-column-start: 3;
+  color: $ground-control; 
   margin: 48px 0 0 0;
   font-family: 'Merriweather', serif;
   font-style: normal;
@@ -608,6 +702,10 @@ article {
   line-height: 38px;
   letter-spacing: 0.25px;
   color: $ground-control;
+
+  @include md {
+    grid-column-start: 2;
+  }
 }
 
 .bullet-list li {
@@ -628,6 +726,16 @@ h5:first-of-type {
   line-height: 56px;
   letter-spacing: -1.2px;
   color: $ground-control;
+
+  @include md {
+    grid-column-start: 2;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -1px;
+    color: $ground-control;
+    word-break: initial;
+  }
 }
 
 .source {
@@ -640,6 +748,18 @@ h5:first-of-type {
   line-height: 36px;
   letter-spacing: -0.25px;
   color: #828282;
+
+  @include md {
+    grid-column-start: 2;
+    font-family: 'Muli', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    color: #828282;
+  }
+
 }
 
 .project-grid {
@@ -707,6 +827,21 @@ h5:first-of-type {
 
   .know-more:hover ~ .know-more-image-anvisa {
     display: flex; 
+  }
+
+  .closing-article{
+    display: grid;
+    grid-template-columns: 160px 1fr 680px 160px;
+
+    .next-project {
+      grid-column-end: 4;
+    }
+
+    @include md {
+      grid-template-columns: 16px 1fr 16px;
+      grid-column-gap: 12px;
+      grid-column-start: 2;
+    }
   }
 
 /*----------------------------------- About style -----------------------------------*/

@@ -136,8 +136,9 @@ h1 {
     color: #4F4F4F;
     
     @include sm {
-      font-size: 20px;
-      line-height: 28px;
-      font-weight: 300;
+      font-size: 18px;
+      line-height: 32px;
+      letter-spacing: 0.25px;
+      color: #4F4F4F;
     }
   }
