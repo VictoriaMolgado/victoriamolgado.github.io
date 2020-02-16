@@ -150,6 +150,7 @@ a {
 .profile-image {
   display: none;
   position: absolute;
+  max-width: 422px;
 }
 
 .who:hover ~ .profile-image {
@@ -187,7 +188,7 @@ a {
 }
 
 .presentation-interaction {
-  margin: 120px 0 0 0;
+  margin: 100px 0 0 0;
   display: grid;
   grid-template-columns: repeat(5fr);
 
