@@ -686,7 +686,7 @@ article {
 }
 
 .article-text:first-of-type {
-  margin-top: 80px;
+  margin-top: 20px;
 
   @include md {
     margin: 20px 0 0 0;
@@ -865,6 +865,7 @@ h5:first-of-type {
 
     @include md {
       grid-column-start: 2;
+      margin: 80px 0 0 0;
     }
   }
 
@@ -875,6 +876,7 @@ h5:first-of-type {
 
     @include md {
       grid-column-start: 2;
+      margin: 40px 0 0 0;
     }
   }
 
@@ -894,13 +896,12 @@ h5:first-of-type {
 
   h3 {
     grid-column-start: 2;
-    color: $dunas-de-marte;
     margin: 0 0 60px 0;
   }
 
   h6 { 
     grid-column-start: 3;
-    margin: -200px 0 0 0;
+    margin: 0 0 4px 0;
     padding: 0;
 
     @include md {
@@ -985,6 +986,10 @@ h5:first-of-type {
     }
   }
 
+  p {
+    margin: 44px 0 0 0;
+  }
+
 
   .call-to-further {
 
@@ -1043,15 +1048,18 @@ h5:first-of-type {
 
 .key-step {
   user-select: none;
-  color: $azulejo-marciano;
+
+  h3 {
+    color: $azulejo-marciano;
+  }
 
   &:hover {
-    color: $azulejo-marciano;
+    color: $dunas-de-marte;
     cursor: pointer;
   }
 
   &:active {
-    color: $azulejo-marciano;
+    color: $dunas-de-marte;
   }
 
   @include sm {
