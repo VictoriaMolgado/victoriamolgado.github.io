@@ -605,10 +605,6 @@ article {
 
 }
 
-/*article > * {
-  grid-column: 3;
-  min-width: 0;
-}*/ 
 
 .project-intro {
   grid-column: 2 /4;
@@ -843,6 +839,15 @@ h5:first-of-type {
       grid-template-columns: 16px 1fr 16px;
       grid-column-gap: 12px;
       grid-column-start: 2;
+    }
+  }
+
+  .single-images {
+    display: grid;
+    grid-template-columns: 160px 1fr 680px 160px;
+
+    .single {
+      grid-column-start: 1;
     }
   }
 
