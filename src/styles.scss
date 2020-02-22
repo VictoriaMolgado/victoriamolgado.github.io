@@ -844,12 +844,20 @@ h5:first-of-type {
 
   .single-images {
     display: grid;
-    grid-template-columns: 160px 1fr 680px 160px;
+    background-color: #f2f2f2;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    margin: 32px 0 32px 0;
+    padding: 2px 0 2px 240px;
+  
 
-    .single {
-      grid-column-start: 1;
+    .single img {
+     max-height: 532px;
+     grid-column-start: 3;
     }
+
   }
+  
 
 /*----------------------------------- About style -----------------------------------*/
 
