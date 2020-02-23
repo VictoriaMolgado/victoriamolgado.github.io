@@ -177,6 +177,7 @@ a {
   
       .menu-btn {
         display: none;
+      
 
         .menu-btn:checked ~ .menu {
           max-height: 240px;
@@ -199,9 +200,8 @@ a {
           top: 0;
         }
       }
-    }
+  }
 }
-
 
 /* 48em = 768px */
 
