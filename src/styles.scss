@@ -68,6 +68,161 @@ a {
 
 /* ------------- Navbar area --------------*/
 
+.header {
+  display: grid;
+  grid-auto-flow: column;
+  min-height: 80px;
+  background-color: $nevoa-marciatica;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow: hidden;
+    list-style: none;
+    font-family: "Muli", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: -0.8px;
+    color: $azulejo-marciano;
+    background-color: $nevoa-marciatica;
+  
+      &:visited {
+        color: $azulejo-marciano;
+      }
+    }
+
+    li a {
+      display: block;
+      padding: 20px 20px;
+      text-decoration: none;
+
+      &:hover {
+      color: $dunas-de-marte;
+      text-decoration: underline;
+      }
+    }
+
+    .menu-btn:hover {
+      color: $dunas-de-marte;
+      text-decoration: underline;
+    }
+
+    .home-anchor {
+      display: grid;
+      text-decoration: none;
+      float: left;
+      font-family: "Muli", sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 32px;
+      letter-spacing: -0.25px;
+      color: $ground-control;
+    }
+    
+    .menu {
+      display: grid;
+      grid-auto-flow: column;
+      list-style: none;
+      clear: both;
+      max-height: 0;
+      transition: max-height .2s ease-out;
+      font-family: "Muli", sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 36px;
+      letter-spacing: -0.8px;
+      color: $azulejo-marciano;
+    }
+
+    .menu-icon {
+      cursor: pointer;
+      display: inline-block;
+      padding: 28px 20px;
+      position: relative;
+      user-select: none;
+
+        .navicon {
+          background: $ground-control;
+          display: block;
+          height: 2px;
+          position: relative;
+          transition: background .2s ease-out;
+          width: 18px;
+
+          .navicon:before,
+          .navicon:after {
+          background: $ground-control;
+          content: '';
+          display: block;
+          height: 100%;
+          position: absolute;
+          transition: all .2s ease-out;
+          width: 100%;
+          }
+
+          .navicon:before {
+            top: 5px;
+          }
+
+          .navicon:after {
+            top: -5px;
+          }
+      }
+
+  
+      .menu-btn {
+        display: none;
+
+        .menu-btn:checked ~ .menu {
+          max-height: 240px;
+        }
+
+        .menu-btn:checked ~ .menu-icon .navicon {
+          background: transparent;
+        }
+
+        .menu-btn:checked ~ .menu-icon .navicon:before {
+          transform: rotate(-45deg);
+        }
+
+        .menu-btn:checked ~ .menu-icon .navicon:after {
+          transform: rotate(45deg);
+        }
+
+        .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+        .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+          top: 0;
+        }
+      }
+
+}
+
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+
 .nav-area {
   display: grid;
   grid-auto-flow: column;
@@ -1091,8 +1246,4 @@ h5:first-of-type {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
-
-  @include md {
-
-  }
 }
