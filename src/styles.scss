@@ -70,6 +70,7 @@ a {
 .header {
   background-color: $nevoa-marciatica;
   width: 100%;
+  position: absolute;
   z-index: 3;
 }
 
@@ -253,10 +254,9 @@ a {
   letter-spacing: -1.2px;
   text-decoration-line: underline;
   pointer-events: auto;
-  cursor: pointer;
   color: $azulejo-marciano;
   position: relative;
-  transition: 0.3s;
+  transition: 0.6s ease-in-out;
 
   a:visited {
     text-decoration: underline;
@@ -265,7 +265,7 @@ a {
 
   a:hover {
     text-decoration: underline;
-    color: #fff;
+    color: $nevoa-marciatica;
   }
 
   @include sm {
@@ -282,8 +282,22 @@ a {
 .profile-image {
   display: none;
   position: absolute;
-  max-width: 25%;
+  width: 400px;
+  height: 400px;
+  transition: 0.6s ease-in-out;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  @include md {
+    
+  }
+
 }
+
+
 
 .who:hover ~ .profile-image {
   display: flex;
@@ -305,7 +319,6 @@ a {
   width: 100%;
   max-width: 890px;
   
-
   @include md {
     margin-top: 160px;
   }
@@ -325,7 +338,7 @@ a {
       font-size: 36px;
       line-height: 44px;
       letter-spacing: -1px;
-      color: #4F4F4F;
+      color: $ground-control;
     }
 
   }
@@ -468,7 +481,7 @@ a {
       flex: 2;
       margin-bottom: 32px;
 
-      @include sm {
+      @include md {
         margin-top: 20px;
         
         p {  
@@ -968,7 +981,7 @@ h5:first-of-type {
 
     @include md {
       grid-column-start: 2;
-      margin: 80px 0 0 0;
+      margin: 100px 0 0 0;
     }
   }
 
