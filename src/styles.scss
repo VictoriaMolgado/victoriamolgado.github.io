@@ -744,3 +744,43 @@ h5:first-of-type {
   overflow: hidden;
   transition: max-height 0.3s ease-out;
 }
+
+.wrapper {
+  
+}
+
+.accordion {
+  display: grid;
+  grid-template-columns: 120px 0.8fr 680px 100px;   
+
+  dt {
+    grid-column-start: 2;
+    font-family: 'Muli';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -1.2px;
+    color: #286AC3;
+    padding: 10px;
+    border-bottom: 0; 
+    margin: 40px 0 0 40px;
+    }
+
+    dd {
+      grid-column-start: 3;
+      font-family: 'Merriweather';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 38px;
+      letter-spacing: 0.25px;
+      color: #4F4F4F;
+      margin: 52px 0 0 40px;
+    }
+
+    a {
+      display: block;
+      color: $azulejo-marciano;
+    }
+  }

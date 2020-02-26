@@ -38,3 +38,30 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+function openFirstPanel(){
+  $('.accordion > dt:first-child').next().addClass('active').slideDown();
+}
+
+(function($) {
+    
+  var allPanels = $('.accordion > dd').hide();
+  
+  openFirstPanel();
+    
+  $('.accordion > dt > a').click(function() {
+      $this = $(this);
+      $target =  $this.parent().next();
+      
+    
+      if($target.hasClass('active')){
+        $target.removeClass('active').slideUp(); 
+      }else{
+        allPanels.removeClass('active').slideUp();
+        $target.addClass('active').slideDown();
+      }
+      
+    return false;
+  });
+
+})(jQuery);
