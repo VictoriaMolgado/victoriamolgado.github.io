@@ -964,7 +964,7 @@ h5:first-of-type {
 
 /*----------------------------------- About style -----------------------------------*/
 
-.about-container{
+.about-container {
   display: grid;
   grid-template-columns: 100px 0.8fr 680px 100px;
   grid-column-gap: 20px;
@@ -974,7 +974,7 @@ h5:first-of-type {
     grid-template-columns: 16px 1fr 16px;
   }
 
-  .description {
+  .about-header {
     grid-column-start: 3;
     margin: 254px 0 0 0;
     z-index: -1;
@@ -1070,8 +1070,8 @@ h5:first-of-type {
     }
   }
  
-
 }
+
 
 .go-further {
   display: grid;
