@@ -560,13 +560,18 @@ a {
 
 /* ------------- Projects section begins --------------*/
 
-.projects-section {
+.projects-section .container {
   padding: 72px 0;
   display: grid;
-  margin-bottom: 100px;
+  grid-template-columns: 552px 408px;
+  grid-column-gap: 52px;
 
-  @include sm {
-    padding: 16px 0;
+  .spotlight {
+    grid-column-start: 1;
+  }
+
+  .other-projects {
+    grid-column-start: 2;
   }
 
 }
