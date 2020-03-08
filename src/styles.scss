@@ -562,100 +562,39 @@ a {
 
 .projects-section .container {
   padding: 72px 0;
+ 
+}
+
+.projects {
+  padding: 72px 0;
   display: grid;
-  grid-template-columns: 552px 408px;
+  grid-template-columns: 552px 204px 204px;
   grid-column-gap: 52px;
+
+  h6 {
+    border-bottom: 1px solid $cor-de-pele;
+    margin: 0 0 8px 0;
+  }
+
+  .project-details {
+    border: none;
+  }
 
   .spotlight {
     grid-column-start: 1;
   }
 
-  .other-projects {
+  .most-recent {
+    grid-column: 2 / 4;
+  }
+
+  .old-but-gold {
     grid-column-start: 2;
   }
 
-}
-
-.projects {
-  display: flex;
-  flex: 1;
-  justify-content: space-between;
-
-  @include custom(850) {
-    display: flex;
-    flex-direction: column;
+  .simple-older {
+    grid-column-start: 3;
   }
-
-  .project-link { 
-    display: inline-flex;
-    
-    @include md{
-      margin: 0 auto;
-    }
-  }
-
-  .project {
-    &:hover {
-      h4 {
-        color: $azulejo-marciano;
-      }
-
-      .overlay-text {
-        opacity: 0.6;
-        cursor: pointer;
-      }
-    }
-
-    h4 {
-      transition: color 0.4s ease-in-out;
-      color: $azulejo-marciano;
-      margin: 32px 0 0 0;
-    }
-
-    .project-image {
-      max-width: 325px;
-      margin-bottom: 20px;
-    }
-
-    .project-interaction {
-      background-color: none;
-      position: relative;
-    }
-
-    .overlay-text {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 100%;
-      width: 100%;
-      opacity: 0;
-      transition: all 0.3s ease;
-      background-color: $azulejo-marciano;
-    }
-
-    @include custom(850) {
-      margin-bottom: 100px;
-
-    }
-
-    @include md {
-      font-family: Muli;
-      font-style: normal;
-      font-weight: 800;
-      font-size: 36px;
-      line-height: 40px;
-      letter-spacing: -1px;
-      color: $azulejo-marciano;
-    }
-  }
-
-  
 }
 
 /* ----------------------------------- Projects section ends-----------------------------------*/
