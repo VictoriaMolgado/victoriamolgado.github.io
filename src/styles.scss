@@ -585,9 +585,10 @@ a {
   }
 
   .most-recent {
-    grid-column: 2 / 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
   }
-
+  
   .old-but-gold {
     grid-column-start: 2;
   }
