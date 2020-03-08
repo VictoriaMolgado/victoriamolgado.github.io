@@ -561,14 +561,13 @@ a {
 /* ------------- Projects section begins --------------*/
 
 .projects-section .container {
-  padding: 72px 0;
  
 }
 
 .projects {
   padding: 72px 0;
   display: grid;
-  grid-template-columns: 552px 204px 204px;
+  grid-template-columns: 552px 1fr 1fr;
   grid-column-gap: 52px;
 
   h6 {
@@ -585,16 +584,17 @@ a {
   }
 
   .most-recent {
-    grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column: 2 / 4;
   }
   
   .old-but-gold {
     grid-column-start: 2;
+    margin: -140px 0 0 0;
   }
 
   .simple-older {
     grid-column-start: 3;
+    margin: -140px 0 0 0;
   }
 }
 
