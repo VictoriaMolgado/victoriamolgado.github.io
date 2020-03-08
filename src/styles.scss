@@ -560,10 +560,6 @@ a {
 
 /* ------------- Projects section begins --------------*/
 
-.projects-section .container {
- 
-}
-
 .projects {
   padding: 72px 0;
   display: grid;
@@ -575,8 +571,20 @@ a {
     margin: 0 0 8px 0;
   }
 
+  a {
+    color: $azulejo-marciano;
+    transition: .2s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      color: $dunas-de-marte;
+    }
+  }
+
   .project-details {
     border: none;
+    margin: 4px 0 0 0;
+    font-weight: normal;
   }
 
   .spotlight {
