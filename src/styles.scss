@@ -566,9 +566,22 @@ a {
   grid-template-columns: 552px 1fr 1fr;
   grid-column-gap: 52px;
 
+  @include md {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 16px;
+  }
+
   h6 {
     border-bottom: 1px solid $cor-de-pele;
     margin: 0 0 8px 0;
+
+    @include md {
+      grid-column: 1 / -1;
+      font-size: 16px;
+      line-height: 30px;
+      letter-spacing: -0.5px;
+      color: #828282;
+    }
   }
 
   a {
@@ -581,28 +594,59 @@ a {
     }
   }
 
-  .project-details {
+  .project-categories {
     border: none;
     margin: 4px 0 0 0;
     font-weight: normal;
+    font-size: 16px;
+    line-height: 36px;
+    letter-spacing: -0.8px;
+    color: $ground-control;
   }
 
   .spotlight {
     grid-column-start: 1;
+
+    @include md {
+      grid-column: 1 / -1;
+      margin: 0 0 40px 0;
+
+      .spotlight-title {
+        font-size: 36px;
+        line-height: 40px;
+        letter-spacing: -1.2px;
+      }
+    }
   }
 
   .most-recent {
     grid-column: 2 / 4;
+
+    @include md {
+      grid-column: 1 / -1;
+      margin: 0 0 40px 0;
+    }
   }
   
   .old-but-gold {
     grid-column-start: 2;
     margin: -140px 0 0 0;
+
+    @include md {
+      grid-column-start: 1;
+      margin: 0 0 20px 0;
+    }
   }
 
   .simple-older {
     grid-column-start: 3;
     margin: -140px 0 0 0;
+
+    @include md {
+      grid-column-start: 2;
+      margin: 0 0 20px 0;
+
+    }
   }
 }
 
