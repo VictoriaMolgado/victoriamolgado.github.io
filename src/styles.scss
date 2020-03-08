@@ -567,6 +567,7 @@ a {
   grid-column-gap: 52px;
 
   @include md {
+    padding: 20px 0;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 16px;
   }
@@ -582,6 +583,16 @@ a {
       letter-spacing: -0.5px;
       color: #828282;
     }
+  }
+
+  .older-projects {
+    grid-column: 2 / 4;
+    margin: -180px 0 0 0;
+
+    @include md {
+      grid-column: 1 / -1;
+    }
+    
   }
 
   a {
@@ -627,7 +638,7 @@ a {
       margin: 0 0 40px 0;
     }
   }
-  
+
   .old-but-gold {
     grid-column-start: 2;
     margin: -140px 0 0 0;
