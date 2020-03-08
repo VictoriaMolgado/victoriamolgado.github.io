@@ -721,7 +721,7 @@ article {
 
 .project-intro {
   grid-column: 2 /4;
-  margin: 40px 0px 40px 0;
+  margin: 52px 0px 40px 0;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -755,15 +755,7 @@ article {
 }
 
 .disciplines { 
-  font-size: 16px;
-  line-height: 36px;
-  letter-spacing: -0.8px;
-  color: $ground-control;
-
-  @include md {
-  
-  }
-
+  color: #828282;
 }
 
 .project-details {
