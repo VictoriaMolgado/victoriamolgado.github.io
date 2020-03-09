@@ -979,6 +979,19 @@ article {
     grid-column: 1 / 4;
     grid-row-start: 5;
   }
+
+  .image-source {
+    grid-column: 4 / 10;
+    grid-row-start: 7;
+    margin: 60px 0 0 0;
+    font-family: "Muli";
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: -0.25px;
+    color: #828282;
+  }
 }
 
 .ending-decoration {
