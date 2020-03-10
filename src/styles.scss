@@ -975,6 +975,10 @@ article {
   margin: 52px 0 12px 0; 
   padding: 12px;
   background-color: $nevoa-espacial;
+
+  @include md {
+    grid-template-columns: 1fr;
+  }
   
   .process-item img {
     width: 100%;
@@ -984,6 +988,10 @@ article {
   .process__item--1 {
     grid-column: 4 / 10;
     grid-row: 1 / -1;
+
+    @include md {
+      grid-column-start: 1;
+    }
   }
 
   .process__item--2 {
