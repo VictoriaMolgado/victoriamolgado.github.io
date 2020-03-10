@@ -891,6 +891,12 @@ article {
   padding: 80px;
   background-color: $nevoa-espacial; 
 
+  @include md {
+    grid-template-columns: 1fr;
+    padding: 20px 20px 20px 20px;
+    margin: 48px 0 48px 0; 
+  }
+
   .horizontal-grid img {
     width: 100%;
     height: 100%;
@@ -899,14 +905,26 @@ article {
 
   .horizontal_item--1 {
     grid-column-start: 1;
+
+    @include md {
+      grid-column-start: 1;
+    }
   }
 
   .horizontal_item--2 {
     grid-column-start: 2;
+
+    @include md {
+      grid-column-start: 1;
+    }
   }
 
   .horizontal_item--3 {
     grid-column-start: 3;
+
+    @include md {
+      grid-column-start: 1;
+    }
   }
 }
 
