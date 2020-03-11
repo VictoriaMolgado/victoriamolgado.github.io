@@ -738,8 +738,8 @@ article {
   color: $azulejo-marciano;
 
   @include md {
-    grid-column-start: 2;
-    margin: 60px 0 0 0;
+    grid-column: 2 / 2;
+    margin: 60px 0 40px 0;
     font-family:'Muli', sans-serif;
     font-style: normal;
     font-weight: normal;
