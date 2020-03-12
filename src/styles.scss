@@ -900,7 +900,7 @@ article {
   .horizontal-grid img {
     width: 100%;
     height: 100%;
-    object-fit: scale-down;;
+    object-fit: scale-down;
   }
 
   .horizontal_item--1 {
@@ -1034,6 +1034,11 @@ article {
   }
 }
 
+.result-image {
+  grid-column: 1 / -1;
+  background-color: $nevoa-espacial;
+}
+
 .ending-decoration {
   grid-column-start: 3;
   margin: 80px 0 120px 0;
@@ -1086,12 +1091,9 @@ article {
   }
 
   .single-images {
-    display: grid;
-    background-color: #f2f2f2;
-    grid-column-start: 1;
-    grid-column-end: 5;
+    background-color: $nevoa-espacial;
+    grid-column: 1 / -1;
     margin: 32px 0 32px 0;
-    padding: 2px 0 2px 240px;
   
 
     .single img {
