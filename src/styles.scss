@@ -723,7 +723,6 @@ article {
       margin: 40px 0 0 0;
     }
   }
-
 }
 
 
@@ -1067,13 +1066,24 @@ article {
   }
 
 
-  .know-more:hover ~ .know-more-image-anvisa {
-    display: flex; 
-  }
+.know-more:hover ~ .know-more-image-anvisa {
+  display: flex; 
+}
 
-  .closing-article {
-    display: grid;
-    grid-template-columns: 160px 1fr 680px 160px;
+.single-images {
+  grid-column: 1 / -1;
+  background-color: $nevoa-espacial;
+  margin: 52px 0 52px 0;
+
+  .solo {
+    max-width: 100%;
+    object-fit: cover;
+  }
+}
+
+.closing-article {
+  display: grid;
+  grid-template-columns: 160px 1fr 680px 160px;
 
     .next-project {
       grid-column-end: 4;
@@ -1088,22 +1098,7 @@ article {
       grid-column-gap: 12px;
       grid-column-start: 2;
     }
-  }
-
-  .single-images {
-    background-color: $nevoa-espacial;
-    grid-column: 1 / -1;
-    margin: 32px 0 32px 0;
-  
-
-    .single img {
-     max-height: 532px;
-     grid-column-start: 3;
-    }
-
-  }
-  
-
+}
 /*----------------------------------- About style -----------------------------------*/
 
 .about-container {
