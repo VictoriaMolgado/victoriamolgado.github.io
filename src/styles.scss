@@ -782,7 +782,7 @@ article {
 .article-text {
   color: $ground-control; 
   display: inline-block;
-  margin: 20px 0 0 0;
+  margin: 20px 0 20px 0;
   grid-column-start: 3;
 
   @include md {
@@ -1073,7 +1073,6 @@ article {
 .single-images {
   grid-column: 1 / -1;
   background-color: $nevoa-espacial;
-  margin: 52px 0 52px 0;
 
   .solo {
     max-width: 100%;
