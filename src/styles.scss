@@ -704,7 +704,7 @@ article {
 
   h4 {
     grid-column: 3;
-    margin: 88px 0px 0 0;
+    margin: 88px 0 40px 0;
     color: $azulejo-marciano;
 
     @include md {
@@ -715,7 +715,7 @@ article {
 
   h5 {
     grid-column: 3;
-    margin: 52px 0 0 0;
+    margin: 0 0 0 0;
     color: $ground-control;
 
     @include md {
@@ -782,7 +782,7 @@ article {
 .article-text {
   color: $ground-control; 
   display: inline-block;
-  margin: 20px 0 20px 0;
+  margin: 12px 0 20px 0;
   grid-column-start: 3;
 
   @include md {
@@ -821,10 +821,6 @@ article {
 .bullet-list li {
   margin-top: 20px;
 }
-
-//h5:first-of-type {
-//margin-top: 0;
-//}
 
 .text-eye {
   grid-column-start: 3;
@@ -971,7 +967,7 @@ article {
   grid-template-rows: repeat(8, 5vw);
   grid-column: 1 / -1;
   grid-gap: 12px;
-  margin: 52px 0 12px 0; 
+  margin: 52px 0 52px 0; 
   padding: 12px;
   background-color: $nevoa-espacial;
 

@@ -131,13 +131,13 @@ h1 {
     font-family: 'Merriweather', serif;
     font-weight: 300;
     font-size: 20px;
-    line-height: 38px;
+    line-height: 36px;
     letter-spacing: 0.25px;
     color: #4F4F4F;
     
     @include sm {
-      font-size: 18px;
-      line-height: 32px;
+      font-size: 16px;
+      line-height: 28px;
       letter-spacing: 0.25px;
       color: #4F4F4F;
     }
