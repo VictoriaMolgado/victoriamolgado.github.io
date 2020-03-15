@@ -667,7 +667,7 @@ a {
 
 article {
   display: grid;
-  grid-template-columns: 160px 1fr 680px 160px;
+  grid-template-columns: 0.2fr 0.2fr 1fr 0.4fr;
   column-gap: 10px;
 
   @include md {
