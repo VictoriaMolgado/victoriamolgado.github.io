@@ -785,6 +785,22 @@ article {
   margin: 12px 0 20px 0;
   grid-column-start: 3;
 
+  a {
+    text-decoration: underline;
+    color: $azulejo-marciano;
+  }
+  
+  a:visited {
+    text-decoration: underline;
+    color: $azulejo-marciano;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: $nevoa-marciatica;
+  }
+
+
   @include md {
     grid-column-start: 2;
     margin: 20px 0 0 0;
