@@ -1,9 +1,4 @@
 /* ------------- Basic setup --------------*/
-
-html {
-  scroll-behavior: smooth;
-}
-
 @import "media";
 @import "fonts"; 
 @import "buttons"; 
@@ -16,6 +11,7 @@ html {
 }
 
 html {
+  scroll-behavior: smooth;
   background-color: $nevoa-marciatica;
   color: $azulejo-marciano;
   font-family: "Muli", Arial, Helvetica, sans-serif;
@@ -24,6 +20,14 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+html .article-styles {
+  background-color: white;
+  color: $azulejo-marciano;
+  font-family: "Muli", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
 
 .container {
   width: 90%;
@@ -862,7 +866,7 @@ article {
 
 .source {
   grid-column-start: 3;
-  margin: 20px 0 24px 0;
+  margin: 16px 0 52px 0;
   font-family: "Muli";
   font-style: normal;
   font-weight: lighter;
