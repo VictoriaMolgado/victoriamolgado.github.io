@@ -804,6 +804,9 @@ article {
     color: $dunas-de-marte
   }
 
+  a::selection {
+    color: white;
+  }
 
   @include md {
     grid-column-start: 2;
@@ -811,6 +814,11 @@ article {
 
   }
   
+}
+
+.article-text::selection {
+  color: white;
+  background-color: $azulejo-marciano;
 }
 
 .article-text:first-of-type {
