@@ -12,7 +12,7 @@
 }
 
 @mixin md {
-  @media (max-width: "1349px") {
+  @media (max-width: "1024px") {
     @content;
   }
 }
