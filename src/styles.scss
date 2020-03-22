@@ -1094,6 +1094,10 @@ article {
     max-width: 100%;
     object-fit: cover;
   }
+
+  @include md {
+    margin: 0;
+  }
 }
 
 .closing-article {
