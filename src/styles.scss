@@ -762,10 +762,7 @@ article {
 }
 
 .project-details {
-  font-size: 16px;
-  line-height: 36px;
-  letter-spacing: -0.8px;
-  color: $ground-control;
+  color: #828282;
 
   @include md {
     display: none;
