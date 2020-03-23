@@ -1163,7 +1163,7 @@ article {
 
   h1 {
     grid-column-start: 3;
-    margin: 80px 0 0 0;
+    margin: 80px 0 60px 0;
     z-index: -1;
 
     @include md {
@@ -1240,14 +1240,17 @@ article {
     letter-spacing: -0.5px;
     color: $ground-control;
 
-
     @include md {
       grid-column-start: 2;
     }
   }
+
+  .pilar::selection {
+    color: white;
+    background-color: $azulejo-marciano;
+  }
  
 }
-
 
 .go-further {
   display: grid;

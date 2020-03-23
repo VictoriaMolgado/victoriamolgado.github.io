@@ -18,7 +18,7 @@ function toggleContentStyle(content) {
   } else {
     content.style.display = "block";
   }
-
+  
   if (content.style.maxHeight){
     content.style.maxHeight = null;
   } else {
