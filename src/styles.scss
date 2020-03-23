@@ -1128,6 +1128,10 @@ article {
     grid-template-columns: 16px 1fr 16px;
   }
 
+  .text-container {
+    grid-column-start: 3;
+  }
+
   .about-header {
     grid-column-start: 3;
     margin: 254px 0 0 0;
@@ -1171,7 +1175,7 @@ article {
 
   h6 { 
     grid-column-start: 3;
-    margin: 0 0 4px 0;
+    margin: 40px 0 40px 0;
     padding: 0;
 
     @include md {
