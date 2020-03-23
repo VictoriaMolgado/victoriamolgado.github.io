@@ -50,8 +50,11 @@ body {
 footer {
   display: flex;
   align-items: flex-start;
-  padding-bottom: 120px;
-  margin: 80px 0 0 0;
+  padding: 80px 0 160px 0;
+
+  h3 {
+    max-width: 80%;
+  }
 
   .primary-btn {
     margin-top: 80px;
