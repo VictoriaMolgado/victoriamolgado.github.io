@@ -1113,7 +1113,7 @@ article {
 .single-images {
   grid-column: 1 / -1;
   background-color: $nevoa-espacial;
-  margin: 60px 100px 0 100px;
+  margin: 60px 120px 0 120px;
 
   .solo {
     max-width: 100%;
@@ -1138,10 +1138,12 @@ article {
 
 .closing-article {
   display: grid;
-  grid-template-columns: 160px 1fr 680px 160px;
+  grid-template-columns: 0.2fr 0.2fr 1fr 0.4fr;
+  padding-bottom: 200px;
 
     .next-project {
       grid-column-end: 4;
+      margin-bottom: 120px;
 
       @include md {
         grid-column-start: 2;
