@@ -1111,6 +1111,17 @@ article {
     object-fit: cover;
   }
 
+  .videos-align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+  }
+
+  .video-solo {
+    border: none;
+  }
+
   @include md {
     margin: 0;
   }
