@@ -719,7 +719,7 @@ article {
   h4 {
     grid-column: 3;
     margin: 60px 0 28px 0;
-    color: $azulejo-marciano;
+    color: $ground-control;
 
     @include md {
       grid-column-start: 2;
@@ -802,7 +802,7 @@ article {
 .article-text {
   color: $ground-control; 
   display: inline-block;
-  margin: 12px 0 32px 0;
+  margin: 12px 0 24px 0;
   grid-column-start: 3;
 
   a {
