@@ -765,6 +765,15 @@ article {
   }
 }
 
+.observation {
+  grid-column: 2 /4;
+  background-color: $nevoa-espacial;
+  font-family: monospace;
+  font-size: 16px;
+  letter-spacing: -1px;
+  padding: 20px 60px;
+}
+
 .project-context {
   display: grid;
   grid-column: 1 / -1;
