@@ -1013,8 +1013,11 @@ article {
   grid-column-end: 5;
   margin: 72px 0 60px 0;
 
-  .full-image img {
-    width: 80%;
+  .desktop-only {
+
+    @include sm {
+      display: none;
+    }
   }
 }
 
