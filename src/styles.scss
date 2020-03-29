@@ -1183,6 +1183,10 @@ article {
 
   .text-container {
     grid-column-start: 3;
+
+    @include md {
+      grid-column-start: 2;
+    }
   }
 
   .about-header {
