@@ -1009,8 +1009,9 @@ article {
 }
 
 .display-full-image { 
-  grid-column: 1 / -1;
-  margin: 72px 0 72px 0;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  margin: 72px 0 60px 0;
 
   .full-image img {
     width: 80%;
@@ -1173,7 +1174,7 @@ article {
 .about-container {
   display: grid;
   grid-template-columns: 100px 1fr 680px 100px;
-  grid-column-gap: 20px;
+  grid-column-gap: 28px;
 
   @include md {
     display: grid;
@@ -1224,6 +1225,16 @@ article {
     grid-column-start: 2;
     margin: 0 0 60px 0;
   }
+
+  .about-h4 {
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -1px;
+    color: $ground-control;
+    margin: 0 0 20px 0;
+  }
+
 
   h6 { 
     grid-column-start: 3;
