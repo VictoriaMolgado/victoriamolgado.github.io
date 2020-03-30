@@ -718,8 +718,13 @@ article {
 
   h4 {
     grid-column: 3;
-    margin: 60px 0 28px 0;
+    margin: 0 0 16px 0;
     color: $ground-control;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: -0.8px;
 
     @include md {
       grid-column-start: 2;
@@ -737,6 +742,18 @@ article {
       margin: 40px 0 0 0;
     }
   }
+
+  h6 {
+    grid-column-start: 3;
+    margin: 60px 0 12px 0;
+    color: #999;
+
+    @include md {
+      grid-column-start: 2;
+      margin: 0 0 20px 0;
+    }
+  }
+
 }
 
 
@@ -805,7 +822,7 @@ article {
 .article-text {
   color: $ground-control; 
   display: inline-block;
-  margin: 12px 0 24px 0;
+  margin: 0px 0 24px 0;
   grid-column-start: 3;
   font-family: 'Muli', sans-serif;
   font-style: normal;
@@ -902,7 +919,7 @@ article {
 
 .source {
   grid-column-start: 3;
-  margin: 16px 0 52px 0;
+  margin: 16px 0 20px 0;
   font-family: "Muli";
   font-style: normal;
   font-weight: lighter;
