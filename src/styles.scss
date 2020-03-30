@@ -718,7 +718,7 @@ article {
 
   h4 {
     grid-column: 3;
-    margin: 0 0 16px 0;
+    margin: 0 0 20px 0;
     color: $ground-control;
     font-style: normal;
     font-weight: 800;
@@ -831,6 +831,7 @@ article {
   line-height: 32px;
   letter-spacing: -0.3px;
   color: #4F4F4F;
+ 
 
 
 
@@ -866,25 +867,17 @@ article {
   background-color: $azulejo-marciano;
 }
 
-.article-text:first-of-type {
-  margin-top: 20px;
-
-  @include md {
-    margin: 20px 0 0 0;
-  }
-}
-
 .bullet-list {
   grid-column-start: 3;
   color: $ground-control; 
   margin: 12px 0 20px 0;
-  font-family: 'Merriweather', serif;
+  font-family: 'Muli', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
-  line-height: 32px;
-  letter-spacing: 0.25px;
-  color: $ground-control;
+  line-height: 24px;
+  letter-spacing: -0.3px;
+  color: #4F4F4F;
 
   @include md {
     grid-column-start: 2;
@@ -1143,7 +1136,7 @@ article {
 .single-images {
   grid-column: 1 / -1;
   background-color: $nevoa-espacial;
-  margin: 60px 120px 60px 120px;
+  margin: 40px 120px 40px 120px;
 
   .solo {
     max-width: 100%;
