@@ -1013,12 +1013,9 @@ article {
   grid-column-end: 5;
   margin: 72px 0 60px 0;
 
-  .desktop-only {
-
     @include sm {
       display: none;
     }
-  }
 }
 
 .process-grid {
