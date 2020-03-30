@@ -728,7 +728,7 @@ article {
 
     @include md {
       grid-column-start: 2;
-      margin: 60px 0 0 0;
+      margin: 0 0 16px 0;
     }
   }
 
@@ -750,7 +750,7 @@ article {
 
     @include md {
       grid-column-start: 2;
-      margin: 0 0 20px 0;
+      margin: 20px 0 16px 0;
     }
   }
 
@@ -831,8 +831,6 @@ article {
   line-height: 32px;
   letter-spacing: -0.3px;
   color: #4F4F4F;
- 
-
 
 
   a {
@@ -1155,7 +1153,7 @@ article {
   }
 
   @include md {
-    margin: 0;
+    margin: 20px 0 20px 0;
   }
 }
 
@@ -1257,7 +1255,7 @@ article {
 
     @include md {
       grid-column-start: 2;
-      margin: 40px 0 40px 0;
+      margin: 0 0 20px 0;
     }
 
   }
