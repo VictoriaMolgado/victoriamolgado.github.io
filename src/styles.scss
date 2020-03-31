@@ -759,8 +759,8 @@ article {
 
 .project-intro {
   grid-column: 2 / 5;
-  max-width: 1020px;
-  margin: 52px 0px 40px 0;
+  max-width: 1040px;
+  margin: 13px 0px 40px 0;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -770,7 +770,7 @@ article {
 
   @include md {
     grid-column: 2 / 2;
-    margin: 60px 0 40px 0;
+    margin: 20px 0 40px 0;
     font-family:'Muli', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -1140,6 +1140,7 @@ article {
   .solo {
     max-width: 100%;
     object-fit: cover;
+    align-self: center;
   }
 
   .videos-align {
