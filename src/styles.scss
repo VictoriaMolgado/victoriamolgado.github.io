@@ -795,8 +795,13 @@ article {
   line-height: 24px;
   margin: 12px 0;
   padding: 20px 60px;
+  color: $ground-control;
 
   a {
+    color: $azulejo-marciano;
+  }
+
+  a:hover {
     color: $dunas-de-marte;
   }
 }
