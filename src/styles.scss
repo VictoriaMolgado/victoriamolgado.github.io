@@ -718,7 +718,7 @@ article {
 
   h4 {
     grid-column: 3;
-    margin: 0 0 20px 0;
+    margin: 0 0 28px 0;
     color: $ground-control;
     font-style: normal;
     font-weight: 800;
@@ -728,7 +728,7 @@ article {
 
     @include md {
       grid-column-start: 2;
-      margin: 0 0 16px 0;
+      margin: 0 0 24px 0;
     }
   }
 
@@ -784,10 +784,11 @@ article {
 }
 
 .observation {
-  grid-column: 2 / 4;
+  grid-column: 3 / 4;
   background-color: $nevoa-espacial;
   font-family: monospace;
   font-size: 16px;
+  margin: 12px 0;
   padding: 20px 60px;
 
   a {
