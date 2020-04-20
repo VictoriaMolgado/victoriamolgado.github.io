@@ -1385,6 +1385,10 @@ article {
     grid-column-start: 2;
   }
 
+  @include md {
+    grid-template-columns: 1fr;
+  }
+
 }
 
 .branding-figures {
