@@ -1196,135 +1196,118 @@ article {
 }
 /*----------------------------------- About style -----------------------------------*/
 
-.about-container {
-  display: grid;
-  grid-template-columns: 100px 1fr 680px 100px;
-  grid-column-gap: 28px;
+.image-area {
+  display: flex;
 
-  @include md {
-    display: grid;
-    grid-template-columns: 16px 1fr 16px;
+  .about-picture {
+    margin: 120px 0 0 0;
+    height: 520px;
+    position: absolute;
+    z-index: -1;  
   }
 
-  .text-container {
-    grid-column-start: 3;
+  img {
+    object-fit: contain;
+  }
 
-    @include md {
-      grid-column-start: 2;
+  @include md {
+    .about-picture {
+      height: 240px;
+      position: relative; 
     }
+  }
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 80%;
+  margin: 0 auto;
+  justify-content: center;
+ 
+  .text-container {
+    max-width: 680px;
+    margin: 40px 0;
   }
 
   .about-header {
-    grid-column-start: 3;
-    margin: 220px 0 60px 0;
-    z-index: -1;
-
-    @include md {
-      grid-column-start: 2;
-      margin: 100px 0 0 0;
-    }
+    max-width: 680px;
+    margin: 200px 0 80px 0;
   }
 
   h1 {
-    grid-column-start: 3;
-    margin: 80px 0 60px 0;
-   
-
-    @include md {
-      grid-column-start: 2;
-      margin: 40px 0 0 0;
-    }
-  }
-
-  .h1-pink{ 
-    color: #DBA08F;
-  }
-
-  h2 {
-    grid-column-start: 3;
-    margin: 20px 0 60px 0;
-
-    @include md {
-      grid-column-start: 2;
-    }
-
-  }
-
-  h3 {
-    grid-column-start: 2;
-    margin: 0 0 60px 0;
-  }
-
-  .about-h4 {
-    font-weight: 800;
-    font-size: 36px;
-    line-height: 44px;
-    letter-spacing: -1px;
-    color: $ground-control;
-    margin: 0 0 20px 0;
-  }
-
-
-  h6 { 
-    grid-column-start: 3;
-    margin: 40px 0 40px 0;
-    padding: 0;
-
-    @include md {
-      grid-column-start: 2;
-      margin: 0 0 20px 0;
-    }
-
+    color: $dunas-de-marte;
   }
 
   p {
-    grid-column-start: 3;
-    margin: 0 0 60px 0;
+    margin: 20px 0 0 0;
+  }
 
-    @include md {
-      grid-column-start: 2;
-      font-family: 'Merriweather', sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 32px;
-      letter-spacing: 0.25px;
-      color: $ground-control;
+  .about-h4 {
+    max-width: 680px;
+  }
+
+  .principles {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 40px 0;
+  
+    .principle {
+      margin: 0 40px;
+      max-width: 240px;
+
+      .principle-icon {
+        padding: 24px 4px;
+        max-width: 80px;
+      }
+    
+      h4 {
+        font-weight: 800;
+        font-size: 36px;  
+        line-height: 40px;
+        letter-spacing: -1px;
+        color: $dunas-de-marte;
+      }
+    
+      p {
+        font-family: 'Muli', sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: -0.5px;
+        color: $ground-control;
+      }
+    }
+  }
+
+  @include md {
+    .about-container {
+      max-width: 92%;
     }
 
-  }
-
-  p:nth-of-type(5n) {
-    margin: 60px 0 100px 0;
-
-    @include md {
-      margin: 40px 0 40px 0;
+    .about-header {
+      max-width: 92%;
+      margin: 0;
     }
 
-  }
+    .about-h4 {
+      word-break: normal;
+    }
 
-  .pilar {
-    grid-column-end: 3;
-    margin: 0 0 80px 0;
-    font-family: 'Muli', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 36px;
-    letter-spacing: -0.5px;
-    color: $ground-control;
+    .principles {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
 
-    @include md {
-      grid-column-start: 2;
+    .principle {
+      margin: 24px 0 !important;
+      max-width: 100% !important;
     }
   }
-
-  .pilar::selection {
-    color: white;
-    background-color: $azulejo-marciano;
-  }
- 
 }
+
 
 .go-further {
   display: grid;
@@ -1400,6 +1383,10 @@ article {
 
   .secondary-btn {
     grid-column-start: 2;
+  }
+
+  @include md {
+    grid-template-columns: 1fr;
   }
 
 }
