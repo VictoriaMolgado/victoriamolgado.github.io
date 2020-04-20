@@ -368,7 +368,7 @@ a {
 
     .primary-btn {
       margin: 16px 0 0px 0;
-      grid-column-end: 6;
+      grid-column-start: 3;
 
       @include md { 
         margin: 0 0 0 0;
@@ -1384,32 +1384,23 @@ article {
   .secondary-btn {
     grid-column-start: 2;
   }
-
-  @include md {
-    grid-template-columns: 1fr;
-  }
-
 }
 
-.branding-figures {
-  display: grid;
-  grid-template-columns: 120px 0.8fr 680px 100px;
-
-  .brand-mood {
-    max-width: 376px;
-    z-index: -1;
-    margin: 60px 0 0 0;
+@include md {
+  .further-btn  {
+    grid-template-columns: repeat(2, 1fr);
   }
-
-  .brand-profile { 
-    max-width: 376px;
-    margin: 312px 0 0 0;
+  .primary-btn {
+    grid-column-start: 1;
   }
-
-  @include md {
-    display: none;
+  
+  .secondary-btn {
+    grid-column-start: 2;
   }
 }
+
+
+
 
 .key-step {
   user-select: none;
