@@ -1213,8 +1213,8 @@ article {
   @include md {
     .about-picture {
       height: 240px;
+      position: relative; 
     }
-    
   }
 }
 
@@ -1285,6 +1285,15 @@ article {
   @include md {
     .about-container {
       max-width: 92%;
+    }
+
+    .about-header {
+      max-width: 92%;
+      margin: 0;
+    }
+
+    .about-h4 {
+      word-break: normal;
     }
 
     .principles {
