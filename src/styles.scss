@@ -60,10 +60,19 @@ footer {
     margin-top: 80px;
 
     @include sm {
-      margin: 80px 0 0 0;
+      margin: 32px 0 0 0;
+    }
+  }
+
+  @include md {
+    flex-direction: column;
+
+    h3 {
+      max-width: 100%;
     }
   }
 }
+
 
 a { 
   text-decoration: none;
