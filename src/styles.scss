@@ -1196,11 +1196,33 @@ article {
 }
 /*----------------------------------- About style -----------------------------------*/
 
+.image-area {
+  display: flex;
+
+  .about-picture {
+    margin: 120px 0 0 0;
+    height: 520px;
+    position: absolute;
+    z-index: -1;  
+  }
+
+  img {
+    object-fit: contain;
+  }
+
+  @include md {
+    .about-picture {
+      height: 240px;
+    }
+    
+  }
+}
+
 .about-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  max-width: 1200px;
+  max-width: 80%;
   margin: 0 auto;
   justify-content: center;
  
@@ -1214,7 +1236,7 @@ article {
     margin: 200px 0 80px 0;
   }
 
-  .h1-pink {
+  h1 {
     color: $dunas-de-marte;
   }
 
@@ -1226,42 +1248,57 @@ article {
     max-width: 680px;
   }
 
-}
+  .principles {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 40px 0;
+  
+    .principle {
+      margin: 0 40px;
+      max-width: 240px;
 
-.principles {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  margin: 80px 0;
-}
-
-.principle {
-  margin: 0 40px;
-  max-width: 240px;
-
-  h4 {
-    font-weight: 800;
-    font-size: 36px;  
-    line-height: 40px;
-    letter-spacing: -1px;
-    color: $dunas-de-marte;
+      .principle-icon {
+        padding: 24px 4px;
+        max-width: 80px;
+      }
+    
+      h4 {
+        font-weight: 800;
+        font-size: 36px;  
+        line-height: 40px;
+        letter-spacing: -1px;
+        color: $dunas-de-marte;
+      }
+    
+      p {
+        font-family: 'Muli', sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: -0.5px;
+        color: $ground-control;
+      }
+    }
   }
 
-  p {
-    font-family: 'Muli', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
-    letter-spacing: -0.5px;
-    color: $ground-control;
+  @include md {
+    .about-container {
+      max-width: 92%;
+    }
+
+    .principles {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .principle {
+      margin: 24px 0 !important;
+      max-width: 100% !important;
+    }
   }
-
 }
 
-.principle-icon {
-  padding: 24px 4px;
-  max-width: 80px;
-}
 
 .go-further {
   display: grid;
