@@ -819,6 +819,10 @@ article {
   a:hover {
     color: $dunas-de-marte;
   }
+
+  @include md {
+    display: none;
+  }
 }
 
 .project-context {
