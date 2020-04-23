@@ -1192,7 +1192,7 @@ article {
 .closing-article {
   display: grid;
   grid-template-columns: 0.2fr 0.2fr 0.8fr 0.4fr;
-  padding-bottom: 200px;
+  padding: 60px 0 120px 0;
 
     .next-project {
       grid-column-end: 4;
