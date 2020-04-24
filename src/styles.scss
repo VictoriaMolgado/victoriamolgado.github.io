@@ -689,9 +689,11 @@ a {
 /* ----------------------------------- article style -----------------------------------*/
 
 article {
-  display: grid;
-  grid-template-columns: 0.2fr 0.2fr 0.8fr 0.4fr;
-  column-gap: 10px;
+  display: flex;
+  flex-direction: row;
+  max-width: 92%;
+  flex-wrap: wrap;
+  margin: 0 auto;
 
   @include md {
   display: grid;
@@ -701,8 +703,6 @@ article {
   }
 
   h3 {
-    grid-column: 2 / 4;
-    grid-column-start: 2;
     font-style: normal;
     font-weight: 800;
     font-size: 76px;
@@ -726,7 +726,6 @@ article {
   }
 
   h4 {
-    grid-column: 3;
     margin: 0 0 28px 0;
     color: $ground-control;
     font-style: normal;
@@ -746,7 +745,6 @@ article {
   }
 
   h5 {
-    grid-column: 3;
     margin: 20px 0 0 0;
     color: $ground-control;
 
@@ -757,7 +755,6 @@ article {
   }
 
   h6 {
-    grid-column-start: 3;
     margin: 60px 0 12px 0;
     font-weight: 400;
     font-size: 20px;
@@ -771,34 +768,13 @@ article {
     }
   }
 
-}
-
-
-.project-intro {
-  grid-column: 2 / 5;
-  max-width: 1040px;
-  margin: 13px 0px 40px 0;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 28px;
-  letter-spacing: -0.5px;
-  color: $azulejo-marciano;
-
-  @include md {
-    grid-column: 2 / 2;
-    margin: 20px 0 40px 0;
-    font-family:'Muli', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 30px;
-    letter-spacing: -0.6px;
-    color: $azulejo-marciano;
-
-
+  .text-container {
+    max-width: 60%;
+    margin: 0 auto;
   }
+
 }
+
 
 .observation {
   display: flex;
@@ -826,13 +802,8 @@ article {
 }
 
 .project-context {
-  display: grid;
-  grid-column: 1 / -1;
-  grid-auto-flow: column;
-  grid-column-start: 2;
-  margin: 0 0 0 0;
-
-
+  display: flex;
+  flex-direction: column;
 }
 
 .disciplines { 
@@ -897,7 +868,6 @@ article {
 }
 
 .bullet-list {
-  grid-column-start: 3;
   color: $ground-control; 
   margin: 12px 0 20px 0;
   font-family: 'Muli', sans-serif;
@@ -918,7 +888,6 @@ article {
 }
 
 .text-eye {
-  grid-column-start: 3;
   margin: 80px 0 0 0;
   font-family: "Muli";
   font-style: normal;
@@ -940,7 +909,6 @@ article {
 }
 
 .source {
-  grid-column-start: 3;
   margin: 4px 0 20px 0;
   font-family: "Muli";
   font-style: normal;
@@ -951,7 +919,6 @@ article {
   color: #828282;
 
   @include md {
-    grid-column-start: 2;
     font-family: 'Muli', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -963,21 +930,10 @@ article {
 
 }
 
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(7, 5vw);
-  grid-column: 1 / -1;
-  grid-gap: 15px;
-  margin: 52px 0 52px 0;     
-}
-
 .horizontal-image-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column: 1 / -1;
-  grid-gap: 15px;
-  margin: 40px 0 8px 0;    
+  display: flex;
+  flex-direction: row;
+  margin: 40px 12px;   
   padding: 12px 8px;
 
   @include md {
