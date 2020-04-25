@@ -690,16 +690,21 @@ a {
 
 article {
   display: flex;
-  flex-direction: row;
-  max-width: 92%;
+  flex-direction: column;
   flex-wrap: wrap;
   margin: 0 auto;
 
   @include md {
-  display: grid;
-  grid-template-columns: 16px 1fr 16px;
-  column-gap: 12px;
+  display: flex;
 
+  }
+
+  .title-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 680px;
+    padding: 200px 0 60px 120px;
   }
 
   h3 {
@@ -709,8 +714,7 @@ article {
     line-height: 96px;
     letter-spacing: -1.2px;
     color: $ground-control;
-    margin: 260px 0px 20px 0;
-  
+
     @include md {
       grid-column-start: 2;
       font-family: 'Muli', sans-serif;
@@ -769,7 +773,7 @@ article {
   }
 
   .text-container {
-    max-width: 60%;
+    max-width: 680px;
     margin: 0 auto;
   }
 
@@ -802,8 +806,7 @@ article {
 }
 
 .project-context {
-  display: flex;
-  flex-direction: column;
+  margin: 20px 0 0 0;
 }
 
 .disciplines { 
@@ -823,7 +826,6 @@ article {
 
 .article-text {
   color: $ground-control; 
-  display: inline-block;
   margin: 0px 0 24px 0;
   grid-column-start: 3;
   font-family: 'Muli', sans-serif;
@@ -909,7 +911,8 @@ article {
 }
 
 .source {
-  margin: 4px 0 20px 0;
+  max-width: 60%;
+  margin: 0 auto;
   font-family: "Muli";
   font-style: normal;
   font-weight: lighter;
