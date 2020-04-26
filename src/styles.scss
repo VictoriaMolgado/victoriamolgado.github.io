@@ -767,7 +767,7 @@ article {
 
   .text-container {
     max-width: 680px;
-    margin: 0 auto;
+    align-self: center;
   }
 
   @include md {
@@ -900,7 +900,7 @@ article {
   color: #828282;
 
   @include md {
-
+    margin: 4px 0 4px 0;
   }
 }
 
