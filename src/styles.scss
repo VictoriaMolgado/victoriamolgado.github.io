@@ -726,7 +726,7 @@ article {
   }
 
   h4 {
-    margin: 40px 0 12px 0;
+    margin: 12px 0 24px 0;
     color: $ground-control;
     font-style: normal;
     font-weight: 800;
@@ -752,7 +752,7 @@ article {
   }
 
   h6 {
-    margin: 60px 0 12px 0;
+    margin: 52px 0 0 0;
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
@@ -766,6 +766,8 @@ article {
   }
 
   .text-container {
+    display: flex;
+    justify-content: flex-start;
     max-width: 680px;
     margin: 0 auto;
   }
