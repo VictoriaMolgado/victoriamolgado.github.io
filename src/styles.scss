@@ -766,8 +766,6 @@ article {
   }
 
   .text-container {
-    display: flex;
-    justify-content: flex-start;
     max-width: 680px;
     margin: 0 auto;
   }
@@ -902,7 +900,7 @@ article {
   color: #828282;
 
   @include md {
-    grid-column-start: 2;
+
   }
 }
 
