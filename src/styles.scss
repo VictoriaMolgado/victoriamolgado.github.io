@@ -734,11 +734,6 @@ article {
     font-size: 32px;
     line-height: 44px;
     letter-spacing: -0.8px;
-
-    @include md {
-      grid-column-start: 2;
-      margin: 0 0 24px 0;
-    }
   }
 
 
@@ -753,22 +748,21 @@ article {
   }
 
   h6 {
-    margin: 52px 0 0 0;
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
     letter-spacing: -0.5px;
     color: $dunas-de-marte;
-
-    @include md {
-      grid-column-start: 2;
-      margin: 20px 0 16px 0;
-    }
   }
 
   .text-container {
-    max-width: 680px;
+    max-width: 640px;
     align-self: center; 
+    margin: 64px 0 0 0;
+
+    @include md {
+      margin: 20px 0 16px 0;
+    }
   }
 
   .case-container {
