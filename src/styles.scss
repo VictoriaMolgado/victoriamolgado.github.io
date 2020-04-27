@@ -995,20 +995,23 @@ article {
 .horizontal-image-grid {
   display: flex;
   flex-direction: row;
-  margin: 40px 12px;   
+  margin: 0 auto;   
   padding: 12px 8px;
   max-width: 100%;
 
   @include md {
     display: flex;
     flex-direction: column;
-    padding: 20px 20px 20px 20px;
     margin: 20px 0 20px 0; 
   }
 
   .reduction {
     max-width: 92%;
     object-fit: contain;
+
+    @include md {
+      margin: 12px 0;
+    }
   }
 
 }
