@@ -771,12 +771,17 @@ article {
     align-self: center; 
   }
 
-  .case-container{
+  .case-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+
+    @include md {
+      display: flex;
+      flex-direction: row;
+    }
   }
 
   .case-text {
@@ -799,6 +804,22 @@ article {
       line-height: 28px;
       letter-spacing: -0.2px;
       color: #828282;
+    }
+  }
+
+  @include md {
+    .case-text {
+      max-width: 80%;
+    }
+  }
+
+  .case-image {
+    
+    @include md {
+        img {
+        max-width: 100%;
+        object-fit: contain;
+      }
     }
   }
 
