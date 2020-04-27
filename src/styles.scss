@@ -1044,23 +1044,18 @@ article {
 }
 
 .closing-article {
-  display: grid;
-  grid-template-columns: 0.2fr 0.2fr 0.8fr 0.4fr;
+  display: flex;
+  max-width: 64%;
+  margin: 0 auto;
   padding: 60px 0 120px 0;
 
     .next-project {
-      grid-column-end: 4;
       margin-bottom: 120px;
-
-      @include md {
-        grid-column-start: 2;
-      }
     }
 
     @include md {
-      grid-template-columns: 16px 1fr 16px;
-      grid-column-gap: 12px;
-      grid-column-start: 2;
+      padding: 20px 0 120px 0;
+      max-width: 88%;
     }
 }
 
