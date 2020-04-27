@@ -694,6 +694,7 @@ article {
   flex-direction: column;
   flex-wrap: wrap;
   margin: 0 auto;
+ 
 
   .title-wrap {
     display: flex;
@@ -767,7 +768,38 @@ article {
 
   .text-container {
     max-width: 680px;
-    align-self: center;
+    align-self: center; 
+  }
+
+  .case-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .case-text {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 400px;
+
+    h6 {
+      margin: 0 0 48px 0;
+    }
+
+    p {
+      color: $ground-control; 
+      margin: 0px 0 24px 0;
+      grid-column-start: 3;
+      font-family: 'Muli', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: -0.2px;
+      color: #828282;
+    }
   }
 
   @include md {
@@ -794,6 +826,7 @@ article {
       max-width: 80%;
       margin: 40px auto;
     }
+
   }
 
 }
@@ -890,7 +923,7 @@ article {
 
 .bullet-list {
   color: $ground-control; 
-  margin: 12px 0 20px 0;
+  margin: 40px auto;
   font-family: 'Muli', sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -931,7 +964,7 @@ article {
 
 .source {
   max-width: 60%;
-  margin: 0 auto;
+  margin: 20px auto;
   font-family: "Muli";
   font-style: normal;
   font-weight: lighter;
