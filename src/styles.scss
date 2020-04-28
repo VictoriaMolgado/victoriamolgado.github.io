@@ -586,38 +586,69 @@ a {
 
 .projects {
   padding: 72px 0;
-  display: grid;
-  grid-template-columns: 552px 1fr 1fr;
-  grid-column-gap: 52px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
   @include md {
     padding: 20px 0;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 16px;
   }
 
-  h6 {
-    border-bottom: 1px solid $cor-de-pele;
-    margin: 0 0 8px 0;
+  .spotlight {
+    max-width: 50%;
 
     @include md {
-      grid-column: 1 / -1;
-      font-size: 16px;
-      line-height: 30px;
-      letter-spacing: -0.5px;
-      color: #828282;
+      max-width: 92%;
+      padding: 0 0 28px 0;
+    }
+  }
+
+  .spotlight-title {
+
+    @include md {
+      font-size: 36px;
+      line-height: 40px;
+      letter-spacing: -1.2px;
+    }
+  }
+
+  .other-cases {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0 60px 0 60px;
+
+    @include md {
+      padding: 0;
+    }
+  }
+  
+
+  .most-recent {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 60px 0;
+
+    @include md {
+      padding: 0 0 40px 0;
     }
   }
 
   .older-projects {
-    grid-column: 2 / 4;
-    margin: -180px 0 0 0;
-
-    @include md {
-      grid-column: 1 / -1;
-    }
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 8px 0 20px 0;
   }
+
+  .old-but-gold {
+    max-width: 200px;
+  }
+
+  .old-but-gold:first-of-type {
+    margin: 0 36px 0 0;
+  }
+
 
   a {
     color: $azulejo-marciano;
@@ -626,6 +657,20 @@ a {
     &:hover {
       cursor: pointer;
       color: $dunas-de-marte;
+    }
+  }
+
+  h6 {
+    border-bottom: 1px solid $cor-de-pele;
+    margin: 0 0 8px 0;
+    color: #828282;;
+    
+
+    @include md {
+      font-size: 16px;
+      line-height: 30px;
+      letter-spacing: -0.5px;
+      color: #828282;
     }
   }
 
@@ -639,50 +684,6 @@ a {
     color: $ground-control;
   }
 
-  .spotlight {
-    grid-column-start: 1;
-
-    @include md {
-      grid-column: 1 / -1;
-      margin: 0 0 40px 0;
-
-      .spotlight-title {
-        font-size: 36px;
-        line-height: 40px;
-        letter-spacing: -1.2px;
-      }
-    }
-  }
-
-  .most-recent {
-    grid-column: 2 / 4;
-
-    @include md {
-      grid-column: 1 / -1;
-      margin: 0 0 40px 0;
-    }
-  }
-
-  .old-but-gold {
-    grid-column-start: 2;
-    margin: -140px 0 0 0;
-
-    @include md {
-      grid-column-start: 1;
-      margin: 0 0 20px 0;
-    }
-  }
-
-  .simple-older {
-    grid-column-start: 3;
-    margin: -140px 0 0 0;
-
-    @include md {
-      grid-column-start: 2;
-      margin: 0 0 20px 0;
-
-    }
-  }
 }
 
 /* ----------------------------------- Projects section ends-----------------------------------*/
