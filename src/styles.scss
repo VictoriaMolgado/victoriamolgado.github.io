@@ -770,8 +770,9 @@ article {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    margin: 40px 120px 40px 120px;
 
     @include md {
       display: flex;
@@ -810,7 +811,13 @@ article {
     }
   }
 
+  .case-image-frame {
+    display: flex;
+    flex-direction: row;
+  }
+
   .case-image {
+    max-width: 640px;
     
     @include md {
         img {
