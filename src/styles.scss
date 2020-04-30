@@ -827,6 +827,20 @@ article {
     }
   }
 
+  .case-single-images {
+    margin: 0 92px 48px 92px;
+
+    .case-solo {
+      max-width: 100%;
+      object-fit: cover;
+      align-self: center;
+    }
+  
+    @include md {
+      margin: 20px 0 20px 0;
+    }
+  }
+
   @include md {
 
     .article {
