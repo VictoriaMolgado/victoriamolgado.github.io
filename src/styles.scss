@@ -698,10 +698,13 @@ a {
   a {
     color: $azulejo-marciano;
     transition: .2s ease-in-out;
+    text-decoration: underline;
+    text-decoration-color: $azulejo-marciano;
 
     &:hover {
       cursor: pointer;
       color: $dunas-de-marte;
+      text-decoration-color: $dunas-de-marte;
     }
   }
 
