@@ -683,7 +683,81 @@ a {
     letter-spacing: -0.8px;
     color: $ground-control;
   }
+}
 
+.my-content {
+  display: flex;
+  flex-direction: row;
+  max-width: 80%;
+  margin: 32px auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 0px 0px 80px;
+  background-color: $nevoa-espacial;
+
+  @include md {
+    display: flex;
+    flex-direction: column;
+    max-width: 92%;
+    margin: 16px auto;
+    padding: 40px 20px;
+  }
+
+
+  a {
+    color: $azulejo-marciano;
+    transition: .2s ease-in-out;
+    text-decoration: underline;
+    text-decoration-color: $azulejo-marciano;
+
+    &:hover {
+      cursor: pointer;
+      color: $dunas-de-marte;
+      text-decoration-color: $dunas-de-marte;
+    }
+  }
+
+  .banner-text {
+    flex-direction: row;
+    max-width: 400px;
+
+
+    h3 {
+      margin: 0 0 32px 0;
+
+      @include md {
+        margin: 0 0 16px 0;
+      }
+    }
+    
+    p {
+      max-width: 288px;
+    }
+
+    @include md {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+  .banner-mockup {
+    display: flex;
+    flex-direction: row;
+    float: right;
+
+    @include md {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+  .banner-image {
+    max-width: 392px;
+
+    @include md {
+      display: none;
+     }
+  }
 }
 
 /* ----------------------------------- Projects section ends-----------------------------------*/
@@ -770,8 +844,9 @@ article {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    margin: 48px 92px 48px 92px;
 
     @include md {
       display: flex;
@@ -787,6 +862,7 @@ article {
 
     h6 {
       margin: 0 0 48px 0;
+      color: #828282;
     }
 
     p {
@@ -803,6 +879,25 @@ article {
     }
   }
 
+  a {
+    text-decoration: underline;
+    color: $azulejo-marciano;
+  }
+  
+  a:visited {
+    text-decoration: underline;
+    color: $azulejo-marciano;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: $dunas-de-marte
+  }
+
+  a::selection {
+    color: white;
+  }
+
   @include md {
 
     .case-text {
@@ -810,13 +905,33 @@ article {
     }
   }
 
+  .case-image-frame {
+    display: flex;
+    flex-direction: row;
+  }
+
   .case-image {
+    max-width: 640px;
     
     @include md {
         img {
         max-width: 100%;
         object-fit: contain;
       }
+    }
+  }
+
+  .case-single-images {
+    margin: 0 92px 48px 92px;
+
+    .case-solo {
+      max-width: 100%;
+      object-fit: cover;
+      align-self: center;
+    }
+  
+    @include md {
+      margin: 20px 0 20px 0;
     }
   }
 
@@ -842,6 +957,7 @@ article {
   }
 
 }
+
 
 
 
@@ -887,9 +1003,8 @@ article {
   font-weight: normal;
   font-size: 18px;
   line-height: 28px;
-  letter-spacing: -0.2px;
+  letter-spacing: 0px;
   color: #828282;
-
 
   a {
     text-decoration: underline;
@@ -911,9 +1026,7 @@ article {
   }
 
   @include md {
-    grid-column-start: 2;
     margin: 20px 0 0 0;
-
   }
   
 }
@@ -966,7 +1079,7 @@ article {
 
 .source {
   max-width: 60%;
-  margin: 20px auto;
+  margin: 8px auto 40px auto;
   font-family: "Muli";
   font-style: normal;
   font-weight: lighter;
@@ -1116,7 +1229,7 @@ article {
   
     .principle {
       margin: 0 40px;
-      max-width: 240px;
+      max-width: 260px;
 
       .principle-icon {
         padding: 24px 4px;
@@ -1130,14 +1243,25 @@ article {
         letter-spacing: -1px;
         color: $dunas-de-marte;
       }
+
+      .scope {
+        font-weight: 800;
+        font-size: 36px;  
+        line-height: 40px;
+        letter-spacing: -1px;
+        color: $ground-control;
+      }
     
       p {
+        margin: 0px 0 24px 0;
+        grid-column-start: 3;
         font-family: 'Muli', sans-serif;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 30px;
-        letter-spacing: -0.5px;
-        color: $ground-control;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0px;
+        color: #828282;
       }
     }
   }
