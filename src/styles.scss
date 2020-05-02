@@ -866,6 +866,7 @@ article {
 
 
 
+
 .observation {
   display: flex;
   max-width: 76%;
@@ -1150,6 +1151,14 @@ article {
         line-height: 40px;
         letter-spacing: -1px;
         color: $dunas-de-marte;
+      }
+
+      .scope {
+        font-weight: 800;
+        font-size: 36px;  
+        line-height: 40px;
+        letter-spacing: -1px;
+        color: $ground-control;
       }
     
       p {
