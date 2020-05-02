@@ -683,7 +683,50 @@ a {
     letter-spacing: -0.8px;
     color: $ground-control;
   }
+}
 
+.my-content {
+  display: flex;
+  flex-direction: row;
+  max-width: 80%;
+  margin: 32px auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 0px 0px 80px;
+  background-color: $nevoa-espacial;
+
+  a {
+    color: $azulejo-marciano;
+    transition: .2s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      color: $dunas-de-marte;
+    }
+  }
+
+  .banner-text {
+    flex-direction: row;
+    max-width: 400px;
+  
+    h3 {
+      margin: 0 0 32px 0;
+    }
+    
+    p {
+      max-width: 288px;
+    }
+  }
+  
+  .banner-mockup {
+    display: flex;
+    flex-direction: row;
+    float: right;
+  }
+  
+  .banner-image {
+    max-width: 392px;
+  }
 }
 
 /* ----------------------------------- Projects section ends-----------------------------------*/
