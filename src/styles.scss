@@ -695,6 +695,15 @@ a {
   padding: 0px 0px 0px 80px;
   background-color: $nevoa-espacial;
 
+  @include md {
+    display: flex;
+    flex-direction: column;
+    max-width: 92%;
+    margin: 16px auto;
+    padding: 40px 20px;
+  }
+
+
   a {
     color: $azulejo-marciano;
     transition: .2s ease-in-out;
@@ -711,13 +720,23 @@ a {
   .banner-text {
     flex-direction: row;
     max-width: 400px;
-  
+
+
     h3 {
       margin: 0 0 32px 0;
+
+      @include md {
+        margin: 0 0 16px 0;
+      }
     }
     
     p {
       max-width: 288px;
+    }
+
+    @include md {
+      display: flex;
+      flex-direction: column;
     }
   }
   
@@ -725,10 +744,19 @@ a {
     display: flex;
     flex-direction: row;
     float: right;
+
+    @include md {
+      display: flex;
+      flex-direction: column;
+    }
   }
   
   .banner-image {
     max-width: 392px;
+
+    @include md {
+      display: none;
+     }
   }
 }
 
