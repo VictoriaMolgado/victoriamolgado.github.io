@@ -788,6 +788,7 @@ article {
 
     h6 {
       margin: 0 0 48px 0;
+      color: #828282;
     }
 
     p {
@@ -802,6 +803,25 @@ article {
       letter-spacing: -0.2px;
       color: #828282;
     }
+  }
+
+  a {
+    text-decoration: underline;
+    color: $azulejo-marciano;
+  }
+  
+  a:visited {
+    text-decoration: underline;
+    color: $azulejo-marciano;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: $dunas-de-marte
+  }
+
+  a::selection {
+    color: white;
   }
 
   @include md {
@@ -909,7 +929,7 @@ article {
   font-weight: normal;
   font-size: 18px;
   line-height: 28px;
-  letter-spacing: -0.2px;
+  letter-spacing: 0px;
   color: #828282;
 
 
@@ -933,9 +953,7 @@ article {
   }
 
   @include md {
-    grid-column-start: 2;
     margin: 20px 0 0 0;
-
   }
   
 }
@@ -988,7 +1006,7 @@ article {
 
 .source {
   max-width: 60%;
-  margin: 20px auto;
+  margin: 8px auto 40px auto;
   font-family: "Muli";
   font-style: normal;
   font-weight: lighter;
