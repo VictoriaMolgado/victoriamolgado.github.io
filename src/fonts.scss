@@ -102,13 +102,13 @@ h1 {
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
-    line-height: 32px;
+    line-height: 36px;
     letter-spacing: -0.6px;
     color: #4F4F4F;
   
     @include sm {
       font-size: 20px;
-      line-height: 36px;
+      line-height: 30px;
     }
   }
   

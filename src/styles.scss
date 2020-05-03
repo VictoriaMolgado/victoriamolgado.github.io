@@ -877,6 +877,12 @@ article {
       max-width: 96%;
     }
 
+    h5 {
+      @include md {
+        margin: 0 0 24px 0;
+      }
+    }
+
     h6 {
       margin: 0 0 48px 0;
       color: #828282;
