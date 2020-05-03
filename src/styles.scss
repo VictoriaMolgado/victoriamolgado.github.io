@@ -769,6 +769,12 @@ article {
   flex-direction: column;
   flex-wrap: wrap;
   margin: 0 auto;
+
+  @include md {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 88%;
+  }
  
 
   .title-wrap {
@@ -777,6 +783,11 @@ article {
     flex-wrap: wrap;
     max-width: 680px;
     padding: 200px 0 60px 120px;
+
+    @include md {
+      max-width: 88%;
+      padding: 80px 0 60px 20px;
+    }
   }
 
   h3 {
@@ -836,7 +847,8 @@ article {
     margin: 64px 0 0 0;
 
     @include md {
-      margin: 20px 0 16px 0;
+      max-width: 92%;
+      margin: 40px auto;
     }
   }
 
@@ -922,6 +934,10 @@ article {
   }
 
   .case-single-images {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: $nevoa-espacial;
     margin: 0 92px 48px 92px;
 
     .case-solo {
@@ -932,29 +948,12 @@ article {
   
     @include md {
       margin: 20px 0 20px 0;
+      max-width: 100%;
     }
   }
 
-  @include md {
 
-    .article {
-      max-width: 88%;
-      margin: 0 auto;
-    }
-
-    .title-wrap {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      max-width: 88%;
-      padding: 80px 0 60px 20px;
-    }
-
-    .text-container {
-      max-width: 84%;
-      margin: 40px auto;
-    }
-  }
+  
 
 }
 
