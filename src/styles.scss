@@ -859,6 +859,7 @@ article {
     justify-content: space-between;
     align-items: center;
     margin: 48px 92px 48px 92px;
+    max-width: 100%;
 
     @include md {
       max-width: 100%;
