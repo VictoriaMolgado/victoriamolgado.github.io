@@ -863,14 +863,19 @@ article {
     @include md {
       display: flex;
       flex-direction: row;
+      margin: 0 auto;
     }
   }
 
   .case-text {
-
+    
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 400px;
+
+    @include md {
+      max-width: 96%;
+    }
 
     h6 {
       margin: 0 0 48px 0;
@@ -910,13 +915,6 @@ article {
     color: white;
   }
 
-  @include md {
-
-    .case-text {
-      max-width: 80%;
-    }
-  }
-
   .case-image-frame {
     display: flex;
     flex-direction: row;
@@ -926,10 +924,8 @@ article {
     max-width: 640px;
     
     @include md {
-        img {
-        max-width: 100%;
-        object-fit: contain;
-      }
+      max-width: 100%;
+      object-fit: contain;
     }
   }
 
@@ -951,10 +947,6 @@ article {
       max-width: 100%;
     }
   }
-
-
-  
-
 }
 
 
@@ -1079,7 +1071,7 @@ article {
 .source {
   max-width: 60%;
   margin: 8px auto 40px auto;
-  font-family: "Muli";
+  font-family: 'Muli', sans-serif;
   font-style: normal;
   font-weight: lighter;
   font-size: 18px;
@@ -1088,13 +1080,11 @@ article {
   color: #828282;
 
   @include md {
-    font-family: 'Muli', sans-serif;
-    font-style: normal;
-    font-weight: normal;
+    max-width: 96%;
+    font-weight: lighter;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.4px;
-    color: #828282;
   }
 
 }
