@@ -863,12 +863,11 @@ article {
     @include md {
       display: flex;
       flex-direction: row;
-      margin: 0 auto;
+      margin: 60px auto 0px auto;
     }
   }
 
   .case-text {
-    
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 400px;
@@ -880,6 +879,10 @@ article {
     h6 {
       margin: 0 0 48px 0;
       color: #828282;
+
+      @include md {
+        margin: 0 0 16px 0;
+      }
     }
 
     p {
