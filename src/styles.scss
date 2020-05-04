@@ -934,14 +934,15 @@ article {
   }
 
   .case-image {
-    max-width: 640px;
-    max-height: 640px;
-    margin: 0 auto;
-    
-    @include md {
-      max-width: 88vw !important;
-      object-fit: contain;
-    }
+      max-width: 640px;
+      max-height: 640px;
+      margin: 0 auto;
+
+      @include sm {
+        max-width: 330px;
+        max-height: 330px;
+        object-fit: contain;
+      }
   }
 
   .case-single-images {
