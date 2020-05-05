@@ -945,6 +945,18 @@ article {
       }
   }
 
+  .horizontal-case-image {
+    max-width: 640px;
+    max-height: 129px;
+    margin: 0 auto;
+
+    @include sm {
+      max-width: 330px;
+      max-height: 66px;
+      object-fit: contain;
+    }
+  }
+
   .case-single-images {
     display: flex;
     flex-direction: column;
