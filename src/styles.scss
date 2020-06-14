@@ -180,33 +180,6 @@ a {
     }
 }
 
-.header .menu-dark {
-  clear: both;
-  max-height: 0;
-  transition: max-height .2s ease-out;
-  list-style: none;
-  font-family: "Muli", sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 36px;
-  letter-spacing: -0.8px;
-  color: $nevoa-espacial;
-  margin: 40px 160px 0 0;
-
-    a:link { 
-      color: $azulejo-marciano;
-    }
-  
-    a:visited { 
-      text-decoration: none;
-      color: $azulejo-marciano;
-    }
-    
-    a:hover { 
-      text-decoration: underline;
-      color: $dunas-de-marte;
-    }
-}
 
 /* menu icon */
 
@@ -1481,7 +1454,6 @@ article {
 }
 
 .stories {
-  background-color: $azulejo-marciano; 
 }
 
 .stories-area {
