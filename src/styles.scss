@@ -1469,6 +1469,15 @@ article {
     flex: 2 1 10%;
     margin: 12px;
     padding: 20px;
+
+    .day {
+      border-bottom: 1px solid $ground-control;
+      margin-bottom: 12px;
+    }
+
+    .story-image {
+      max-width: 400px;
+    }
   }
 
 }
