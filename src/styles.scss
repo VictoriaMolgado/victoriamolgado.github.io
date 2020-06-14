@@ -1467,16 +1467,22 @@ article {
   .story-card {
     background-color: #F2F2F2;
     flex: 2 1 10%;
-    margin: 12px;
-    padding: 20px;
+    margin: 60px 12px;
+    padding: 40px 20px;
 
     .day {
-      border-bottom: 1px solid $ground-control;
-      margin-bottom: 12px;
+      font-family: 'Muli';
+      font-weight: 800;
+      font-size: 14px;
+      line-height: 32px;
+      letter-spacing: -0.2px;
+      color: #828282;
+      border-bottom: 1px solid #828282;
+      margin-bottom: 24px;
     }
 
     .story-image {
-      max-width: 400px;
+      max-width: 100%;
     }
   }
 
