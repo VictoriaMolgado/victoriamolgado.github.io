@@ -1457,5 +1457,18 @@ article {
 }
 
 .stories-area {
-  padding-top: 200px;
+  padding: 200px 120px 60px 120px;
+
+  .stories-section {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .story-card {
+    background-color: #F2F2F2;
+    flex: 2 1 10%;
+    margin: 12px;
+    padding: 20px;
+  }
+
 }
