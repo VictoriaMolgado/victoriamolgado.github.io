@@ -1485,6 +1485,14 @@ article {
       margin: 20px 0 0 0;
       max-width: 100%;
     }
+
+    a {
+      color: $azulejo-marciano;
+    }
+
+    a:hover {
+      color: $dunas-de-marte;
+    }
   }
 
 }
