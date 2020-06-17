@@ -91,6 +91,7 @@ a {
 
 /* ------------- Navbar area --------------*/
 .header {
+  background-color: $nevoa-marciatica;
   width: 100%;
   position: absolute;
   z-index: 3;
@@ -1460,7 +1461,7 @@ article {
   padding: 200px 120px 60px 120px;
 
   @include md {
-    padding: 120px 20px;
+    padding: 160px 20px;
   }
 
   .stories-section {
@@ -1477,6 +1478,10 @@ article {
     flex: 2 1 10%;
     margin: 60px 12px;
     padding: 40px 20px;
+
+    @include md {
+      margin: 20px 12px;
+    }
 
     .day {
       font-family: 'Muli';
