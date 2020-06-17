@@ -1459,9 +1459,17 @@ article {
 .stories-area {
   padding: 200px 120px 60px 120px;
 
+  @include md {
+    padding: 120px 20px;
+  }
+
   .stories-section {
     display: flex;
     flex-direction: row;
+
+    @include md {
+      flex-direction: column;
+    }
   }
 
   .story-card {
