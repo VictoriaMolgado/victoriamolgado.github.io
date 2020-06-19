@@ -1487,8 +1487,8 @@ article {
 
   .story-card {
     flex: 2 1 10%;
-    margin: 60px auto;
-    padding: 40px 56px;
+    margin: 60px 0;
+    padding: 40px 0px;
 
     @include md {
       margin: 20px 12px;
@@ -1518,5 +1518,10 @@ article {
       color: $dunas-de-marte;
     }
   }
+
+  .story-card:first-of-type {
+    margin-right: 80px;
+  }
+
 
 }
