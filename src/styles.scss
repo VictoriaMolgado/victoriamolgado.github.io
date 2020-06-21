@@ -1477,11 +1477,11 @@ article {
     display: flex;
     flex-direction: row;
     font-size: 14px;
-    font-weight: 800;
-    color: #666;
+    font-weight: 600;
+    color: #999;
     
     .story-tags {
-      margin: 0 28px 8px 0;
+      margin: 0 30px 8px 0;
     }
 
     .article-tags {
@@ -1504,8 +1504,8 @@ article {
       font-size: 14px;
       line-height: 32px;
       letter-spacing: -0.2px;
-      color: #828282;
-      border-bottom: 1px solid #828282;
+      color: #999;
+      border-bottom: 0.8px solid #999;
       margin-bottom: 24px;
     }
 
