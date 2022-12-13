@@ -36,8 +36,8 @@ body {
 } 
 
 .container {
-  width: 90%;
-  max-width: 1056px;
+  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
 
   @include sm {
@@ -341,7 +341,9 @@ a {
   word-wrap: break-word;
   overflow-wrap: break-word;
   width: 100%;
+  margin: auto;
   max-width: 890px;
+
   
   @include md {
     margin-top: 160px;
@@ -584,6 +586,23 @@ a {
 
 
 /* ------------- Projects section begins --------------*/
+
+.fill-screen-project {
+  display: flex;
+  flex-direction: row;
+  background-color: #FAEFEC;
+}
+
+.project-highlight {
+  max-width: 100%;
+  margin: 0 0 16px 0;
+  padding: 56px;
+}
+
+.title-and-description {
+  display: flex;
+  flex-direction: column;
+}
 
 .projects {
   padding: 72px 0;
