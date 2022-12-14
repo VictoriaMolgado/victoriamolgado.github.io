@@ -92,7 +92,7 @@ a {
 /* ------------- Navbar area --------------*/
 .header {
   background-color: $nevoa-marciatica;
-  width: 100%;
+  max-width: 100%;
   position: absolute;
   z-index: 3;
 
@@ -342,7 +342,7 @@ a {
   overflow-wrap: break-word;
   width: 100%;
   margin: auto;
-  max-width: 890px;
+  max-width: 904px;
 
   
   @include md {
@@ -401,6 +401,9 @@ a {
   z-index: 1;
   padding-bottom: 12px;
   margin-top: 120px;
+  margin: auto;
+  max-width: 904px;
+
 
   &:first-of-type {
     margin-top: 72px;
@@ -1022,7 +1025,7 @@ article {
 
 .observation {
   display: flex;
-  max-width: 76%;
+  max-width: 904px;
   justify-content: left;
   margin: 60px auto;
   background-color: $nevoa-espacial;
