@@ -591,17 +591,26 @@ a {
   display: flex;
   flex-direction: row;
   background-color: #FAEFEC;
+  padding: 92px;
+  margin: auto;
+  
+  &:hover {
+    cursor: pointer;
+    background-color: #ECDFDB;
+  }
 }
 
 .project-highlight {
   max-width: 100%;
-  margin: 0 0 16px 0;
-  padding: 56px;
+  margin: auto;
+  padding: 32px;
 }
 
 .title-and-description {
   display: flex;
   flex-direction: column;
+  max-width: 500px;
+  margin: auto;
 }
 
 .projects {
@@ -1033,7 +1042,7 @@ article {
   }
 }
 
-.article-text {
+.sans-serif-text {
   color: $ground-control; 
   margin: 0px 0 24px 0;
   grid-column-start: 3;
@@ -1070,7 +1079,7 @@ article {
   
 }
 
-.article-text::selection {
+.sans-serif-text::selection {
   color: white;
   background-color: $azulejo-marciano;
 }
