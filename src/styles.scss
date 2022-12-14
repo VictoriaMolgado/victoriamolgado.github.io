@@ -597,6 +597,16 @@ a {
   &:hover {
     cursor: pointer;
     background-color: #ECDFDB;
+    transition: ease-in-out;
+  }
+
+  @include md {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 0 0 24px 0;
+    border-radius: 4px;
+    
   }
 }
 
