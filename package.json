@@ -49,6 +49,7 @@
     }
   },
   "dependencies": {
+    "react-scripts": "^5.0.1",
     "sass": "^1.56.2",
     "serve": "^14.1.2",
     "server": "^1.0.38"
