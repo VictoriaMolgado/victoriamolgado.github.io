@@ -611,7 +611,7 @@ a {
   @include md {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 32px 20px;
     margin: 0 0 24px 0;
     border-radius: 4px;
     
@@ -630,12 +630,26 @@ a {
   max-width: 32%;
   margin: auto;
   margin-right: 16px;
+
 }
 
 .title-and-role {
 
   h4 {
     margin: 0 0 24px 0;
+  }
+}
+
+@include md {
+  .title-and-description {
+    max-width: 100%;
+  }
+
+  .title-and-role {
+
+    h4 {
+      margin: 0;
+    }
   }
 
 }
@@ -756,9 +770,23 @@ a {
   justify-content: space-around;
   width: 100%;
   vertical-align: auto;
+  border-radius: 4px;
 
   h3 {
     width: 100%;
+  }
+}
+
+@include md {
+  .other-projects {
+    display: flex;
+    flex-direction: column;
+    padding: 52px 20px;
+
+    h3 {
+      width: 100%;
+      margin: 0 0 40px 0;
+    }
   }
 }
 
