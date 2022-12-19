@@ -36,8 +36,8 @@ body {
 } 
 
 .container {
-  width: 90%;
-  max-width: 1056px;
+  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
 
   @include sm {
@@ -49,15 +49,18 @@ body {
 
 footer {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
   padding: 80px 0 160px 0;
+  width: 100%;
+  margin: auto;
+  max-width: 904px;
 
   h3 {
-    max-width: 80%;
+    max-width: 92%;
   }
 
   .primary-btn {
-    margin-top: 80px;
+    margin-top: 32px;
 
     @include sm {
       margin: 32px 0 0 0;
@@ -66,6 +69,8 @@ footer {
 
   @include md {
     flex-direction: column;
+    padding: 40px;
+    height: 100%;
 
     h3 {
       max-width: 100%;
@@ -92,7 +97,7 @@ a {
 /* ------------- Navbar area --------------*/
 .header {
   background-color: $nevoa-marciatica;
-  width: 100%;
+  max-width: 100%;
   position: absolute;
   z-index: 3;
 
@@ -341,13 +346,16 @@ a {
   word-wrap: break-word;
   overflow-wrap: break-word;
   width: 100%;
-  max-width: 890px;
+  margin: auto;
+  max-width: 904px;
+
   
   @include md {
     margin-top: 160px;
   }
 
   .hello {
+    margin: 24px 0 0 0;
     font-family: "Muli", sans-serif;
     font-style: normal;
     font-weight: 800;
@@ -396,11 +404,12 @@ a {
 .section-title {
   text-align: left;
   z-index: 1;
-  padding-bottom: 12px;
-  margin-top: 120px;
+  padding: 72px 0 0 0;
+  margin: auto;
+  max-width: 904px;
 
   &:first-of-type {
-    margin-top: 72px;
+    margin-top: 12px;
   }
 
   @include sm {
@@ -415,6 +424,7 @@ a {
   min-height: 100%;
   justify-content: center;
   padding: 72px 0;
+  max-width: 904px;
 
   @include sm {
     min-height: unset;
@@ -585,8 +595,72 @@ a {
 
 /* ------------- Projects section begins --------------*/
 
+.fill-screen-project {
+  display: flex;
+  flex-direction: row;
+  background-color: #FAEFEC;
+  padding: 52px 112px;
+  margin: auto;
+  
+  &:hover {
+    cursor: pointer;
+    background-color: #ECDFDB;
+    transition: ease-in-out;
+  }
+
+  @include md {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 20px;
+    margin: 0 0 24px 0;
+    border-radius: 4px;
+    
+  }
+}
+
+.project-highlight {
+  max-width: 100%;
+  margin: auto;
+  padding: 32px;
+}
+
+.title-and-description {
+  display: flex;
+  flex-direction: column;
+  max-width: 32%;
+  margin: auto;
+  margin-right: 16px;
+
+}
+
+.title-and-role {
+
+  h4 {
+    margin: 0 0 24px 0;
+  }
+}
+
+@include md {
+  .title-and-description {
+    max-width: 100%;
+  }
+
+  .title-and-role {
+
+    h4 {
+      margin: 0;
+    }
+  }
+
+}
+
+.project-icon {
+  max-width: 6%;
+
+}
+
 .projects {
-  padding: 72px 0;
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -686,15 +760,70 @@ a {
   }
 }
 
+.other-projects {
+  display: flex;
+  flex-direction: row;
+  background-color: $nevoa-espacial;
+  padding: 52px 112px;
+  margin: auto;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  vertical-align: auto;
+  border-radius: 4px;
+
+  h3 {
+    width: 100%;
+  }
+}
+
+@include md {
+  .other-projects {
+    display: flex;
+    flex-direction: column;
+    padding: 52px 20px;
+
+    h3 {
+      width: 100%;
+      margin: 0 0 40px 0;
+    }
+  }
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.project-link {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: -0.8px;
+  margin: 0 0 16px 0;
+
+  &:hover {
+    cursor: pointer;
+    color: $dunas-de-marte;
+  }
+
+}
+
 .my-content {
   display: flex;
   flex-direction: row;
-  max-width: 80%;
-  margin: 32px auto;
+  max-width: 100%;
+  margin: 12px auto;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 0px 0px 80px;
+  padding: 24px 272px;
   background-color: $nevoa-espacial;
+
+  &:hover {
+    cursor: pointer;
+  }
+
 
   @include md {
     display: flex;
@@ -704,26 +833,11 @@ a {
     padding: 40px 20px;
   }
 
-
-  a {
-    color: $azulejo-marciano;
-    transition: .2s ease-in-out;
-    text-decoration: underline;
-    text-decoration-color: $azulejo-marciano;
-
-    &:hover {
-      cursor: pointer;
-      color: $dunas-de-marte;
-      text-decoration-color: $dunas-de-marte;
-    }
-  }
-
   .banner-text {
     flex-direction: row;
     max-width: 400px;
 
-
-    h3 {
+    h4 {
       margin: 0 0 32px 0;
 
       @include md {
@@ -754,6 +868,7 @@ a {
   
   .banner-image {
     max-width: 392px;
+    border-radius: 4px;
 
     @include md {
       display: none;
@@ -983,7 +1098,7 @@ article {
 
 .observation {
   display: flex;
-  max-width: 76%;
+  max-width: 904px;
   justify-content: left;
   margin: 60px auto;
   background-color: $nevoa-espacial;
@@ -1014,7 +1129,7 @@ article {
   }
 }
 
-.article-text {
+.sans-serif-text {
   color: $ground-control; 
   margin: 0px 0 24px 0;
   grid-column-start: 3;
@@ -1051,7 +1166,7 @@ article {
   
 }
 
-.article-text::selection {
+.sans-serif-text::selection {
   color: white;
   background-color: $azulejo-marciano;
 }
@@ -1232,6 +1347,7 @@ article {
   .about-header {
     max-width: 680px;
     margin: 200px 0 80px 0;
+    text-shadow: #000 2%;
   }
 
   h1 {
@@ -1301,7 +1417,7 @@ article {
 
   @include md {
     .about-container {
-      max-width: 92%;
+      max-width: 80%;
     }
 
     .about-header {
@@ -1327,19 +1443,24 @@ article {
 
 
 .go-further {
-  display: grid;
-  grid-template-columns: 100px 0.8fr 680px 100px;
-  grid-column-gap: 20px;
+  display: flex;
+  flex-direction: row;
+  max-width: 80%;
+  margin: auto;
+  align-items: center;
 
   @include md {
-    display: grid;
-    grid-template-columns: 16px 1fr 16px;
+    display: flex;
+    flex-direction: row;
+    max-width: 92%;
+
   }
   
   .further-image {
     grid-column-start: 2;
-    max-width: 372px;
+    max-width: 40%;
     z-index: -2;
+    border-radius: 4px;
 
     @include md {
       display: none;
@@ -1369,6 +1490,8 @@ article {
 
 
   .call-to-further {
+
+    margin: 0 0 0 24px;
 
     @include md {
       grid-column-start: 2;
