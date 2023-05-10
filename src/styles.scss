@@ -77,7 +77,6 @@ a {
 .header-section {
   display: flex;
   flex-direction: row;
-  height: 100%;
 
   @include sm {
     height: unset;
@@ -85,10 +84,30 @@ a {
 }
 
 /* ------------- Navbar area --------------*/
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+  }
+
+  li a {
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: $nevoa-marciatica;
+  }
+}
+
 .header {
   background-color: $nevoa-marciatica;
   max-width: 100%;
-  position: absolute;
   z-index: 3;
 
   ul {
@@ -127,6 +146,10 @@ a {
 
 }
 
+.alicate {
+  display: flex;
+  flex-direction: column;
+}
 
 .home-anchor-mobile {
   display: block;
