@@ -88,6 +88,7 @@ a {
 .navigation {
   display: flex;
   flex-direction: row;
+  align-items: center;
 
   ul {
     margin: 0;
@@ -109,7 +110,7 @@ a {
   background-color: $nevoa-marciatica;
   max-width: 100%;
   z-index: 3;
-
+  
   ul {
     margin: 0;
     padding: 0;
@@ -693,95 +694,16 @@ a {
     padding: 20px 0;
   }
 
-  .spotlight {
-    max-width: 50%;
-
-    @include md {
-      max-width: 92%;
-      padding: 0 0 28px 0;
-    }
-  }
-
-  .spotlight-title {
-
-    @include md {
-      font-size: 36px;
-      line-height: 40px;
-      letter-spacing: -1.2px;
-    }
-  }
-
-  .other-cases {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: 0 60px 0 60px;
-
-    @include md {
-      padding: 0;
-    }
-  }
-  
-
-  .most-recent {
-    display: flex;
-    flex-direction: column;
-    padding: 0 0 60px 0;
-
-    @include md {
-      padding: 0 0 40px 0;
-    }
-  }
-
-  .older-projects {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: 8px 0 20px 0;
-  }
-
-  .old-but-gold {
-    max-width: 200px;
-  }
-
-  .old-but-gold:first-of-type {
-    margin: 0 36px 0 0;
-  }
-
-
   a {
     color: $azulejo-marciano;
     transition: .2s ease-in-out;
-
+    
     &:hover {
       cursor: pointer;
       color: $dunas-de-marte;
     }
   }
 
-  h6 {
-    border-bottom: 1px solid $cor-de-pele;
-    margin: 0 0 8px 0;
-    color: #828282;;
-    
-
-    @include md {
-      font-size: 16px;
-      line-height: 30px;
-      letter-spacing: -0.5px;
-      color: #828282;
-    }
-  }
-
-  .project-categories {
-    border: none;
-    margin: 4px 0 0 0;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 36px;
-    letter-spacing: -0.8px;
-    color: $ground-control;
-  }
 }
 
 .other-projects {
