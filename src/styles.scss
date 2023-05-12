@@ -85,10 +85,13 @@ a {
 
 /* ------------- Navbar area --------------*/
 
-.navigation {
+.navigation-container {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.navigation {
   list-style: none;
   font-family: "Muli", sans-serif;
   font-weight: bold;
@@ -108,6 +111,10 @@ a {
   li a:hover {
     color: $dunas-de-marte;
     transition: color 0.3s ease;
+  }
+
+  @include md {
+    display: none;
   }
 }
 
@@ -672,10 +679,13 @@ a {
   .title-and-description {
     display: flex;
     flex-direction: column;
-    max-width: 32%;
     margin: auto;
     margin-right: 16px;
-    max-width: 100%;
+    width: 100%;
+  }
+
+  .project-image img {
+    display: none;
   }
 
   .title-and-role {
