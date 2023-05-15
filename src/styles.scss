@@ -86,10 +86,32 @@ a {
 /* ------------- Navbar area --------------*/
 
 .small-menu {
+
   a:visited { 
     text-decoration: none;
     color: $azulejo-marciano;
   }
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: row;
+  padding: 52px 32px;
+  margin: auto;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  vertical-align: auto;
+
+  h3 {
+    color: $azulejo-marciano;
+  }
+
+  a:visited { 
+    text-decoration: none;
+    color: $azulejo-marciano;
+  }
+  
 }
 
 .navigation-container {
