@@ -85,10 +85,22 @@ a {
 
 /* ------------- Navbar area --------------*/
 
+.small-menu {
+  a:visited { 
+    text-decoration: none;
+    color: $azulejo-marciano;
+  }
+}
+
 .navigation-container {
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  @include md {
+    justify-content: space-between;
+    margin: 0 32px 0 0;
+  }
 }
 
 .new-class {
@@ -169,6 +181,10 @@ a {
 .alicate {
   display: flex;
   flex-direction: column;
+
+  @include md {
+    margin: 20px;
+  }
 }
 
 .home-anchor-mobile {
@@ -303,6 +319,11 @@ a {
   .header .menu-icon {
     display: none;
   }
+
+  .small-menu {
+    display: none;
+  }
+
 }
 
 /* ------------- About section --------------*/
