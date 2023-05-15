@@ -85,10 +85,44 @@ a {
 
 /* ------------- Navbar area --------------*/
 
+.small-menu {
+
+  a:visited { 
+    text-decoration: none;
+    color: $azulejo-marciano;
+  }
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: row;
+  padding: 52px 32px;
+  margin: auto;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  vertical-align: auto;
+
+  h3 {
+    color: $azulejo-marciano;
+  }
+
+  a:visited { 
+    text-decoration: none;
+    color: $azulejo-marciano;
+  }
+  
+}
+
 .navigation-container {
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  @include md {
+    justify-content: space-between;
+    margin: 0 32px 0 0;
+  }
 }
 
 .new-class {
@@ -169,6 +203,10 @@ a {
 .alicate {
   display: flex;
   flex-direction: column;
+
+  @include md {
+    margin: 20px;
+  }
 }
 
 .home-anchor-mobile {
@@ -303,6 +341,11 @@ a {
   .header .menu-icon {
     display: none;
   }
+
+  .small-menu {
+    display: none;
+  }
+
 }
 
 /* ------------- About section --------------*/
