@@ -118,9 +118,9 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 
   @include md {
-    justify-content: space-between;
     margin: 0 32px 0 0;
   }
 }
