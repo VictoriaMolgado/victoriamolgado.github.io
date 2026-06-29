@@ -9,6 +9,11 @@
     --color-placeholder: #2b5cd9;
     --color-white: #ffffff;
 
+    --color-navy: #1E49AA;
+    --color-green: #009D61;
+    --color-bright-blue: #356DFF;
+    --color-dark: #000000;
+
     --font-serif: "Noto Serif JP", Georgia, "Times New Roman", serif;
 
     --space-s: 1rem;
@@ -195,6 +200,16 @@ a {
     aspect-ratio: 16 / 9;
     background: var(--color-placeholder);
     border-radius: var(--border-radius);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-image-full video {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
 }
 
 /* ————————————————————————————————
