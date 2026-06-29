@@ -218,7 +218,6 @@ a {
     font-weight: var(--font-weight-body);
     line-height: var(--line-height-body);
     color: var(--color-gray);
-    margin-bottom: var(--space-s);
 }
 
 .content-statement {
@@ -235,6 +234,22 @@ a {
     line-height: var(--line-height-body);
     letter-spacing: var(--letter-spacing-body);
     color: var(--color-gray);
+}
+
+/* — Content block spacing: sibling combinator rules — */
+.content-label + .content-statement {
+    margin-top: var(--space-s);
+}
+
+.content-statement + .content-statement {
+    margin-top: var(--space-m);
+}
+
+.content-statement + .content-paragraph {
+    margin-top: var(--space-m);
+}
+
+.content-paragraph + .content-paragraph {
     margin-top: var(--space-s);
 }
 
@@ -408,7 +423,8 @@ a {
     }
 
     .project-image-full {
-        margin: 0;
+        margin-top: var(--space-l);
+        margin-bottom: var(--space-l);
         width: 100%;
         border-radius: var(--border-radius);
     }

@@ -87,11 +87,43 @@ Weight and letter-spacing are fixed across breakpoints. Size and line-height sca
 | `--page-padding` | 1.25rem   | 2.5rem  | 0.5rem  | 5rem    |
 | `--border-radius` | 16px     | —       | —       | —       |
 
+## Content block spacing
+
+Spacing between elements inside `.content-block` is controlled by **adjacent sibling combinators** (`+`).
+No margins live on the elements themselves — spacing is determined by what comes before.
+
+| Sequence                                   | Space         | Why                                      |
+|--------------------------------------------|---------------|------------------------------------------|
+| `.content-label` + `.content-statement`    | `--space-s`   | Label is a caption, stays close           |
+| `.content-statement` + `.content-statement`| `--space-m`   | Separate ideas need breathing room        |
+| `.content-statement` + `.content-paragraph`| `--space-m`   | Paragraph is secondary, offset from main  |
+| `.content-paragraph` + `.content-paragraph`| `--space-s`   | Continuation, stays tight                 |
+
+This means:
+- A block with a label groups tightly: `label → (space-s) → statement`
+- A block without a label starts directly with statement or paragraph
+- Multiple statements or a statement followed by a paragraph get more space between them
+
+### Example
+
+```html
+<!-- Label + statement: tight group -->
+<span class="content-label">Context</span>        <!-- no top margin -->
+<p class="content-statement">Main idea.</p>        <!-- space-s above -->
+<p class="content-paragraph">Supporting text.</p>  <!-- space-m above -->
+
+<!-- No label: statements alone -->
+<p class="content-statement">First point.</p>      <!-- no top margin -->
+<p class="content-statement">Second point.</p>     <!-- space-m above -->
+```
+
+---
+
 ## Where tokens are used
 
 - `--page-padding` — horizontal margin for all page content (nav, hero, projects, content blocks, footer)
 - `--space-xl` — hero top padding, project card vertical spacing, content block vertical padding
 - `--space-l` — hero bottom padding, project row gap (desktop), about page gap, footer top padding
-- `--space-m` — project title top margin, about headline bottom margin, project header title bottom margin
-- `--space-s` — nav vertical padding, content label bottom margin, content paragraph top margin
+- `--space-m` — content block sibling spacing (statement→statement, statement→paragraph), project title top margin, about headline bottom margin, project header title bottom margin
+- `--space-s` — nav vertical padding, content block sibling spacing (label→statement, paragraph→paragraph)
 - `--border-radius` — all image containers (project cards, full-width images, about image)
