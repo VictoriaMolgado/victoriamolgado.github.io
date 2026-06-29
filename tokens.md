@@ -15,12 +15,11 @@ Values scale across four breakpoints: mobile (default), tablet (768px), desktop 
 | `--color-placeholder` | `#2b5cd9` |
 | `--color-white`    | `#ffffff` |
 
-## Typography — Fonts
+## Typography — Font
 
 | Token         | Value                                          |
 |---------------|------------------------------------------------|
 | `--font-serif` | `"Noto Serif JP", Georgia, "Times New Roman", serif` |
-| `--font-sans`  | `-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif` |
 
 ## Typography — Scale
 
