@@ -1,0 +1,444 @@
+/* ————————————————————————————————
+   Design tokens
+   ———————————————————————————————— */
+
+:root {
+    --color-black: #4f4f4f;
+    --color-gray: #6b6b6b;
+    --color-blue: #2b5cd9;
+    --color-placeholder: #2b5cd9;
+    --color-white: #ffffff;
+
+    --font-serif: "Noto Serif JP", Georgia, "Times New Roman", serif;
+    --font-sans:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+        sans-serif;
+
+    --space-s: 1rem;
+    --space-m: 2rem;
+    --space-l: 4rem;
+    --space-xl: 6rem;
+
+    --page-padding: 1.25rem;
+    --border-radius: 16px;
+
+    /* — Type roles (weight + letter-spacing fixed; size + line-height scale per breakpoint) — */
+    --font-size-display: 1.75rem; /* 28px */
+    --line-height-display: 2.75rem; /* 44px */
+    --font-weight-display: 500;
+    --letter-spacing-display: -1px;
+
+    --font-size-heading: 1.5rem; /* 24px */
+    --line-height-heading: 2rem; /* 32px */
+    --font-weight-heading: 500;
+    --letter-spacing-heading: -1px;
+
+    --font-size-body-lg: 1.25rem; /* 20px */
+    --line-height-body-lg: 2rem; /* 32px */
+    --font-weight-body-lg: 400;
+    --letter-spacing-body-lg: -1.2px;
+
+    --font-size-body: 1rem; /* 16px */
+    --line-height-body: 1.5rem; /* 24px */
+    --font-weight-body: 500;
+    --letter-spacing-body: 0px;
+
+    --font-size-caption: 0.875rem; /* 14px */
+    --line-height-caption: 1.625rem; /* 26px */
+    --font-weight-caption: 400;
+    --letter-spacing-caption: 0px;
+}
+
+/* ————————————————————————————————
+   Reset
+   ———————————————————————————————— */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--font-serif);
+    color: var(--color-black);
+    background: var(--color-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ————————————————————————————————
+   Nav
+   ———————————————————————————————— */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-s) var(--page-padding);
+}
+
+.nav-logo {
+    font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-display);
+    color: var(--color-black);
+}
+
+.nav-link {
+    font-size: var(--font-size-caption);
+    color: var(--color-blue);
+}
+
+/* ————————————————————————————————
+   Home — hero
+   ———————————————————————————————— */
+
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 0 var(--page-padding) 15vh;
+    min-height: calc(100vh - 10rem);
+}
+
+.hero h1 br {
+    display: none;
+}
+
+.hero h1 {
+    font-size: var(--font-size-display);
+    font-weight: var(--font-weight-display);
+    line-height: var(--line-height-display);
+    letter-spacing: var(--letter-spacing-display);
+    font-variation-settings: "wght" 600;
+}
+
+/* ————————————————————————————————
+   Home — project list
+   ———————————————————————————————— */
+
+.projects {
+    padding: 0 var(--page-padding);
+}
+
+.project {
+    display: block;
+    margin-bottom: var(--space-xl);
+}
+
+.project-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: var(--color-placeholder);
+    border-radius: var(--border-radius);
+}
+
+.project-title {
+    font-size: var(--font-size-heading);
+    font-weight: var(--font-weight-heading);
+    line-height: var(--line-height-heading);
+    letter-spacing: var(--letter-spacing-heading);
+    color: var(--color-black);
+    margin-top: var(--space-m);
+}
+
+.project-description {
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-body);
+    line-height: var(--line-height-body);
+    letter-spacing: var(--letter-spacing-body);
+    color: var(--color-black);
+    margin-top: 0.75rem;
+}
+
+/* ————————————————————————————————
+   Project page — header
+   ———————————————————————————————— */
+
+.project-header {
+    padding: var(--space-xl) var(--page-padding) var(--space-l);
+}
+
+.project-header-title {
+    font-size: var(--font-size-display);
+    font-weight: var(--font-weight-display);
+    line-height: var(--line-height-display);
+    letter-spacing: var(--letter-spacing-display);
+    font-variation-settings: "wght" 600;
+    margin-bottom: var(--space-m);
+}
+
+.project-meta {
+    font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-caption);
+    line-height: var(--line-height-caption);
+    letter-spacing: var(--letter-spacing-caption);
+    color: var(--color-gray);
+}
+
+/* ————————————————————————————————
+   Project page — images
+   ———————————————————————————————— */
+
+.project-image-full {
+    margin: 0 var(--page-padding);
+    width: calc(100% - var(--page-padding) * 2);
+    aspect-ratio: 16 / 9;
+    background: var(--color-placeholder);
+    border-radius: var(--border-radius);
+}
+
+/* ————————————————————————————————
+   Project page — content blocks
+   ———————————————————————————————— */
+
+.project-content {
+    padding: 0;
+}
+
+.content-block {
+    padding: var(--space-xl) var(--page-padding);
+}
+
+.content-label {
+    display: block;
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-body);
+    line-height: var(--line-height-body);
+    color: var(--color-gray);
+    margin-bottom: var(--space-s);
+}
+
+.content-statement {
+    font-size: var(--font-size-body-lg);
+    font-weight: var(--font-weight-body-lg);
+    line-height: var(--line-height-body-lg);
+    letter-spacing: var(--letter-spacing-body-lg);
+    color: var(--color-black);
+}
+
+.content-paragraph {
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-body);
+    line-height: var(--line-height-body);
+    letter-spacing: var(--letter-spacing-body);
+    color: var(--color-gray);
+    margin-top: var(--space-s);
+}
+
+.project-thanks {
+    font-size: var(--font-size-body-lg);
+    font-weight: var(--font-weight-body-lg);
+    line-height: var(--line-height-body-lg);
+    color: var(--color-gray);
+    padding: var(--space-l) var(--page-padding) var(--space-m);
+}
+
+/* ————————————————————————————————
+   About page
+   ———————————————————————————————— */
+
+.about {
+    padding: var(--space-xl) var(--page-padding) var(--space-l);
+}
+
+.about-headline {
+    font-size: var(--font-size-display);
+    font-weight: var(--font-weight-display);
+    line-height: var(--line-height-display);
+    letter-spacing: var(--letter-spacing-display);
+    font-variation-settings: "wght" 600;
+    margin-bottom: var(--space-l);
+}
+
+.about-body {
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-body);
+    line-height: var(--line-height-body);
+    letter-spacing: var(--letter-spacing-body);
+    color: var(--color-gray);
+    margin-bottom: var(--space-m);
+}
+
+.about-image {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background: var(--color-placeholder);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--space-l);
+}
+
+/* ————————————————————————————————
+   Footer
+   ———————————————————————————————— */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-l) var(--page-padding) var(--space-m);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-caption);
+    line-height: var(--line-height-caption);
+    color: var(--color-gray);
+}
+
+.footer-links {
+    display: flex;
+    gap: var(--space-s);
+}
+
+.footer-links a {
+    color: var(--color-gray);
+}
+
+/* ————————————————————————————————
+   Responsive — tablet (768px)
+   ———————————————————————————————— */
+
+@media (min-width: 768px) {
+    :root {
+        --page-padding: 2.5rem;
+    }
+}
+
+/* ————————————————————————————————
+   Responsive — desktop (1024px)
+   ———————————————————————————————— */
+
+@media (min-width: 1024px) {
+    :root {
+        --page-padding: 0.5rem;
+        --space-xl: 8rem;
+
+        /* — Type scale: desktop — */
+        --font-size-display: 3.5rem; /* 48px */
+        --line-height-display: 4.5rem; /* 72px */
+
+        --font-size-heading: 1.75rem; /* 28px */
+        --line-height-heading: 2.75rem; /* 44px */
+
+        --font-size-body-lg: 2.25rem; /* 36px */
+        --line-height-body-lg: 3.25rem; /* 52px */
+
+        --font-size-body: 1.5rem; /* 24px */
+        --line-height-body: 2.25rem; /* 36px */
+
+        --font-size-caption: 1.125rem; /* 18px */
+        --line-height-caption: 1.625rem; /* 26px */
+    }
+
+    .project {
+        display: flex;
+        flex-direction: row;
+        gap: var(--space-l);
+        align-items: flex-start;
+    }
+
+    .hero h1 {
+        max-width: 80%;
+    }
+
+    .hero h1 br {
+        display: block;
+        align-items: center;
+    }
+
+    .project-info {
+        flex: 1;
+        order: 1;
+        min-width: 0;
+    }
+
+    .project-image {
+        flex: 2;
+        order: 2;
+        width: auto;
+        min-width: 0;
+    }
+
+    .project-title {
+        margin-top: 0;
+    }
+
+    /* About page */
+    .about {
+        display: flex;
+        flex-direction: row;
+        gap: var(--space-l);
+        align-items: flex-start;
+    }
+
+    .about-image {
+        flex: 1;
+        width: auto;
+        margin-bottom: 0;
+    }
+
+    .about-text {
+        flex: 1;
+    }
+
+    .about-headline {
+        margin-bottom: var(--space-m);
+    }
+
+    /* Project page */
+    .project-header {
+        min-height: calc(100vh - 3.5rem);
+        padding-top: 30vh;
+    }
+
+    .content-block {
+        max-width: 720px;
+    }
+
+    .project-image-full {
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+/* ————————————————————————————————
+   Responsive — large desktop (1900px)
+   ———————————————————————————————— */
+
+@media (min-width: 1900px) {
+    :root {
+        --page-padding: 5rem;
+        --space-xl: 10rem;
+
+        /* — Type scale: large desktop — */
+        --font-size-display: 4.5rem; /* 64px */
+        --line-height-display: 6rem; /* 96px */
+
+        --font-size-heading: 2.25rem; /* 36px */
+        --line-height-heading: 3.5rem; /* 56px */
+
+        --font-size-body-lg: 3rem; /* 48px */
+        --line-height-body-lg: 4.5rem; /* 72px */
+
+        --font-size-body: 2rem; /* 32px */
+        --line-height-body: 3rem; /* 48px */
+
+        --font-size-caption: 1.5rem; /* 24px */
+        --line-height-caption: 2.25rem; /* 36px */
+    }
+
+    body {
+        max-width: 2400px;
+    }
+}
