@@ -379,6 +379,69 @@ a {
 }
 
 /* ————————————————————————————————
+   Motion — page load
+   ———————————————————————————————— */
+
+@-webkit-keyframes fadeSlideUp {
+    from { opacity: 0; -webkit-transform: translateY(20px); transform: translateY(20px); }
+    to { opacity: 1; -webkit-transform: translateY(0); transform: translateY(0); }
+}
+
+@keyframes fadeSlideUp {
+    from { opacity: 0; -webkit-transform: translateY(20px); transform: translateY(20px); }
+    to { opacity: 1; -webkit-transform: translateY(0); transform: translateY(0); }
+}
+
+body {
+    -webkit-animation: fadeSlideUp 0.6s ease-out both;
+    animation: fadeSlideUp 0.6s ease-out both;
+}
+
+/* ————————————————————————————————
+   Motion — scroll reveal
+   ———————————————————————————————— */
+
+.js .reveal {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+    -webkit-transition: opacity 0.6s ease-out, -webkit-transform 0.6s ease-out;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.js .reveal.is-visible {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+/* ————————————————————————————————
+   Motion — home project hover
+   ———————————————————————————————— */
+
+.project {
+    padding: var(--page-padding);
+    border-radius: var(--border-radius);
+    -webkit-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+.project:hover {
+    background-color: var(--project-color, var(--color-placeholder));
+}
+
+.project-title,
+.project-description {
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+.project:hover .project-title,
+.project:hover .project-description {
+    color: var(--color-white);
+}
+
+/* ————————————————————————————————
    Responsive — tablet (768px)
    ———————————————————————————————— */
 
