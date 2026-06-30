@@ -218,6 +218,7 @@ a {
     max-width: 80%;
     max-height: 80%;
     object-fit: contain;
+    border-radius: 8px;
 }
 
 /* Pattern 2 — Bleed: content fills container, no internal padding */
