@@ -9,9 +9,9 @@
     --color-placeholder: #2b5cd9;
     --color-white: #ffffff;
 
-    --color-navy: #1E49AA;
-    --color-green: #009D61;
-    --color-bright-blue: #356DFF;
+    --color-navy: #1e49aa;
+    --color-green: #009d61;
+    --color-bright-blue: #356dff;
     --color-dark: #000000;
 
     --font-serif: "Noto Serif JP", Georgia, "Times New Roman", serif;
@@ -191,13 +191,57 @@ a {
 }
 
 /* ————————————————————————————————
-   Project page — images
+   Project page — image areas
    ———————————————————————————————— */
 
-.project-image-full {
-    margin: 0 var(--page-padding);
+/* Shared base for all image areas */
+.project-image-full,
+.project-image-bleed,
+.project-image-pair {
+    margin: var(--space-s) var(--page-padding);
     width: calc(100% - var(--page-padding) * 2);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+/* Pattern 1 — Padded: 16:9 container, content centered at ~80% */
+.project-image-full {
     aspect-ratio: 16 / 9;
+    background: var(--color-placeholder);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-image-full video,
+.project-image-full img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+/* Pattern 2 — Bleed: content fills container, no internal padding */
+.project-image-bleed {
+    background: var(--color-placeholder);
+    display: flex;
+}
+
+.project-image-bleed video,
+.project-image-bleed img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Pattern 3 — Pair: two square areas side by side, stacked on mobile */
+.project-image-pair {
+    display: flex;
+    flex-direction: column;
+    gap: var(--page-padding);
+}
+
+.project-image-pair-item {
+    aspect-ratio: 1 / 1;
     background: var(--color-placeholder);
     border-radius: var(--border-radius);
     overflow: hidden;
@@ -206,7 +250,8 @@ a {
     justify-content: center;
 }
 
-.project-image-full video {
+.project-image-pair-item video,
+.project-image-pair-item img {
     max-width: 80%;
     max-height: 80%;
     object-fit: contain;
@@ -423,8 +468,8 @@ a {
 
     /* Project page */
     .project-header {
-        min-height: calc(100vh - 3.5rem);
         padding-top: 30vh;
+        padding-bottom: var(--space-l);
     }
 
     .content-block,
@@ -433,11 +478,22 @@ a {
         margin: 0 auto;
     }
 
-    .project-image-full {
+    .project-image-full,
+    .project-image-bleed,
+    .project-image-pair {
         margin-top: var(--space-l);
         margin-bottom: var(--space-l);
         width: 100%;
         border-radius: var(--border-radius);
+    }
+
+    .project-image-pair {
+        flex-direction: row;
+    }
+
+    .project-image-pair-item {
+        flex: 1;
+        min-width: 0;
     }
 }
 
