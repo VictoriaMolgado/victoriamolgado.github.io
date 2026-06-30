@@ -27,3 +27,15 @@ document.documentElement.classList.add('js');
     observer.observe(elements[i]);
   }
 })();
+
+/* — Project hover: set radial origin from cursor entry point — */
+(function () {
+  var projects = document.querySelectorAll('.project');
+  for (var i = 0; i < projects.length; i++) {
+    projects[i].addEventListener('mouseenter', function (e) {
+      var rect = this.getBoundingClientRect();
+      this.style.setProperty('--x', (e.clientX - rect.left) + 'px');
+      this.style.setProperty('--y', (e.clientY - rect.top) + 'px');
+    });
+  }
+})();
