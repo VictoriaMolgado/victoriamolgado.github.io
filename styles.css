@@ -232,6 +232,7 @@ a {
     width: 100%;
     display: block;
     object-fit: cover;
+    border-radius: 8px;
 }
 
 /* Pattern 3 — Pair: two square areas side by side, stacked on mobile */
@@ -256,6 +257,7 @@ a {
     max-width: 80%;
     max-height: 80%;
     object-fit: contain;
+    border-radius: 8px;
 }
 
 /* ————————————————————————————————
