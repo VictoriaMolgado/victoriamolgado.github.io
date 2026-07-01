@@ -22,6 +22,12 @@ document.documentElement.classList.add('js');
     });
   }, { threshold: 0.1 });
 
+  /* Make the first project on the home page visible immediately */
+  var firstProject = document.querySelector('.projects > .project.reveal');
+  if (firstProject) {
+    firstProject.classList.add('is-visible');
+  }
+
   for (var i = 0; i < elements.length; i++) {
     observer.observe(elements[i]);
   }
