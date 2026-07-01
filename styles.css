@@ -386,8 +386,9 @@ a {
 
 .about-image {
     width: 100%;
+    min-width: 0;
     aspect-ratio: 3 / 4;
-    background: var(--color-placeholder);
+    object-fit: cover;
     border-radius: var(--border-radius);
     margin-bottom: var(--space-l);
 }
