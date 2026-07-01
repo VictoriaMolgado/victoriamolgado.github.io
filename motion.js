@@ -79,29 +79,58 @@ document.documentElement.classList.add('js');
   }
 })();
 
-/* — JS-driven scroll snapping (replaces CSS scroll-snap) — */
+/* — JS-driven scroll snapping — */
 (function () {
-  var hero = document.querySelector('.hero');
-  var projects = document.querySelectorAll('.project');
-  if (!hero || !projects.length) return;
+  var isHome = !!document.querySelector('.hero');
+  var isProject = !!document.querySelector('.project-header');
+  if (!isHome && !isProject) return;
 
-  /* Build snap targets: hero + each project */
+  /* Build snap targets depending on page type */
   function getTargets() {
-    var targets = [hero];
-    for (var i = 0; i < projects.length; i++) {
-      targets.push(projects[i]);
+    if (isHome) {
+      var hero = document.querySelector('.hero');
+      var projects = document.querySelectorAll('.project');
+      var targets = [hero];
+      for (var i = 0; i < projects.length; i++) {
+        targets.push(projects[i]);
+      }
+      return targets;
     }
-    return targets;
+
+    /* Project pages: header, hero images, content sections, images */
+    var selectors =
+      '.project-header, ' +
+      '.project-content > .content-block, ' +
+      '.project-content > .project-image-full, ' +
+      '.project-content > .project-image-bleed, ' +
+      '.project-content > .project-image-pair, ' +
+      '.project-content > .image-captioned, ' +
+      '.project-content > .project-thanks, ' +
+      'body > .project-image-full, ' +
+      'body > .project-image-bleed, ' +
+      'body > .project-image-pair, ' +
+      'body > .image-captioned, ' +
+      'body > .hero-carousel';
+
+    return Array.prototype.slice.call(
+      document.querySelectorAll(selectors)
+    ).sort(function (a, b) {
+      return a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1;
+    });
   }
 
-  /* Where we want each target centered (or top-aligned for hero) */
+  /* Top-aligned elements */
+  function isTopAligned(el) {
+    return el.classList.contains('hero') || el.classList.contains('project-header');
+  }
+
+  /* Where we want each target centered (or top-aligned for header/hero) */
   function getSnapY(el) {
     var rect = el.getBoundingClientRect();
     var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     var elTop = rect.top + scrollTop;
 
-    if (el === hero) {
-      /* Hero snaps to top */
+    if (isTopAligned(el)) {
       return 0;
     }
     /* Center element vertically in viewport */
