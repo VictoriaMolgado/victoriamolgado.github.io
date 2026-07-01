@@ -115,16 +115,14 @@ a {
     min-height: calc(100vh - 4rem);
 }
 
-.hero h1 br {
-    display: none;
-}
-
 .hero h1 {
     font-size: var(--font-size-display);
     font-weight: var(--font-weight-display);
     line-height: var(--line-height-display);
     letter-spacing: var(--letter-spacing-display);
     font-variation-settings: "wght" 600;
+    text-wrap: balance;
+    max-width: 100%;
 }
 
 /* ————————————————————————————————
@@ -190,6 +188,7 @@ a {
     letter-spacing: var(--letter-spacing-heading);
     color: var(--color-black);
     margin-top: var(--space-m);
+    text-wrap: pretty;
 }
 
 .project-description {
@@ -216,6 +215,7 @@ a {
     letter-spacing: var(--letter-spacing-display);
     font-variation-settings: "wght" 600;
     margin-bottom: var(--space-m);
+    text-wrap: balance;
 }
 
 .project-meta {
@@ -322,6 +322,7 @@ a {
     line-height: var(--line-height-body-lg);
     letter-spacing: var(--letter-spacing-body-lg);
     color: var(--color-black);
+    text-wrap: pretty;
 }
 
 .content-paragraph {
@@ -560,12 +561,7 @@ body {
     }
 
     .hero h1 {
-        max-width: 80%;
-    }
-
-    .hero h1 br {
-        display: block;
-        align-items: center;
+        max-width: 70%;
     }
 
     .project-info {
