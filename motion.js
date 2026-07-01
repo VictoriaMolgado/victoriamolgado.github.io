@@ -27,6 +27,46 @@ document.documentElement.classList.add('js');
   }
 })();
 
+/* — Hero carousel — */
+(function () {
+  var carousel = document.querySelector('.hero-carousel');
+  if (!carousel) return;
+
+  var images = carousel.querySelectorAll('img');
+  var dots = carousel.querySelectorAll('.hero-carousel-dot');
+  var current = 0;
+  var interval = 4000;
+  var timer;
+
+  function goTo(index) {
+    images[current].classList.remove('is-active');
+    dots[current].classList.remove('is-active');
+    current = index;
+    images[current].classList.add('is-active');
+    dots[current].classList.add('is-active');
+  }
+
+  function next() {
+    goTo((current + 1) % images.length);
+  }
+
+  function startAutoplay() {
+    timer = setInterval(next, interval);
+  }
+
+  for (var i = 0; i < dots.length; i++) {
+    (function (idx) {
+      dots[idx].addEventListener('click', function () {
+        clearInterval(timer);
+        goTo(idx);
+        startAutoplay();
+      });
+    })(i);
+  }
+
+  startAutoplay();
+})();
+
 /* — Project hover: set radial origin from cursor entry point — */
 (function () {
   var projects = document.querySelectorAll('.project');

@@ -26,11 +26,24 @@
         </header>
 
         <div
-            class="project-image-full reveal"
+            class="project-image-full hero-carousel reveal"
+            style="background: #000000"
             aria-label="System Initiative hero image"
-        ></div>
+        >
+            <img src="assets/imgs/si-png/1-map-hero.png" alt="System Initiative map hero" class="is-active" />
+            <img src="assets/imgs/si-png/2-grid-hero.png" alt="System Initiative grid hero" />
+            <img src="assets/imgs/si-png/3-component-page-hero.png" alt="System Initiative component page hero" />
+            <img src="assets/imgs/si-png/4-review-hero.png" alt="System Initiative review hero" />
+            <div class="hero-carousel-dots">
+                <button class="hero-carousel-dot is-active" aria-label="Slide 1"></button>
+                <button class="hero-carousel-dot" aria-label="Slide 2"></button>
+                <button class="hero-carousel-dot" aria-label="Slide 3"></button>
+                <button class="hero-carousel-dot" aria-label="Slide 4"></button>
+            </div>
+        </div>
 
         <main class="project-content">
+            <!-- Content block 1 — Context -->
             <section class="content-block reveal">
                 <span class="content-label">Context</span>
                 <p class="content-statement">
@@ -42,12 +55,18 @@
                 <p class="content-paragraph">
                     Modeling infrastructure in a simulation would bring more
                     confidence and control to engineers. However, the interface
-                    seemed so complex that many didn't even want to try.
+                    seemed so complex that many didn’t even want to try.
                 </p>
             </section>
 
-            <div class="project-image-full reveal" aria-label="Project image"></div>
+            <div class="image-captioned reveal">
+                <div class="project-image-full" style="background: #000000" aria-label="System Initiative previous UI">
+                    <img src="assets/imgs/si-png/si-previous-ui.png" alt="System Initiative previous UI" />
+                </div>
+                <p class="image-subtitle">Users draged components to the canva do compose their infrastructures, leading to many usability challanges. The original UI was essential to the learnings that let to the changes. Primarly, the configure-by-clicking iteraction was core to the product concept.</p>
+            </div>
 
+            <!-- Content block 2 — Challenge -->
             <section class="content-block reveal">
                 <span class="content-label">Challenge</span>
                 <p class="content-statement">
@@ -57,6 +76,7 @@
                 </p>
             </section>
 
+            <!-- Content block 3 — Hypothesis -->
             <section class="content-block reveal">
                 <span class="content-label">Hypothesis</span>
                 <p class="content-statement">
@@ -67,19 +87,46 @@
                 </p>
             </section>
 
+            <!-- Content block 4 — Output -->
             <section class="content-block reveal">
                 <span class="content-label">Output</span>
                 <p class="content-statement">
-                    System Initiative's platform was re-lauched with four core
+                    System Initiative’s platform was re-lauched with four core
                     experiences: the map, the grid, the component page and the
                     review flow.
                 </p>
             </section>
 
-            <div class="project-image-full reveal" aria-label="Project image"></div>
-
+            <!-- Content block 5 — The Map -->
             <section class="content-block reveal">
-                <span class="content-label">Specificity</span>
+                <span class="content-label">The Map</span>
+                <p class="content-statement">
+                    The map and the grid represented the whole infrastructure.
+                    The map was a visual representation of all the
+                    relationships.
+                </p>
+            </section>
+
+            <div class="project-image-full reveal" style="background: var(--color-navy)" aria-label="The map">
+                <img src="assets/imgs/si-png/5-the-map.png" alt="The map view" />
+            </div>
+
+            <div class="project-image-full reveal" style="background: var(--color-navy)" aria-label="The map with menu open">
+                <img src="assets/imgs/si-png/6-the-map-menu-open.png" alt="The map with menu open" />
+            </div>
+
+            <div class="project-image-pair reveal" aria-label="Map details">
+                <div class="project-image-pair-item" style="background: var(--color-navy)">
+                    <img src="assets/imgs/si-png/7-Show a selected component on the map.png" alt="A selected component on the map" />
+                </div>
+                <div class="project-image-pair-item" style="background: var(--color-navy)">
+                    <img src="assets/imgs/si-png/8-show-subscriptions.png" alt="Show subscriptions" />
+                </div>
+            </div>
+
+            <!-- Content block 6 — The Grid -->
+            <section class="content-block reveal">
+                <span class="content-label">The Grid</span>
                 <p class="content-statement">
                     The preview was a product itself. It should run speed checks
                     on the version — both developers and business users would
@@ -93,43 +140,73 @@
                 </p>
             </section>
 
+            <div class="project-image-full reveal" style="background: var(--color-navy)" aria-label="The grid view">
+                <img src="assets/imgs/si-png/9-the-grid-view.png" alt="The grid view" />
+            </div>
+
+            <div class="image-captioned reveal">
+                <div class="project-image-pair" aria-label="Search and filter details">
+                    <div class="project-image-pair-item" style="background: var(--color-navy)">
+                        <img src="assets/imgs/si-png/10-search-zoom-in.png" alt="Search zoom in" />
+                    </div>
+                    <div class="project-image-pair-item" style="background: var(--color-navy)">
+                        <img src="assets/imgs/si-png/11-filter-zoom-in.png" alt="Filter zoom in" />
+                    </div>
+                </div>
+                <div class="image-subtitle-pair">
+                    <p>The search bar suggests components by key words.</p>
+                    <p>Filters could get complex: hierarchy and navigation were a must-have.</p>
+                </div>
+            </div>
+
+            <div class="image-captioned reveal">
+                <div class="project-image-full" style="background: var(--color-navy)" aria-label="Create a view">
+                    <img src="assets/imgs/si-png/12-create-a-view.png" alt="Create a view" />
+                </div>
+                <p class="image-subtitle">The active filters bar shows all filters as controlable components.</p>
+            </div>
+
+            <!-- Content block 7 — Component Page -->
             <section class="content-block reveal">
-                <span class="content-label">The Map</span>
+                <span class="content-label">Component Page</span>
                 <p class="content-statement">
-                    The map and the grid represented the whole infrastructure.
-                    The map was a visual representation of all the
-                    relationships.
-                </p>
-            </section>
-
-            <div class="project-image-full reveal" aria-label="Project image"></div>
-            <div class="project-image-full reveal" aria-label="Project image"></div>
-            <div class="project-image-full reveal" aria-label="Project image"></div>
-
-            <section class="content-block reveal">
-                <span class="content-label">Specificity</span>
-                <p class="content-statement">The Component Page</p>
-                <p class="content-paragraph">
                     All component properties can be edited here. Is also
                     centralize information, like details about the verifications
                     and other meta data.
                 </p>
             </section>
 
-            <div class="project-image-full reveal" aria-label="Project image"></div>
+            <div class="project-image-full reveal" style="background: var(--color-navy)" aria-label="Component details">
+                <img src="assets/imgs/si-png/12-component-details.png" alt="Component details" />
+            </div>
 
+            <!-- Content block 8 — The Review -->
             <section class="content-block reveal">
-                <p class="content-statement">Review</p>
-                <p class="content-paragraph">
+                <span class="content-label">The Review</span>
+                <p class="content-statement">
                     When working with AI, one of prospects’ biggest concerns was
                     having control over what changed and clarity to review it.
                 </p>
             </section>
 
-            <div class="project-image-full reveal" aria-label="Project image"></div>
-            <div class="project-image-full reveal" aria-label="Project image"></div>
-            <div class="project-image-full reveal" aria-label="Project image"></div>
+            <div class="project-image-full reveal" style="background: var(--color-navy)" aria-label="Review">
+                <img src="assets/imgs/si-png/13-review.png" alt="Review" />
+            </div>
 
+            <div class="project-image-full reveal" style="background: var(--color-navy)" aria-label="Review with function">
+                <img src="assets/imgs/si-png/14-review-with-function.png" alt="Review with function" />
+            </div>
+
+            <div class="project-image-pair reveal" aria-label="Component history">
+                <div class="project-image-pair-item" style="background: var(--color-navy)">
+                    <img src="assets/imgs/si-png/15-component-history-light.png" alt="Component history light" />
+                </div>
+                <div class="project-image-pair-item" style="background: var(--color-navy)">
+                    <img src="assets/imgs/si-png/16-component-history-dark.png" alt="Component history dark" />
+                </div>
+            </div>
+
+            <!-- Content block 9 — Outcome -->
             <section class="content-block reveal">
                 <span class="content-label">Outcome</span>
                 <p class="content-statement">
@@ -149,6 +226,7 @@
                 </p>
             </section>
 
+            <!-- Content block 10 — Review should be a first-class citizen -->
             <section class="content-block reveal">
                 <p class="content-statement">
                     "Review" should be a first-class citizen
@@ -160,9 +238,29 @@
                 </p>
             </section>
 
-            <div class="project-image-full reveal" aria-label="Project image"></div>
-            <div class="project-image-full reveal" aria-label="Project image"></div>
+            <div class="image-captioned reveal">
+                <div class="project-image-pair" aria-label="CLI and Messages">
+                    <div class="project-image-pair-item" style="background: var(--color-navy)">
+                        <img src="assets/imgs/si-png/17-cli-example.png" alt="CLI example" />
+                    </div>
+                    <div class="project-image-pair-item" style="background: var(--color-navy)">
+                        <img src="assets/imgs/si-png/18-Messages.png" alt="Messages" />
+                    </div>
+                </div>
+                <div class="image-subtitle-pair">
+                    <p>Engineers work from the CLI.</p>
+                    <p>The page is sharable and contains everything users need.</p>
+                </div>
+            </div>
 
+            <div class="image-captioned reveal">
+                <div class="project-image-full" style="background: var(--color-navy)" aria-label="Review light mode">
+                    <img src="assets/imgs/si-png/19-review-light-mode.png" alt="Review light mode" />
+                </div>
+                <p class="image-subtitle">A representation of the possible changes, ready to be user tested.</p>
+            </div>
+
+            <!-- Content block 11 — The map should be easier to navigate -->
             <section class="content-block reveal">
                 <p class="content-statement">
                     The map should be easier to navigate
@@ -177,8 +275,19 @@
                 </p>
             </section>
 
-            <div class="project-image-full reveal" aria-label="Project image"></div>
-            <div class="project-image-full reveal" aria-label="Project image"></div>
+            <div class="image-captioned reveal">
+                <div class="project-image-full" style="background: var(--color-navy)" aria-label="Map redesign">
+                    <img src="assets/imgs/si-png/20-map-redesign.png" alt="Map redesign" />
+                </div>
+                <p class="image-subtitle">The map, grouped by categories that create navigation layers.</p>
+            </div>
+
+            <div class="image-captioned reveal">
+                <div class="project-image-full" style="background: var(--color-navy)" aria-label="Map redesign alternate view">
+                    <img src="assets/imgs/si-png/21-map-redesign.png" alt="Map redesign alternate view" />
+                </div>
+                <p class="image-subtitle">The map, grouped by categories that create navigation layers.</p>
+            </div>
 
             <section class="content-block reveal">
                 <span class="content-label">Takeaways</span>

@@ -372,6 +372,92 @@ a {
     border-radius: 8px;
 }
 
+/* Hero carousel */
+.hero-carousel {
+    position: relative;
+}
+
+.hero-carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 80%;
+    max-height: 80%;
+    margin: auto;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.hero-carousel img.is-active {
+    opacity: 1;
+}
+
+.hero-carousel-dots {
+    position: absolute;
+    bottom: var(--space-s);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.hero-carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.hero-carousel-dot.is-active {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Image with subtitle wrapper */
+.image-captioned {
+    margin: var(--space-s) var(--page-padding);
+    width: calc(100% - var(--page-padding) * 2);
+}
+
+.image-captioned .project-image-full,
+.image-captioned .project-image-bleed,
+.image-captioned .project-image-pair {
+    margin: 0;
+    width: 100%;
+}
+
+.image-captioned .image-subtitle,
+.image-captioned .image-subtitle-pair {
+    margin: var(--space-s) 0 0;
+    width: 100%;
+}
+
+/* Image subtitles */
+.image-subtitle {
+    font-size: var(--font-size-caption);
+    line-height: var(--line-height-body);
+    color: var(--color-gray);
+}
+
+.image-subtitle-pair {
+    display: flex;
+    flex-direction: column;
+    gap: var(--page-padding);
+}
+
+.image-subtitle-pair p {
+    font-size: var(--font-size-caption);
+    line-height: var(--line-height-body);
+    color: var(--color-gray);
+    flex: 1;
+}
+
 /* ————————————————————————————————
    Project page — content blocks
    ———————————————————————————————— */
@@ -688,13 +774,14 @@ body {
 
     .content-block,
     .project-thanks {
-        max-width: 820px;
+        max-width: calc(820px + var(--page-padding) * 2);
         margin: 0 auto;
     }
 
     .project-image-full,
     .project-image-bleed,
-    .project-image-pair {
+    .project-image-pair,
+    .image-captioned {
         margin: var(--space-l) var(--page-padding);
         width: calc(100% - var(--page-padding) * 2);
         border-radius: var(--border-radius);
@@ -707,6 +794,10 @@ body {
     .project-image-pair-item {
         flex: 1;
         min-width: 0;
+    }
+
+    .image-subtitle-pair {
+        flex-direction: row;
     }
 }
 
@@ -737,5 +828,10 @@ body {
 
     body {
         max-width: 1900px;
+    }
+
+    .content-block,
+    .project-thanks {
+        max-width: calc(1080px + var(--page-padding) * 2);
     }
 }
