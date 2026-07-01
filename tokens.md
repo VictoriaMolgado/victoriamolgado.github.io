@@ -18,6 +18,8 @@ Values scale across four breakpoints: mobile (default), tablet (768px), desktop 
 | `--color-green`    | `#009D61` |
 | `--color-bright-blue` | `#356DFF` |
 | `--color-dark`     | `#000000` |
+| `--color-compatible-blue`| `#2953B3` |
+
 
 ## Typography — Font
 
