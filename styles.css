@@ -188,7 +188,7 @@ a {
     display: flex;
     align-items: center;
     padding: 0 var(--page-padding) 15vh;
-    min-height: calc(100vh - 4rem);
+    min-height: calc(100vh - 4rem - 48px);
 }
 
 .hero h1 {
