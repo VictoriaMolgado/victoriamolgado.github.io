@@ -66,8 +66,6 @@
 
 html {
     -webkit-text-size-adjust: 100%;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
 }
 
 body {
@@ -114,8 +112,7 @@ a {
     display: flex;
     align-items: center;
     padding: 0 var(--page-padding) 15vh;
-    min-height: calc(100vh - 10rem);
-    scroll-snap-align: start;
+    min-height: calc(100vh - 4rem);
 }
 
 .hero h1 br {
@@ -141,7 +138,6 @@ a {
 .project {
     display: block;
     margin-bottom: var(--space-xl);
-    scroll-snap-align: center;
 }
 
 .project-image {
@@ -181,7 +177,7 @@ a {
 .project-image--pair video,
 .project-image--pair img {
     width: auto;
-    max-height: 80%;
+    height: 80%;
     object-fit: contain;
     flex-shrink: 0;
     border-radius: 8px;
@@ -425,8 +421,8 @@ a {
 @-webkit-keyframes fadeSlideUp {
     from {
         opacity: 0;
-        -webkit-transform: translateY(20px);
-        transform: translateY(20px);
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
     }
     to {
         opacity: 1;
@@ -438,8 +434,8 @@ a {
 @keyframes fadeSlideUp {
     from {
         opacity: 0;
-        -webkit-transform: translateY(20px);
-        transform: translateY(20px);
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
     }
     to {
         opacity: 1;
@@ -459,8 +455,8 @@ body {
 
 .js .reveal {
     opacity: 0;
-    -webkit-transform: translateY(20px);
-    transform: translateY(20px);
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
     -webkit-transition:
         opacity 0.6s ease-out,
         -webkit-transform 0.6s ease-out;
