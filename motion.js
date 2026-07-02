@@ -213,20 +213,23 @@ document.documentElement.classList.add('js');
 
   /* Toggle .is-centered on the snapped-to project */
   function setCentered(targets, index) {
-    for (var i = 0; i < projects.length; i++) {
-      projects[i].classList.remove('is-centered');
+    for (var i = 0; i < targets.length; i++) {
+      targets[i].classList.remove('is-centered');
     }
     var el = targets[index];
-    if (el !== hero) {
+    if (!isTopAligned(el)) {
       el.classList.add('is-centered');
     }
   }
 
-  /* Wheel handler — one gesture = one snap */
+  /* Wheel handler — trackpad-aware snapping */
   var wheelTimeout = null;
   var accumulated = 0;
-  var threshold = 30; /* px of wheel delta to trigger snap */
+  var threshold = 30;       /* px of delta to trigger a snap */
+  var cooldown = 450;       /* ms to wait after snap before allowing another */
   var snapped = false;
+  var lastAbsDelta = 0;     /* track delta magnitude for inertia detection */
+  var risingCount = 0;      /* consecutive events with rising magnitude = new gesture */
 
   function onWheel(e) {
     /* Don't hijack horizontal scroll */
@@ -234,24 +237,60 @@ document.documentElement.classList.add('js');
 
     e.preventDefault();
 
-    /* If already snapped during this gesture, ignore further wheel events */
+    var absDelta = Math.abs(e.deltaY);
+
+    /* — Inertia detection — */
     if (snapped) {
-      clearTimeout(wheelTimeout);
-      wheelTimeout = setTimeout(function () {
-        accumulated = 0;
-        snapped = false;
-      }, 150);
-      return;
+      /*
+       * After a snap, ignore inertial tail events.
+       * Inertia = delta magnitudes staying flat or decreasing.
+       * A new intentional gesture = multiple consecutive events
+       * with *increasing* magnitude.
+       */
+      if (absDelta > lastAbsDelta + 1) {
+        risingCount++;
+      } else {
+        risingCount = 0;
+      }
+      lastAbsDelta = absDelta;
+
+      /* Require 3+ rising-magnitude events to confirm new intent */
+      if (risingCount < 3) {
+        clearTimeout(wheelTimeout);
+        wheelTimeout = setTimeout(function () {
+          accumulated = 0;
+          snapped = false;
+          risingCount = 0;
+          lastAbsDelta = 0;
+        }, cooldown);
+        return;
+      }
+
+      /* New gesture confirmed — reset and allow snapping */
+      snapped = false;
+      accumulated = 0;
+      risingCount = 0;
+      lastAbsDelta = 0;
+
+      /* Cancel current animation so the new snap takes over */
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+        animationId = null;
+        animating = false;
+      }
     }
 
     accumulated += e.deltaY;
+    lastAbsDelta = absDelta;
 
     /* Reset gesture detection after inactivity */
     clearTimeout(wheelTimeout);
     wheelTimeout = setTimeout(function () {
       accumulated = 0;
       snapped = false;
-    }, 150);
+      risingCount = 0;
+      lastAbsDelta = 0;
+    }, cooldown);
 
     if (Math.abs(accumulated) < threshold) return;
 
@@ -270,6 +309,7 @@ document.documentElement.classList.add('js');
     setCentered(targets, next);
     accumulated = 0;
     snapped = true;
+    risingCount = 0;
   }
 
   window.addEventListener('wheel', onWheel, { passive: false });
