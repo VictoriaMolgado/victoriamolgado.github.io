@@ -685,6 +685,26 @@ body {
 }
 
 /* ————————————————————————————————
+   Motion — scroll-snap circle fill (mobile + tablet)
+   ———————————————————————————————— */
+
+@media (max-width: 1023px) {
+    .project.is-centered::before {
+        --x: 50%;
+        --y: 50%;
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
+        -webkit-transition: -webkit-transform 1.05s ease-out 0.08s;
+        transition: transform 1.05s ease-out 0.08s;
+    }
+
+    .project.is-centered .project-title,
+    .project.is-centered .project-description {
+        color: var(--color-white);
+    }
+}
+
+/* ————————————————————————————————
    Responsive — tablet (768px)
    ———————————————————————————————— */
 

@@ -211,6 +211,17 @@ document.documentElement.classList.add('js');
     animationId = requestAnimationFrame(step);
   }
 
+  /* Toggle .is-centered on the snapped-to project */
+  function setCentered(targets, index) {
+    for (var i = 0; i < projects.length; i++) {
+      projects[i].classList.remove('is-centered');
+    }
+    var el = targets[index];
+    if (el !== hero) {
+      el.classList.add('is-centered');
+    }
+  }
+
   /* Wheel handler — one gesture = one snap */
   var wheelTimeout = null;
   var accumulated = 0;
@@ -256,6 +267,7 @@ document.documentElement.classList.add('js');
     targetY = Math.max(0, Math.min(targetY, maxScroll));
 
     smoothScrollTo(targetY, 600);
+    setCentered(targets, next);
     accumulated = 0;
     snapped = true;
   }
@@ -290,6 +302,7 @@ document.documentElement.classList.add('js');
     targetY = Math.max(0, Math.min(targetY, maxScroll));
 
     smoothScrollTo(targetY, 600);
+    setCentered(targets, next);
     touchSnapped = true;
     touchStartY = null;
   }, { passive: false });
