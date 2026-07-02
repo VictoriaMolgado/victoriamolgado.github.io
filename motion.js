@@ -88,41 +88,17 @@ document.documentElement.classList.add('js');
 /* — JS-driven scroll snapping — */
 (function () {
   var isHome = !!document.querySelector('.hero');
-  var isProject = !!document.querySelector('.project-header');
-  if (!isHome && !isProject) return;
+  if (!isHome) return;
 
   /* Build snap targets depending on page type */
   function getTargets() {
-    if (isHome) {
-      var hero = document.querySelector('.hero');
-      var projects = document.querySelectorAll('.project');
-      var targets = [hero];
-      for (var i = 0; i < projects.length; i++) {
-        targets.push(projects[i]);
-      }
-      return targets;
+    var hero = document.querySelector('.hero');
+    var projects = document.querySelectorAll('.project');
+    var targets = [hero];
+    for (var i = 0; i < projects.length; i++) {
+      targets.push(projects[i]);
     }
-
-    /* Project pages: header, hero images, content sections, images */
-    var selectors =
-      '.project-header, ' +
-      '.project-content > .content-block, ' +
-      '.project-content > .project-image-full, ' +
-      '.project-content > .project-image-bleed, ' +
-      '.project-content > .project-image-pair, ' +
-      '.project-content > .image-captioned, ' +
-      '.project-content > .project-thanks, ' +
-      'body > .project-image-full, ' +
-      'body > .project-image-bleed, ' +
-      'body > .project-image-pair, ' +
-      'body > .image-captioned, ' +
-      'body > .hero-carousel';
-
-    return Array.prototype.slice.call(
-      document.querySelectorAll(selectors)
-    ).sort(function (a, b) {
-      return a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1;
-    });
+    return targets;
   }
 
   /* Top-aligned elements */
