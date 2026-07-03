@@ -102,8 +102,8 @@
     --border-radius: 16px;
 
     /* — Type roles (weight + letter-spacing fixed; size + line-height scale per breakpoint) — */
-    --font-size-display: 1.75rem; /* 28px */
-    --line-height-display: 2.75rem; /* 44px */
+    --font-size-display: 2.25rem; /* 36px */
+    --line-height-display: 3rem; /* 48px */
     --font-weight-display: 500;
     --letter-spacing-display: -1px;
 
@@ -112,18 +112,18 @@
     --font-weight-heading: 500;
     --letter-spacing-heading: -1px;
 
-    --font-size-body-lg: 1.25rem; /* 20px */
-    --line-height-body-lg: 2rem; /* 32px */
+    --font-size-body-lg: 1.5rem; /* 24px */
+    --line-height-body-lg: 2.25rem; /* 36px */
     --font-weight-body-lg: 400;
     --letter-spacing-body-lg: -1.2px;
 
-    --font-size-body: 1rem; /* 16px */
-    --line-height-body: 1.5rem; /* 24px */
+    --font-size-body: 1.25rem; /* 20px */
+    --line-height-body: 2rem; /* 32px */
     --font-weight-body: 500;
     --letter-spacing-body: 0px;
 
-    --font-size-caption: 0.875rem; /* 14px */
-    --line-height-caption: 1.625rem; /* 26px */
+    --font-size-caption: 1rem; /* 16px */
+    --line-height-caption: 1.5rem; /* 24px */
     --font-weight-caption: 400;
     --letter-spacing-caption: 0px;
 }
@@ -170,13 +170,13 @@ a {
 }
 
 .nav-logo {
-    font-size: var(--font-size-caption);
+    font-size: var(--font-size-body);
     font-weight: var(--font-weight-display);
     color: var(--color-black);
 }
 
 .nav-link {
-    font-size: var(--font-size-caption);
+    font-size: var(--font-size-body);
     color: var(--color-blue);
 }
 
@@ -188,8 +188,8 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 var(--page-padding) 15vh;
-    min-height: calc(100vh - 4rem - 48px);
+    padding: 0 var(--page-padding) var(--space-xl);
+    min-height: calc(100vh - 4rem - 48px - 15vh);
     gap: var(--space-s);
 }
 
@@ -292,10 +292,10 @@ a {
 }
 
 .project-header-title {
-    font-size: var(--font-size-display);
-    font-weight: var(--font-weight-display);
-    line-height: var(--line-height-display);
-    letter-spacing: var(--letter-spacing-display);
+    font-size: var(--font-size-body-lg);
+    font-weight: var(--font-weight-heading);
+    line-height: var(--line-height-body-lg);
+    letter-spacing: var(--letter-spacing-heading);
     font-variation-settings: "wght" 600;
     margin-bottom: var(--space-m);
     text-wrap: balance;
@@ -571,8 +571,8 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: var(--space-l) var(--page-padding) var(--space-m);
-    font-size: var(--font-size-caption);
-    line-height: var(--line-height-caption);
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
     color: var(--color-gray);
 }
 
@@ -743,6 +743,16 @@ body {
         --line-height-caption: 1.625rem; /* 26px */
     }
 
+    .nav-logo,
+    .nav-link {
+        font-size: var(--font-size-caption);
+    }
+
+    .footer {
+        font-size: var(--font-size-caption);
+        line-height: var(--line-height-caption);
+    }
+
     .project {
         display: flex;
         flex-direction: row;
@@ -794,6 +804,13 @@ body {
     }
 
     /* Project page */
+    .project-header-title {
+        font-size: var(--font-size-display);
+        font-weight: var(--font-weight-display);
+        line-height: var(--line-height-display);
+        letter-spacing: var(--letter-spacing-display);
+    }
+
     .project-header {
         padding-top: 30vh;
         padding-bottom: var(--space-l);
