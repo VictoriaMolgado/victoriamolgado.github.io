@@ -90,6 +90,10 @@ document.documentElement.classList.add('js');
   var isHome = !!document.querySelector('.hero');
   if (!isHome) return;
 
+  /* Disable scroll snapping on Chrome — trackpad issues */
+  var isChrome = /Chrome/.test(navigator.userAgent) && !/Edg|OPR/.test(navigator.userAgent);
+  if (isChrome) return;
+
   /* Build snap targets depending on page type */
   function getTargets() {
     var hero = document.querySelector('.hero');
@@ -211,6 +215,13 @@ document.documentElement.classList.add('js');
     /* Don't hijack horizontal scroll */
     if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
 
+    /* Allow free scroll past the last project (to reach footer) */
+    var direction = e.deltaY > 0 ? 1 : -1;
+    var targets = getTargets();
+    var current = getCurrentIndex();
+    if (direction === 1 && current >= targets.length - 1) return;
+    if (direction === -1 && current <= 0) return;
+
     e.preventDefault();
 
     var absDelta = Math.abs(e.deltaY);
@@ -306,11 +317,16 @@ document.documentElement.classList.add('js');
     var deltaY = touchStartY - e.touches[0].clientY;
     if (Math.abs(deltaY) < touchThreshold) return;
 
-    e.preventDefault();
-
     var direction = deltaY > 0 ? 1 : -1;
     var targets = getTargets();
     var current = getCurrentIndex();
+
+    /* Allow free scroll past the last project (to reach footer) */
+    if (direction === 1 && current >= targets.length - 1) return;
+    if (direction === -1 && current <= 0) return;
+
+    e.preventDefault();
+
     var next = Math.max(0, Math.min(targets.length - 1, current + direction));
 
     var targetY = getSnapY(targets[next]);
