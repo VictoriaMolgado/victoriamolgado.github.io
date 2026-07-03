@@ -189,7 +189,7 @@ a {
     flex-direction: column;
     justify-content: center;
     padding: 0 var(--page-padding) var(--space-xl);
-    min-height: calc(100vh - 4rem - 48px - 15vh);
+    min-height: calc(100vh - 4rem - 48px - 24vh);
     gap: var(--space-s);
 }
 
@@ -760,6 +760,10 @@ body {
         flex-direction: row;
         gap: var(--space-l);
         align-items: flex-start;
+    }
+
+    .hero {
+        min-height: calc(100vh - 4rem - 48px - 4vh);
     }
 
     .hero h1 {
