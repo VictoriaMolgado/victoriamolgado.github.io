@@ -79,18 +79,8 @@ document.documentElement.classList.add("js");
     current = index;
     dots[current].classList.add("is-active");
 
-    anime({
-      targets: outImg,
-      opacity: 0,
-      easing: "easeInOutQuad",
-      duration: 500,
-    });
-    anime({
-      targets: inImg,
-      opacity: 1,
-      easing: "easeInOutQuad",
-      duration: 500,
-    });
+    outImg.classList.remove("is-active");
+    inImg.classList.add("is-active");
   }
 
   function next() {
