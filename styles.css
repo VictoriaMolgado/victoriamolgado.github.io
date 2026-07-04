@@ -317,7 +317,7 @@ a {
 .project-image-full,
 .project-image-bleed,
 .project-image-pair {
-    margin: var(--space-s) var(--page-padding);
+    margin: var(--space-m) var(--page-padding);
     width: calc(100% - var(--page-padding) * 2);
     border-radius: var(--border-radius);
     overflow: hidden;
@@ -358,11 +358,10 @@ a {
 .project-image-pair {
     display: flex;
     flex-direction: column;
-    gap: var(--page-padding);
+    gap: var(--space-m);
 }
 
 .project-image-pair-item {
-    aspect-ratio: 1 / 1;
     background: var(--color-placeholder);
     border-radius: var(--border-radius);
     overflow: hidden;
@@ -842,6 +841,7 @@ body {
     }
 
     .project-image-pair-item {
+        aspect-ratio: 1 / 1;
         flex: 1;
         min-width: 0;
         padding: 0;
