@@ -104,6 +104,7 @@ document.documentElement.classList.add("js");
   startAutoplay();
 })();
 
+
 /* — Project hover: set radial origin from cursor entry point — */
 (function () {
   var projects = document.querySelectorAll(".project");
