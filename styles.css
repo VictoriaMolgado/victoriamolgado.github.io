@@ -892,3 +892,11 @@ body {
         max-width: calc(1080px + var(--page-padding) * 2);
     }
 }
+
+/* ————————————————————————————————
+   Project tap feedback
+   ———————————————————————————————— */
+
+.project:active .project-image {
+    filter: brightness(0.82);
+}
