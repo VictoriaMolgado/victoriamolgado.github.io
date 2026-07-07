@@ -146,6 +146,9 @@ html {
 
 body {
     font-family: var(--font-serif);
+    /* Matches Noto Serif JP's x-height so the Georgia/Times fallback
+       occupies roughly the same box, reducing reflow on font swap. */
+    font-size-adjust: 0.55;
     color: var(--color-black);
     background: var(--color-white);
     -webkit-font-smoothing: antialiased;
@@ -617,8 +620,8 @@ a {
 }
 
 body {
-    -webkit-animation: fadeSlideUp 1s cubic-bezier(0.25, 1, 0.5, 1) 0.1s both;
-    animation: fadeSlideUp 1s cubic-bezier(0.25, 1, 0.5, 1) 0.1s both;
+    -webkit-animation: fadeSlideUp 1.6s cubic-bezier(0.25, 1, 0.5, 1) 0.1s both;
+    animation: fadeSlideUp 1.6s cubic-bezier(0.25, 1, 0.5, 1) 0.1s both;
 }
 
 /* ————————————————————————————————
