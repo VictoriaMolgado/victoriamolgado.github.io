@@ -595,29 +595,56 @@ a {
 
 @-webkit-keyframes fadeSlideUp {
     from {
-        -webkit-transform: translateY(20px);
-        transform: translateY(20px);
+        opacity: 0;
     }
     to {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
+        opacity: 1;
     }
 }
 
 @keyframes fadeSlideUp {
     from {
-        -webkit-transform: translateY(20px);
-        transform: translateY(20px);
+        opacity: 0;
     }
     to {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
+        opacity: 1;
     }
 }
 
 body {
     -webkit-animation: fadeSlideUp 1.6s cubic-bezier(0.25, 1, 0.5, 1) 0.1s both;
     animation: fadeSlideUp 1.6s cubic-bezier(0.25, 1, 0.5, 1) 0.1s both;
+}
+
+/* Slide is scoped to the hero only (not full-viewport body) and kept to a
+   few px so its CLS contribution (impact fraction × distance fraction)
+   stays negligible instead of shifting the whole page. */
+@-webkit-keyframes heroSlideUp {
+    from {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroSlideUp {
+    from {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+.hero {
+    will-change: transform;
+    -webkit-animation: heroSlideUp 1.6s cubic-bezier(0.25, 1, 0.5, 1) 0.1s both;
+    animation: heroSlideUp 1.6s cubic-bezier(0.25, 1, 0.5, 1) 0.1s both;
 }
 
 /* ————————————————————————————————
