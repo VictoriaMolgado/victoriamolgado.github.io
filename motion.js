@@ -1,8 +1,11 @@
 /* — Progressive enhancement: enable reveal styles — */
 document.documentElement.classList.add("js");
 
-/* — Scroll reveal via IntersectionObserver + anime.js — */
-(function () {
+/* — Scroll reveal via IntersectionObserver.
+   Runs on page-ready (this script is deferred, so the DOM is parsed);
+   the reveal no longer waits on the web font — font-display: optional
+   handles the swap. — */
+function startReveal() {
   var elements = document.querySelectorAll(".reveal");
   if (!elements.length) return;
 
@@ -59,7 +62,9 @@ document.documentElement.classList.add("js");
       colorObserver.observe(projects[i]);
     }
   }
-})();
+}
+
+startReveal();
 
 /* — Hero carousel — */
 (function () {

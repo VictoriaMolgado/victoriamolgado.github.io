@@ -6,7 +6,7 @@
     font-family: "Noto Serif JP";
     font-style: normal;
     font-weight: 400;
-    font-display: swap;
+    font-display: optional;
     src: url(assets/fonts/noto-serif-jp-latin.woff2) format("woff2");
     unicode-range:
         U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
@@ -18,7 +18,7 @@
     font-family: "Noto Serif JP";
     font-style: normal;
     font-weight: 500;
-    font-display: swap;
+    font-display: optional;
     src: url(assets/fonts/noto-serif-jp-latin.woff2) format("woff2");
     unicode-range:
         U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
@@ -30,7 +30,7 @@
     font-family: "Noto Serif JP";
     font-style: normal;
     font-weight: 600;
-    font-display: swap;
+    font-display: optional;
     src: url(assets/fonts/noto-serif-jp-latin.woff2) format("woff2");
     unicode-range:
         U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
@@ -42,7 +42,7 @@
     font-family: "Noto Serif JP";
     font-style: normal;
     font-weight: 400;
-    font-display: swap;
+    font-display: optional;
     src: url(assets/fonts/noto-serif-jp-latin-ext.woff2) format("woff2");
     unicode-range:
         U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
@@ -54,7 +54,7 @@
     font-family: "Noto Serif JP";
     font-style: normal;
     font-weight: 500;
-    font-display: swap;
+    font-display: optional;
     src: url(assets/fonts/noto-serif-jp-latin-ext.woff2) format("woff2");
     unicode-range:
         U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
@@ -66,12 +66,28 @@
     font-family: "Noto Serif JP";
     font-style: normal;
     font-weight: 600;
-    font-display: swap;
+    font-display: optional;
     src: url(assets/fonts/noto-serif-jp-latin-ext.woff2) format("woff2");
     unicode-range:
         U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
         U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
         U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* ————————————————————————————————
+   Metric-matched fallback
+   Overrides tuned so Times New Roman occupies the exact same box as
+   Noto Serif JP — eliminates layout shift on font swap (no masking).
+   Values computed from the actual font metrics (upm 1000, hhea
+   ascent 1151 / descent -286 / gap 0) vs Times' average advance width.
+   ———————————————————————————————— */
+@font-face {
+    font-family: "Noto Serif JP Fallback";
+    src: local("Times New Roman");
+    size-adjust: 120.94%;
+    ascent-override: 95.17%;
+    descent-override: 23.65%;
+    line-gap-override: 0%;
 }
 
 /* ————————————————————————————————
@@ -91,7 +107,7 @@
     --color-compatible-blue: #2953b3;
     --color-dark: #000000;
 
-    --font-serif: "Noto Serif JP", Georgia, "Times New Roman", serif;
+    --font-serif: "Noto Serif JP", "Noto Serif JP Fallback", serif;
 
     --space-s: 1rem;
     --space-m: 2rem;
@@ -146,9 +162,6 @@ html {
 
 body {
     font-family: var(--font-serif);
-    /* Matches Noto Serif JP's x-height so the Georgia/Times fallback
-       occupies roughly the same box, reducing reflow on font swap. */
-    font-size-adjust: 0.55;
     color: var(--color-black);
     background: var(--color-white);
     -webkit-font-smoothing: antialiased;
