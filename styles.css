@@ -102,6 +102,8 @@
     --color-white: #ffffff;
 
     --color-navy: #1e49aa;
+    /* Nav links: AAA (>=7:1) on --color-white */
+    --color-nav-link: #1e49aa;
     --color-green: #009d61;
     --color-bright-blue: #356dff;
     --color-compatible-blue: #2953b3;
@@ -193,7 +195,7 @@ a {
 
 .nav-link {
     font-size: var(--font-size-body);
-    color: var(--color-blue);
+    color: var(--color-nav-link);
 }
 
 /* ————————————————————————————————
