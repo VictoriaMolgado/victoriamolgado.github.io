@@ -224,6 +224,150 @@ a {
     color: var(--color-gray);
 }
 
+/* Alternative homepage — static first pass; legacy hero styles stay above. */
+.home-alternative {
+    background: #fffbf9;
+    font-size: 16px;
+}
+
+.home-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px var(--page-padding);
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.home-mark {
+    font-size: 32px;
+    line-height: 1;
+}
+
+.home-nav-links {
+    display: flex;
+    gap: 20px;
+    color: var(--color-blue);
+}
+
+.home-intro {
+    width: min(100% - 32px, 640px);
+    margin-inline: auto;
+    padding-top: 48px;
+    color: #111111;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.65;
+    letter-spacing: 0;
+}
+
+.home-identity h1 {
+    font: inherit;
+}
+
+.home-identity p {
+    color: #8b8886;
+}
+
+.home-intro-copy {
+    margin-top: 120px;
+}
+
+.home-intro-copy p + p {
+    margin-top: 24px;
+}
+
+.home-intro-copy a,
+.home-company {
+    color: var(--color-blue);
+    font-weight: 600;
+}
+
+/* Text placeholders until the badge artwork is supplied. */
+.home-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 22px;
+    padding-inline: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1;
+    vertical-align: baseline;
+    white-space: nowrap;
+}
+
+.home-tag--amplify {
+    background: #eccef3;
+    color: #700084;
+}
+
+.home-tag--yc {
+    background: #f2d6b9;
+    color: #111111;
+}
+
+.home-tag--softbank {
+    background: #c9daf0;
+    color: rgb(0 0 0 / 80%);
+}
+
+.home-tag--nyse {
+    height: 23px;
+    border-radius: 4px;
+    background: #f0f0f0;
+    color: #000000;
+}
+
+.home-team-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 22px;
+    padding: 1px 4px;
+    gap: 0;
+    border-radius: 6px;
+    background: #f0f0f0;
+    vertical-align: baseline;
+}
+
+.home-team-icon {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    margin-right: -4px;
+    border: 1px solid #f2f2f2;
+    border-radius: 100px;
+    background: #ffffff;
+}
+
+.home-team-icon:last-child {
+    margin-right: 0;
+}
+
+.home-alternative .projects {
+    margin-top: 140px;
+}
+
+@media (min-width: 1024px) {
+    .home-nav {
+        padding: 16px 32px;
+    }
+
+    .home-intro {
+        padding-top: 32px;
+    }
+
+    .home-intro-copy {
+        margin-top: 160px;
+    }
+
+    .home-alternative .projects {
+        margin-top: 190px;
+    }
+}
+
 /* ————————————————————————————————
    Home — project list
    ———————————————————————————————— */

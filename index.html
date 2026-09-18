@@ -25,7 +25,10 @@
         />
         <link rel="stylesheet" href="styles.css" />
     </head>
-    <body>
+    <body class="home-alternative">
+        <!-- Original navigation and hero: uncomment this block and comment out
+             the alternative below to switch back. Remove home-alternative from
+             the body for the original look.
         <nav class="nav">
             <a href="index.html" class="nav-logo">✢ Victoria Molgado</a>
             <a href="about.html" class="nav-link">About</a>
@@ -39,6 +42,48 @@
                 <br />
                 ✢ ✢ ✢
             </h1>
+        </header>
+        -->
+
+        <!-- Alternative navigation and hero -->
+        <nav class="home-nav" aria-label="Main navigation">
+            <a href="index.html" class="home-mark" aria-label="Victoria Molgado home">✢</a>
+            <div class="home-nav-links">
+                <a href="https://www.linkedin.com/in/victoria-molgado/">Get in touch</a>
+                <a href="about.html">About</a>
+            </div>
+        </nav>
+
+        <header class="home-intro">
+            <div class="home-identity">
+                <h1>Victoria Molgado</h1>
+                <p>Product Designer</p>
+            </div>
+            <div class="home-intro-copy">
+                <p>I'm an expert in technical products and developer tools.</p>
+                <p>
+                    I redesigned <a href="system-initiative-overview.html">System Initiative</a>
+                    <span class="home-tag home-tag--amplify">Amplify.</span>
+                    <span class="home-team-tag" aria-label="Meet the team">
+                        <span class="home-team-icon" aria-hidden="true"></span>
+                        <span class="home-team-icon" aria-hidden="true"></span>
+                        <span class="home-team-icon" aria-hidden="true"></span>
+                    </span>
+                    to be an infrastructure platform engineers would use.
+                </p>
+                <p>
+                    Designed a low-code tool for <span class="home-company">Abstra</span>
+                    <span class="home-tag home-tag--yc">YC22</span>
+                    <span class="home-tag home-tag--softbank">SoftBank</span>
+                    a VS Code plugin to compose internal tools and program with Python.
+                </p>
+                <p>
+                    At <a href="vtex-releases.html">VTEX</a>
+                    <span class="home-tag home-tag--softbank">SoftBank</span>
+                    <span class="home-tag home-tag--nyse">NYSE</span>,
+                    I projected a release management versioning experience for non-technical users.
+                </p>
+            </div>
         </header>
 
         <main class="projects">
