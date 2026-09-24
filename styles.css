@@ -255,7 +255,7 @@ a {
     margin-inline: auto;
     padding-top: 48px;
     color: #111111;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 1.65;
     letter-spacing: 0;
@@ -290,11 +290,37 @@ a {
     justify-content: center;
     height: 22px;
     padding-inline: 8px;
+    gap: 4px;
     border-radius: 6px;
     font-size: 14px;
     line-height: 1;
     vertical-align: baseline;
     white-space: nowrap;
+}
+
+.home-tag-logo {
+    display: block;
+    flex: none;
+}
+
+.home-tag-logo--amplify {
+    width: 65px;
+    height: 16px;
+}
+
+.home-tag-logo--yc {
+    width: 18px;
+    height: 18px;
+}
+
+.home-tag-logo--softbank {
+    width: 82px;
+    height: 12px;
+}
+
+.home-tag-logo--nyse {
+    width: 36px;
+    height: 14px;
 }
 
 .home-tag--amplify {
@@ -403,10 +429,6 @@ a {
     transform: translateY(0);
 }
 
-.home-team-section + .home-team-section {
-    margin-top: 28px;
-}
-
 .home-team-section {
     display: block;
 }
@@ -419,63 +441,31 @@ a {
     line-height: 1.5;
 }
 
-.home-team-person {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-}
-
-.home-team-person + .home-team-person {
-    margin-top: 18px;
-}
-
-.home-team-avatar {
-    position: relative;
+.home-team-description {
     display: block;
-    flex: 0 0 24px;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: #d9d9d9;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
-.home-team-avatar-logo {
-    position: absolute;
-    right: -8px;
-    bottom: -8px;
-    display: flex;
+.home-team-inline-logo {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
     width: 20px;
     height: 20px;
+    margin-inline: 1px;
     border: 1px solid #f2f2f2;
     border-radius: 50%;
     background: #ffffff;
+    vertical-align: middle;
 }
 
-.home-team-avatar-logo img {
+.home-team-inline-logo img {
     display: block;
-    max-width: 14px;
-    max-height: 14px;
-}
-
-.home-team-person-copy {
-    display: flex;
-    min-width: 0;
-    flex-direction: column;
-    padding-top: 0;
-}
-
-.home-team-person-copy strong {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
-}
-
-.home-team-person-copy > span {
-    color: #777370;
-    font-size: 16px;
-    line-height: 1.5;
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
 }
 
 @media (max-width: 1023px) {
@@ -563,6 +553,11 @@ a {
     border-radius: 8px;
 }
 
+.project-image--coming-soon img {
+    border-radius: 4px;
+    opacity: 0.72;
+}
+
 .project-image--pair {
     gap: var(--space-m);
     justify-content: center;
@@ -592,8 +587,26 @@ a {
     font-weight: var(--font-weight-body);
     line-height: var(--line-height-body);
     letter-spacing: var(--letter-spacing-body);
-    color: var(--color-black);
+    color: var(--color-gray);
     margin-top: 0.75rem;
+}
+
+.project-status {
+    display: inline-flex;
+    align-items: center;
+    min-height: 22px;
+    margin-top: var(--space-m);
+    padding: 2px 8px;
+    border-radius: 6px;
+    background: #f0f0f0;
+    color: var(--color-gray);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.project-status + .project-title {
+    margin-top: 12px;
 }
 
 /* ————————————————————————————————
@@ -990,7 +1003,7 @@ body {
     border-radius: var(--border-radius);
 }
 
-.project::before {
+.project:not(.project--coming-soon)::before {
     content: "";
     position: absolute;
     width: 300%;
@@ -1005,7 +1018,7 @@ body {
     transition: transform 0.45s ease-in;
 }
 
-.project:hover::before {
+.project:not(.project--coming-soon):hover::before {
     -webkit-transform: translate(-50%, -50%) scale(1);
     transform: translate(-50%, -50%) scale(1);
     -webkit-transition: -webkit-transform 1.05s ease-out 0.08s;
@@ -1023,8 +1036,8 @@ body {
     transition: color 0.3s ease;
 }
 
-.project:hover .project-title,
-.project:hover .project-description {
+.project:not(.project--coming-soon):hover .project-title,
+.project:not(.project--coming-soon):hover .project-description {
     color: var(--color-white);
 }
 
@@ -1033,7 +1046,7 @@ body {
    ———————————————————————————————— */
 
 @media (max-width: 1023px) {
-    .project.is-centered::before {
+    .project:not(.project--coming-soon).is-centered::before {
         --x: 50%;
         --y: 50%;
         -webkit-transform: translate(-50%, -50%) scale(1);
@@ -1042,8 +1055,8 @@ body {
         transition: transform 1.05s ease-out 0.08s;
     }
 
-    .project.is-centered .project-title,
-    .project.is-centered .project-description {
+    .project:not(.project--coming-soon).is-centered .project-title,
+    .project:not(.project--coming-soon).is-centered .project-description {
         color: var(--color-white);
     }
 }
@@ -1120,6 +1133,14 @@ body {
 
     .project-title {
         margin-top: 0;
+    }
+
+    .project-status {
+        margin-top: 0;
+    }
+
+    .project-status + .project-title {
+        margin-top: 12px;
     }
 
     /* About page */

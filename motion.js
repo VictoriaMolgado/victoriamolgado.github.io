@@ -57,7 +57,9 @@ function startReveal() {
       { threshold: 0.5 },
     );
 
-    var projects = document.querySelectorAll(".project");
+    var projects = document.querySelectorAll(
+      ".project:not(.project--coming-soon)",
+    );
     for (var i = 0; i < projects.length; i++) {
       colorObserver.observe(projects[i]);
     }
@@ -112,7 +114,9 @@ startReveal();
 
 /* — Project hover: set radial origin from cursor entry point — */
 (function () {
-  var projects = document.querySelectorAll(".project");
+  var projects = document.querySelectorAll(
+    ".project:not(.project--coming-soon)",
+  );
   for (var i = 0; i < projects.length; i++) {
     projects[i].addEventListener("mouseenter", function (e) {
       var rect = this.getBoundingClientRect();
