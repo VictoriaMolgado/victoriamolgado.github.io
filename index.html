@@ -50,7 +50,7 @@
             <a href="index.html" class="home-mark" aria-label="Victoria Molgado home">✢</a>
             <div class="home-nav-links">
                 <a href="https://www.linkedin.com/in/victoria-molgado/">Get in touch</a>
-                <a href="about.html">About</a>
+                <a href="https://www.linkedin.com/in/victoria-molgado/">LinkedIn</a>
             </div>
         </nav>
 
@@ -60,9 +60,15 @@
                 <p>Product Designer</p>
             </div>
             <div class="home-intro-copy">
-                <p>I'm an expert in technical products and developer tools.</p>
+                <p>I'm an expert in technical products and developer&nbsp;tools.</p>
                 <p>
-                    I redesigned <a href="system-initiative-overview.html">System Initiative</a>
+                    I redesigned <span class="home-tooltip-wrap">
+                        <a href="system-initiative-overview.html" aria-describedby="si-case-tooltip">System Initiative</a>
+                        <span class="home-tooltip-panel" id="si-case-tooltip" role="tooltip">
+                            System Initiative relaunch: investigating adoption
+                            through familiarity and control
+                        </span>
+                    </span>
                     <span class="home-tag home-tag--amplify">
                         <img
                             class="home-tag-logo home-tag-logo--amplify"
@@ -87,47 +93,56 @@
                             </span>
                         </button>
                         <span
-                            class="home-team-card"
+                            class="home-tooltip-panel home-team-card"
                             role="group"
                             aria-label="System Initiative team"
                         >
                             <span class="home-team-section">
                                 <span class="home-team-heading">Founding team</span>
                                 <span class="home-team-description">
-                                    System Initiative was founded by Adam Jacob,
-                                    founder of Chef
-                                    <span class="home-team-inline-logo" aria-hidden="true">
-                                        <img src="assets/imgs/home/chef-xsmall.svg" alt="" />
-                                    </span>.
-                                    The executive team counted with members from Chef
-                                    <span class="home-team-inline-logo" aria-hidden="true">
-                                        <img src="assets/imgs/home/chef-xsmall.svg" alt="" />
-                                    </span>,
-                                    Docker
-                                    <span class="home-team-inline-logo" aria-hidden="true">
-                                        <img src="assets/imgs/home/docker-xsmall.svg" alt="" />
-                                    </span>,
-                                    and Pulumi
-                                    <span class="home-team-inline-logo" aria-hidden="true">
-                                        <img src="assets/imgs/home/polumi-xsmall.svg" alt="" />
-                                    </span>.
+                                    System Initiative was founded by Adam&nbsp;Jacob,
+                                    founder of <span class="home-team-credential">Chef
+                                        <span class="home-team-inline-logo" aria-hidden="true">
+                                            <img src="assets/imgs/home/chef-xsmall.svg" alt="" />
+                                        </span>.</span>
+                                    The executive team counted with members from
+                                    <span class="home-team-credential">Chef
+                                        <span class="home-team-inline-logo" aria-hidden="true">
+                                            <img src="assets/imgs/home/chef-xsmall.svg" alt="" />
+                                        </span>,</span>
+                                    <span class="home-team-credential">Docker
+                                        <span class="home-team-inline-logo" aria-hidden="true">
+                                            <img src="assets/imgs/home/docker-xsmall.svg" alt="" />
+                                        </span>,</span>
+                                    <span class="home-team-credential">and Pulumi
+                                        <span class="home-team-inline-logo" aria-hidden="true">
+                                            <img src="assets/imgs/home/polumi-xsmall.svg" alt="" />
+                                        </span>.</span>
                                 </span>
                             </span>
                         </span>
                     </span>
                     around familiar technical workflows to pursue activation
-                    and adoption.
+                    and&nbsp;adoption.
                 </p>
                 <p>
-                    For <span class="home-company">Abstra</span>
+                    For <span
+                        class="home-company home-tooltip-wrap"
+                        tabindex="0"
+                        aria-describedby="abstra-coming-soon"
+                    >Abstra<span
+                        class="home-tooltip-panel"
+                        id="abstra-coming-soon"
+                        role="tooltip"
+                    >Coming soon</span></span>
                     <span class="home-tag home-tag--yc">
                         <img
                             class="home-tag-logo home-tag-logo--yc"
-                            src="assets/imgs/home/y-combinator-mark.svg"
+                            src="assets/imgs/home/y-combinator-wordmark.svg"
                             alt="Y Combinator"
                         />
-                        <span>YC22</span>
                     </span>
+                    <span class="home-tag home-tag--yc-year">YC22</span>
                     <span class="home-tag home-tag--softbank">
                         <img
                             class="home-tag-logo home-tag-logo--softbank"
@@ -137,10 +152,16 @@
                     </span>, I
                     designed a low-code tool to support its search for product-market
                     fit—a VS Code plugin for engineers to compose internal tools and
-                    program them in Python.
+                    program them in&nbsp;Python.
                 </p>
                 <p>
-                    At <a href="vtex-releases.html">VTEX</a>
+                    At <span class="home-tooltip-wrap">
+                        <a href="vtex-releases.html" aria-describedby="vtex-case-tooltip">VTEX</a>
+                        <span class="home-tooltip-panel" id="vtex-case-tooltip" role="tooltip">
+                            A version control tool for all the e&#8209;commerce team:
+                            shipped in a quarter, iterated in the real world
+                        </span>
+                    </span>
                     <span class="home-tag home-tag--softbank">
                         <img
                             class="home-tag-logo home-tag-logo--softbank"
@@ -157,7 +178,7 @@
                     </span>, I designed a
                     release management experience for non-technical teams, giving
                     Carrefour the confidence to schedule its Black Friday storefront
-                    updates in advance.
+                    updates in&nbsp;advance.
                 </p>
             </div>
         </header>
@@ -252,6 +273,29 @@
                     </p>
                 </div>
             </article>
+
+            <div class="home-project-actions">
+                <aside class="home-contact-callout" aria-label="Feedback and contact">
+                    <p>
+                        Do you have any feedback about this website or want to get in touch?
+                        <a class="home-feedback-link" href="" aria-disabled="true">Fill up this form</a>
+                        and I'll reach out to you.
+                    </p>
+                </aside>
+                <span class="home-tooltip-wrap home-scroll-top-wrap">
+                    <button
+                        class="home-scroll-top"
+                        type="button"
+                        aria-label="Scroll back to top"
+                        aria-describedby="scroll-top-tooltip"
+                    >
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M12 19V5M5 12L12 5L19 12" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <span class="home-tooltip-panel" id="scroll-top-tooltip" role="tooltip">Scroll back to top</span>
+                </span>
+            </div>
         </main>
 
         <footer class="footer">
