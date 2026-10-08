@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Abstra Dashboards — Victoria Molgado</title>
+        <link
+            rel="preload"
+            href="assets/fonts/noto-serif-jp-latin.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+        <link
+            rel="icon"
+            href="assets/imgs/marciano-favicon.ico"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body class="case-study">
+        <nav class="nav">
+            <a href="index.html" class="nav-logo"><span class="nav-mark">✢</span> Victoria Molgado</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Projects</a>
+                <a href="https://www.linkedin.com/in/victoria-molgado/" class="nav-link">LinkedIn</a>
+            </div>
+        </nav>
+
+        <header class="project-header">
+            <h1 class="project-header-title">
+                A low-code tool for developers: composing internal applications
+                in VS Code with Python
+            </h1>
+            <p class="project-meta">Product designer: Victoria Molgado</p>
+            <p class="project-meta">
+                User research ✢ Design system ✢ User interface
+            </p>
+        </header>
+
+        <div
+            class="project-image-full reveal"
+            style="background: #d9d9d9"
+            aria-label="Placeholder for the finished internal tool composed in VS Code"
+        ></div>
+
+        <main class="project-content">
+            <section class="content-block reveal">
+                <span class="content-label">Context</span>
+                <p class="content-statement">
+                    In search of product-market fit, Abstra was exploring
+                    whether a low-code tool could help developers build internal
+                    applications with less interface work.
+                </p>
+                <p class="content-paragraph">
+                    The thesis was that internal tools carry complex
+                    interactions, but developers often build them without
+                    dedicated design support. Abstra could take on that work
+                    through widgets that already accounted for layout, styling,
+                    and interaction states.
+                </p>
+            </section>
+
+            <div
+                class="project-image-bleed reveal"
+                style="aspect-ratio: 16 / 9; background: #d9d9d9"
+                aria-label="Placeholder for a finished dashboard built with Abstra"
+            ></div>
+
+            <section class="content-block reveal">
+                <span class="content-label">Scope</span>
+                <p class="content-statement">
+                    Abstra Dashboards was a VS Code plugin for composing
+                    interfaces from ready-made widgets, connecting them to
+                    business rules in Python, and deploying internal tools
+                    within the developer's coding workflow.
+                </p>
+                <p class="content-paragraph">
+                    The visual builder had to reduce interface work without
+                    limiting how engineers wrote business logic. The design
+                    question was where to give developers control and where the
+                    system should make a decision for them.
+                </p>
+            </section>
+
+            <div
+                class="project-image-full reveal"
+                style="background: #d9d9d9"
+                aria-label="Placeholder for the workflow from empty canvas to a deployed internal tool"
+            ></div>
+
+            <section class="content-block reveal">
+                <span class="content-label">Specificity</span>
+                <p class="content-statement">
+                    The design system was the widgets' main specification. It
+                    had to define how components behaved together, so
+                    developers could assemble a complex tool without designing
+                    every interaction themselves.
+                </p>
+                <p class="content-paragraph">
+                    Placement was one of those decisions. Free positioning made
+                    layout errors easy to introduce. The grid was responsible
+                    for positioning, while components carried their own
+                    spacing, including 8px internal padding. This separated
+                    choosing where a widget belonged from adjusting the space
+                    inside it.
+                </p>
+                <p class="content-paragraph">
+                    Containers needed their own rules. A sidebar could act as a
+                    canvas, but it did not have the same purpose or room as the
+                    main workspace. Later interaction specifications made that
+                    boundary explicit: a smaller set of components could be
+                    dropped into a sidebar, while modals had three canvas
+                    sizes. Reusing the composition model still required
+                    defining what each container could accept.
+                </p>
+                <p class="content-paragraph">
+                    Those specifications also separated editing from testing.
+                    In editing, selecting a widget would expose its properties
+                    in the Inspector, with changes reflected on the canvas. In
+                    testing, the canvas would respond as the finished tool,
+                    with a way back to editing. The same click needed a clear
+                    meaning in each mode: configure the component or use it.
+                </p>
+            </section>
+
+            <div class="image-captioned reveal">
+                <div
+                    class="project-image-full"
+                    style="background: #d9d9d9"
+                    aria-label="Placeholder for placing a widget and inspecting its spacing"
+                ></div>
+                <p class="image-subtitle">
+                    The grid handled placement while each component preserved
+                    its own internal spacing.
+                </p>
+            </div>
+
+            <div class="image-captioned reveal">
+                <div
+                    class="project-image-pair"
+                    aria-label="Placeholders comparing the main canvas with constrained containers"
+                >
+                    <div
+                        class="project-image-pair-item"
+                        style="aspect-ratio: 1 / 1; background: #d9d9d9"
+                        aria-label="Placeholder for the main canvas and sidebar"
+                    ></div>
+                    <div
+                        class="project-image-pair-item"
+                        style="aspect-ratio: 1 / 1; background: #d9d9d9"
+                        aria-label="Placeholder for modal canvas sizes"
+                    ></div>
+                </div>
+                <div class="image-subtitle-pair">
+                    <p>
+                        The sidebar reused the composition model with a smaller
+                        set of accepted components.
+                    </p>
+                    <p>
+                        Three modal sizes made the available canvas explicit.
+                    </p>
+                </div>
+            </div>
+
+            <div class="image-captioned reveal">
+                <div
+                    class="project-image-full"
+                    style="background: #d9d9d9"
+                    aria-label="Placeholder for selecting a widget, editing its label, and testing it"
+                ></div>
+                <p class="image-subtitle">
+                    Editing connected the selected widget to the Inspector;
+                    testing let the same interface behave like the finished
+                    tool.
+                </p>
+            </div>
+
+            <section class="content-block reveal">
+                <span class="content-label">Specificity</span>
+                <p class="content-statement">
+                    The theme settings gave developers a small set of meaningful
+                    decisions. One HEX value was enough to define a brand color;
+                    the system would derive the variations needed for links,
+                    buttons, selections, and light or dark interfaces.
+                </p>
+                <p class="content-paragraph">
+                    That color had to work across surfaces and states. The later
+                    theme specification kept light and dark surfaces fixed and
+                    required the generated colors to preserve contrast with
+                    backgrounds and labels. Developers could bring their brand
+                    without having to assemble and maintain a palette
+                    themselves.
+                </p>
+                <p class="content-paragraph">
+                    Widget states were part of the same responsibility. The
+                    later interaction specifications covered button hover and
+                    click states, text-input selection, errors and clearing,
+                    and corresponding selector behavior. A clean default
+                    appearance was only useful if the component remained
+                    understandable when someone interacted with it.
+                </p>
+                <p class="content-paragraph">
+                    Components were flexible in their purpose and restrained in
+                    their styling. The system aimed to make Abstra recognizable
+                    through consistent composition while leaving room for the
+                    client's brand. For the original builder, interviews with
+                    the implemented version were used to look for blind spots
+                    and inform revisions.
+                </p>
+            </section>
+
+            <div
+                class="project-image-full reveal"
+                style="background: #d9d9d9"
+                aria-label="Placeholder showing one HEX value applied across light and dark surfaces"
+            ></div>
+
+            <div class="image-captioned reveal">
+                <div
+                    class="project-image-pair"
+                    aria-label="Placeholders for input and selector interaction states"
+                >
+                    <div
+                        class="project-image-pair-item"
+                        style="aspect-ratio: 1 / 1; background: #d9d9d9"
+                        aria-label="Placeholder for text input selection, error, and cleared states"
+                    ></div>
+                    <div
+                        class="project-image-pair-item"
+                        style="aspect-ratio: 1 / 1; background: #d9d9d9"
+                        aria-label="Placeholder for corresponding selector states"
+                    ></div>
+                </div>
+                <div class="image-subtitle-pair">
+                    <p>
+                        Inputs remained legible through selection, error, and
+                        clearing states.
+                    </p>
+                    <p>
+                        Selectors followed the same interaction logic and visual
+                        hierarchy.
+                    </p>
+                </div>
+            </div>
+
+            <section class="content-block reveal">
+                <span class="content-label">Outcome</span>
+                <p class="content-statement">
+                    At launch, the plugin recorded 7,000 downloads on its first
+                    day. A YouTube overview spread organically, and VS Code
+                    featured Abstra on the Marketplace homepage for two weeks.
+                </p>
+                <p class="content-paragraph">
+                    The launch brought visibility, but left the commercial
+                    question open: would the developers using the tool also buy
+                    it? The design addressed the effort of building an internal
+                    interface; finding a sustainable market also depended on
+                    understanding who would pay for that work.
+                </p>
+            </section>
+
+            <p class="project-thanks">✢ ✢ ✢</p>
+        </main>
+
+        <footer class="footer">
+            <span>✢ Victória Molgado 2026</span>
+            <nav class="footer-links">
+                <a href="index.html">Projects</a>
+                <a href="#">Linkedin</a>
+                <a href="https://github.com/VictoriaMolgado">GitHub</a>
+            </nav>
+        </footer>
+        <script src="motion.js" defer></script>
+        <script src="analytics.js" defer></script>
+    </body>
+</html>

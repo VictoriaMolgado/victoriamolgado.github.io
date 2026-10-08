@@ -57,7 +57,9 @@ function startReveal() {
       { threshold: 0.5 },
     );
 
-    var projects = document.querySelectorAll(".project");
+    var projects = document.querySelectorAll(
+      ".project:not(.project--coming-soon)",
+    );
     for (var i = 0; i < projects.length; i++) {
       colorObserver.observe(projects[i]);
     }
@@ -65,6 +67,44 @@ function startReveal() {
 }
 
 startReveal();
+
+/* Homepage closing actions. The form stays inactive until its URL is supplied. */
+(function () {
+  var formLink = document.querySelector(".home-feedback-link");
+  if (formLink) {
+    formLink.addEventListener("click", function (event) {
+      if (!formLink.getAttribute("href").trim()) event.preventDefault();
+    });
+  }
+  var scrollTop = document.querySelector(".home-scroll-top");
+  if (!scrollTop) return;
+  scrollTop.addEventListener("click", function () {
+    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: 0, behavior: reducedMotion ? "instant" : "smooth" });
+    var homeLink = document.querySelector(".home-mark");
+    if (homeLink) homeLink.focus({ preventScroll: true });
+  });
+})();
+
+/* Tooltip panels can be dismissed without moving focus from their trigger. */
+(function () {
+  var triggers = document.querySelectorAll(".home-tooltip-wrap, .home-team-wrap");
+  triggers.forEach(function (trigger) {
+    function reset() {
+      trigger.removeAttribute("data-tooltip-dismissed");
+    }
+    trigger.addEventListener("mouseenter", reset);
+    trigger.addEventListener("focusin", reset);
+  });
+  document.addEventListener("keydown", function (event) {
+    if (event.key !== "Escape") return;
+    triggers.forEach(function (trigger) {
+      if (trigger.matches(":hover") || trigger.contains(document.activeElement)) {
+        trigger.setAttribute("data-tooltip-dismissed", "");
+      }
+    });
+  });
+})();
 
 /* — Hero carousel — */
 (function () {
@@ -112,7 +152,9 @@ startReveal();
 
 /* — Project hover: set radial origin from cursor entry point — */
 (function () {
-  var projects = document.querySelectorAll(".project");
+  var projects = document.querySelectorAll(
+    ".project:not(.project--coming-soon)",
+  );
   for (var i = 0; i < projects.length; i++) {
     projects[i].addEventListener("mouseenter", function (e) {
       var rect = this.getBoundingClientRect();
