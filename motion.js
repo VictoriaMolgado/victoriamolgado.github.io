@@ -100,6 +100,106 @@ startReveal();
   });
 })();
 
+/* Linked news cards support hover, keyboard focus, and tap. */
+(function () {
+  var wrappers = document.querySelectorAll(".home-news-wrap");
+  var active = null;
+  var desktop = window.matchMedia("(min-width: 1024px)");
+
+  function position(wrapper) {
+    var card = wrapper.querySelector(".home-news-card");
+    card.style.removeProperty("--news-offset-x");
+    card.style.removeProperty("--news-offset-y");
+    if (!desktop.matches) return;
+    var triggerRect = wrapper.getBoundingClientRect();
+    var cardRect = card.getBoundingClientRect();
+    var left = Math.max(16, Math.min(triggerRect.left, window.innerWidth - cardRect.width - 16));
+    var top = triggerRect.bottom + 8;
+    if (top + cardRect.height > window.innerHeight - 16) {
+      top = triggerRect.top - cardRect.height - 8;
+    }
+    top = Math.max(16, Math.min(top, window.innerHeight - cardRect.height - 16));
+    card.style.setProperty("--news-offset-x", left - triggerRect.left + "px");
+    card.style.setProperty("--news-offset-y", top - triggerRect.top + "px");
+  }
+
+  function close(wrapper, restoreFocus) {
+    if (!wrapper) return;
+    wrapper.removeAttribute("data-news-open");
+    wrapper.querySelector(".home-news-trigger").setAttribute("aria-expanded", "false");
+    wrapper.querySelector(".home-news-card").inert = true;
+    if (active === wrapper) active = null;
+    if (restoreFocus) {
+      wrapper.setAttribute("data-news-dismissed", "");
+      wrapper.querySelector(".home-news-trigger").focus({ preventScroll: true });
+    }
+  }
+
+  function open(wrapper) {
+    if (wrapper.hasAttribute("data-news-dismissed")) return;
+    if (active && active !== wrapper) close(active);
+    position(wrapper);
+    wrapper.setAttribute("data-news-open", "");
+    wrapper.querySelector(".home-news-trigger").setAttribute("aria-expanded", "true");
+    wrapper.querySelector(".home-news-card").inert = false;
+    active = wrapper;
+  }
+
+  wrappers.forEach(function (wrapper) {
+    var trigger = wrapper.querySelector(".home-news-trigger");
+    var timer;
+    wrapper.addEventListener("pointerenter", function (event) {
+      clearTimeout(timer);
+      if (event.pointerType !== "mouse") return;
+      wrapper.removeAttribute("data-news-dismissed");
+      open(wrapper);
+    });
+    wrapper.addEventListener("pointerleave", function (event) {
+      if (event.pointerType !== "mouse") return;
+      wrapper.removeAttribute("data-news-dismissed");
+      timer = setTimeout(function () {
+        if (!wrapper.contains(document.activeElement)) close(wrapper);
+      }, 180);
+    });
+    wrapper.addEventListener("focusin", function () {
+      clearTimeout(timer);
+      open(wrapper);
+    });
+    wrapper.addEventListener("focusout", function () {
+      timer = setTimeout(function () {
+        if (!wrapper.contains(document.activeElement)) {
+          close(wrapper);
+          wrapper.removeAttribute("data-news-dismissed");
+        }
+      }, 0);
+    });
+    trigger.addEventListener("click", function () {
+      wrapper.removeAttribute("data-news-dismissed");
+      open(wrapper);
+    });
+    wrapper.querySelector(".home-news-close").addEventListener("click", function () {
+      close(wrapper, true);
+    });
+  });
+
+  document.addEventListener("pointerdown", function (event) {
+    if (active && !active.contains(event.target)) close(active);
+  });
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && active) {
+      var restoreFocus = active.querySelector(".home-news-card").contains(document.activeElement);
+      active.setAttribute("data-news-dismissed", "");
+      close(active, restoreFocus);
+    }
+  });
+  window.addEventListener("resize", function () {
+    if (active) position(active);
+  });
+  window.addEventListener("scroll", function () {
+    if (active) position(active);
+  }, { passive: true });
+})();
+
 /* — Hero carousel — */
 (function () {
   var carousel = document.querySelector(".hero-carousel");

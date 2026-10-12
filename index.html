@@ -69,12 +69,24 @@
                             through familiarity and control
                         </span>
                     </span>
-                    <span class="home-tag home-tag--amplify">
-                        <img
-                            class="home-tag-logo home-tag-logo--amplify"
-                            src="assets/imgs/home/amplify-wordmark.svg"
-                            alt="Amplify"
-                        />
+                    <span class="home-news-wrap">
+                        <button class="home-tag home-tag--amplify home-news-trigger" type="button"
+                            aria-label="Show System Initiative funding news" aria-expanded="false" aria-controls="home-news-amplify">
+                            <img class="home-tag-logo home-tag-logo--amplify" src="assets/imgs/home/amplify-wordmark.svg" alt="Amplify" />
+                        </button>
+                        <span class="home-tooltip-panel home-news-card" id="home-news-amplify" role="group" aria-label="System Initiative funding news" inert>
+                            <button class="home-news-close" type="button" aria-label="Close news preview">×</button>
+                            <a class="home-news-link" href="https://www.amplifypartners.com/blog-posts/system-initiative" target="_blank" rel="noopener noreferrer">
+                                <span class="home-news-thumbnail home-news-thumbnail--amplify">
+                                    <img src="assets/imgs/home/news/amplify.webp" alt="" width="720" height="400" decoding="async" />
+                                </span>
+                                <span class="home-news-content">
+                                    <span class="home-news-headline">Amplify backed System Initiative at seed and Series A</span>
+                                    <span class="home-news-source">Amplify Partners <span aria-hidden="true">·</span> <time datetime="2023-06-21">Jun 21, 2023</time></span>
+                                    <span class="home-news-action">Read article <span class="home-news-external-icon" aria-hidden="true"></span></span>
+                                </span>
+                            </a>
+                        </span>
                     </span>
                     <span class="home-team-wrap">
                         <button
@@ -98,7 +110,6 @@
                             aria-label="System Initiative team"
                         >
                             <span class="home-team-section">
-                                <span class="home-team-heading">Founding team</span>
                                 <span class="home-team-description">
                                     System Initiative was founded by Adam&nbsp;Jacob,
                                     founder of <span class="home-team-credential">Chef
@@ -135,20 +146,44 @@
                         id="abstra-coming-soon"
                         role="tooltip"
                     >Coming soon</span></span>
-                    <span class="home-tag home-tag--yc">
-                        <img
-                            class="home-tag-logo home-tag-logo--yc"
-                            src="assets/imgs/home/y-combinator-wordmark.svg"
-                            alt="Y Combinator"
-                        />
+                    <span class="home-news-wrap">
+                        <button class="home-tag home-tag--yc home-news-trigger" type="button"
+                            aria-label="Show Abstra’s Y Combinator profile" aria-expanded="false" aria-controls="home-news-yc">
+                            <img class="home-tag-logo home-tag-logo--yc" src="assets/imgs/home/y-combinator-wordmark.svg" alt="Y Combinator" />
+                        </button>
+                        <span class="home-tag home-tag--yc-year" aria-hidden="true">S21</span>
+                        <span class="home-tooltip-panel home-news-card" id="home-news-yc" role="group" aria-label="Abstra’s Y Combinator profile" inert>
+                            <button class="home-news-close" type="button" aria-label="Close news preview">×</button>
+                            <a class="home-news-link" href="https://www.ycombinator.com/companies/abstra" target="_blank" rel="noopener noreferrer">
+                                <span class="home-news-thumbnail home-news-thumbnail--yc">
+                                    <img src="assets/imgs/home/news/yc.webp" alt="" width="720" height="400" decoding="async" />
+                                </span>
+                                <span class="home-news-content">
+                                    <span class="home-news-headline">Abstra joined Y Combinator’s Summer 2021 batch</span>
+                                    <span class="home-news-source">Y Combinator <span aria-hidden="true">·</span> <span>Summer 2021</span></span>
+                                    <span class="home-news-action">View YC profile <span class="home-news-external-icon" aria-hidden="true"></span></span>
+                                </span>
+                            </a>
+                        </span>
                     </span>
-                    <span class="home-tag home-tag--yc-year">YC22</span>
-                    <span class="home-tag home-tag--softbank">
-                        <img
-                            class="home-tag-logo home-tag-logo--softbank"
-                            src="assets/imgs/home/softbank-wordmark.svg"
-                            alt="SoftBank"
-                        />
+                    <span class="home-news-wrap">
+                        <button class="home-tag home-tag--softbank home-news-trigger" type="button"
+                            aria-label="Show Abstra funding news" aria-expanded="false" aria-controls="home-news-abstra">
+                            <img class="home-tag-logo home-tag-logo--softbank" src="assets/imgs/home/softbank-wordmark.svg" alt="SoftBank" />
+                        </button>
+                        <span class="home-tooltip-panel home-news-card" id="home-news-abstra" role="group" aria-label="Abstra funding news" inert>
+                            <button class="home-news-close" type="button" aria-label="Close news preview">×</button>
+                            <a class="home-news-link" href="https://techcrunch.com/2022/01/03/brazils-abstra-lands-accenture-as-a-customer-and-2-3m-to-help-teams-make-apps-with-its-no-code-tool/" target="_blank" rel="noopener noreferrer">
+                                <span class="home-news-thumbnail home-news-thumbnail--abstra">
+                                    <img src="assets/imgs/home/news/abstra.webp" alt="" width="720" height="400" decoding="async" />
+                                </span>
+                                <span class="home-news-content">
+                                    <span class="home-news-headline">Abstra raises $2.3M in a round led by SoftBank</span>
+                                    <span class="home-news-source">TechCrunch <span aria-hidden="true">·</span> <time datetime="2022-01-03">Jan 3, 2022</time></span>
+                                    <span class="home-news-action">Read article <span class="home-news-external-icon" aria-hidden="true"></span></span>
+                                </span>
+                            </a>
+                        </span>
                     </span>, I
                     designed a low-code tool to support its search for product-market
                     fit.
@@ -161,19 +196,43 @@
                             shipped in a quarter, iterated in the real world
                         </span>
                     </span>
-                    <span class="home-tag home-tag--softbank">
-                        <img
-                            class="home-tag-logo home-tag-logo--softbank"
-                            src="assets/imgs/home/softbank-wordmark.svg"
-                            alt="SoftBank"
-                        />
+                    <span class="home-news-wrap">
+                        <button class="home-tag home-tag--softbank home-news-trigger" type="button"
+                            aria-label="Show VTEX funding news" aria-expanded="false" aria-controls="home-news-vtex">
+                            <img class="home-tag-logo home-tag-logo--softbank" src="assets/imgs/home/softbank-wordmark.svg" alt="SoftBank" />
+                        </button>
+                        <span class="home-tooltip-panel home-news-card" id="home-news-vtex" role="group" aria-label="VTEX funding news" inert>
+                            <button class="home-news-close" type="button" aria-label="Close news preview">×</button>
+                            <a class="home-news-link" href="https://braziljournal.com/softbank-gavea-e-constellation-bancam-ambicao-global-da-vtex/" target="_blank" rel="noopener noreferrer">
+                                <span class="home-news-thumbnail home-news-thumbnail--vtex">
+                                    <img src="assets/imgs/home/news/vtex.webp" alt="" width="720" height="400" decoding="async" />
+                                </span>
+                                <span class="home-news-content">
+                                    <span class="home-news-headline">SoftBank leads a $140M investment round in VTEX</span>
+                                    <span class="home-news-source">Brazil Journal <span aria-hidden="true">·</span> <time datetime="2019-11-22">Nov 22, 2019</time></span>
+                                    <span class="home-news-action">Read article <span class="home-news-external-icon" aria-hidden="true"></span></span>
+                                </span>
+                            </a>
+                        </span>
                     </span>
-                    <span class="home-tag home-tag--nyse">
-                        <img
-                            class="home-tag-logo home-tag-logo--nyse"
-                            src="assets/imgs/home/nyse-wordmark.svg"
-                            alt="NYSE"
-                        />
+                    <span class="home-news-wrap">
+                        <button class="home-tag home-tag--nyse home-news-trigger" type="button"
+                            aria-label="Show VTEX public listing news" aria-expanded="false" aria-controls="home-news-nyse">
+                            <img class="home-tag-logo home-tag-logo--nyse" src="assets/imgs/home/nyse-wordmark.svg" alt="NYSE" />
+                        </button>
+                        <span class="home-tooltip-panel home-news-card" id="home-news-nyse" role="group" aria-label="VTEX public listing news" inert>
+                            <button class="home-news-close" type="button" aria-label="Close news preview">×</button>
+                            <a class="home-news-link" href="https://www.prnewswire.com/news-releases/vtex-announces-closing-of-initial-public-offering-ipo-301344323.html" target="_blank" rel="noopener noreferrer">
+                                <span class="home-news-thumbnail home-news-thumbnail--nyse">
+                                    <img src="assets/imgs/home/news/nyse.webp" alt="" width="720" height="400" decoding="async" />
+                                </span>
+                                <span class="home-news-content">
+                                    <span class="home-news-headline">VTEX began trading on the NYSE on July 21, 2021</span>
+                                    <span class="home-news-source">VTEX / PR Newswire <span aria-hidden="true">·</span> <time datetime="2021-07-29">Jul 29, 2021</time></span>
+                                    <span class="home-news-action">Read article <span class="home-news-external-icon" aria-hidden="true"></span></span>
+                                </span>
+                            </a>
+                        </span>
                     </span>, I designed a
                     release management experience for non-technical teams, giving
                     Carrefour the confidence to schedule its Black Friday storefront
