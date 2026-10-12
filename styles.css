@@ -175,7 +175,6 @@ body {
 a {
     color: inherit;
     text-decoration: none;
-    cursor: pointer;
 }
 
 a:focus-visible,
@@ -743,6 +742,7 @@ button:focus-visible,
 .home-feedback-link {
     color: var(--color-blue);
     font-weight: inherit;
+    cursor: pointer;
 }
 
 .home-scroll-top-wrap {
