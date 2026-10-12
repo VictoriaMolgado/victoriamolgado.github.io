@@ -742,7 +742,7 @@ button:focus-visible,
 .home-feedback-link {
     color: var(--color-blue);
     font-weight: inherit;
-    cursor: default;
+    cursor: pointer;
 }
 
 .home-scroll-top-wrap {

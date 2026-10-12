@@ -68,14 +68,8 @@ function startReveal() {
 
 startReveal();
 
-/* Homepage closing actions. The form stays inactive until its URL is supplied. */
+/* Homepage scroll-to-top action. */
 (function () {
-  var formLink = document.querySelector(".home-feedback-link");
-  if (formLink) {
-    formLink.addEventListener("click", function (event) {
-      if (!formLink.getAttribute("href").trim()) event.preventDefault();
-    });
-  }
   var scrollTop = document.querySelector(".home-scroll-top");
   if (!scrollTop) return;
   scrollTop.addEventListener("click", function () {
