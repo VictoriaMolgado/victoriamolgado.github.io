@@ -38,23 +38,29 @@
             </p>
         </header>
 
+        <div class="project-image-full reveal" style="background: #e8e8e8">
+            <video autoplay muted loop playsinline controls preload="metadata" aria-label="Adding and configuring a table in the Abstra visual builder">
+                <source src="assets/videos/abstra/composer-table-setup.mp4" type="video/mp4" />
+            </video>
+        </div>
+
         <main class="project-content">
-            <!-- Content synced from https://app.notion.com/p/43a015e6ffce82dea95601e7be33a4c8; Notion last edited 2026-10-11. -->
+            <!-- Content adapted from https://app.notion.com/p/43a015e6ffce82dea95601e7be33a4c8; Notion last edited 2026-10-20. -->
 
             <section class="content-block reveal">
                 <span class="content-label">Context</span>
                 <p class="content-statement">
-                    In search of product-market fit, Abstra was exploring the thesis of adoption through offering a faster and more intuitive way for developers (or technical users) to build complex internal tools.
+                    In search of product-market fit, Abstra was exploring whether a faster, more intuitive way to build complex internal tools would drive developer adoption.
                 </p>
                 <p class="content-paragraph">
-                    The strategy was product-led growth: developers adopt the tool, making it easier to sell it to their companies later.
+                    As the product designer, I worked on the product concept, user testing, and interaction specifications, and contributed to the search for product-market fit.
                 </p>
             </section>
 
             <section class="content-block reveal">
                 <span class="content-label">Problem</span>
                 <p class="content-statement">
-                    Those tools carry complex interactions and weigh heavily on companies’ productivity. Developers often build them without dedicated design support. Abstra could take on the complexity of design decisions through a system that already accounted for layout, styling, and interaction states.
+                    Internal tools have complex interactions and a direct effect on companies’ productivity. Developers often build them without dedicated design support. Abstra could take on much of that design work through a system that already accounted for layout, styling, and interaction states.
                 </p>
             </section>
 
@@ -65,10 +71,10 @@
             <section class="content-block reveal">
                 <span class="content-label">Scope</span>
                 <p class="content-statement">
-                    We picked a VS Code plugin for composing interfaces from ready-made widgets, connecting them to business rules in Python, and deploying internal tools within the developer’s coding workflow.
+                    Abstra was a VS Code plugin for composing interfaces from ready-made widgets, connecting them to business rules in Python, and deploying internal tools within the developer’s coding workflow.
                 </p>
                 <p class="content-paragraph">
-                    The VS Code plugin was chosen as the medium to meet users where they already were, reducing context switching between IDEs, the terminal, and the browser.
+                    The CEO proposed VS Code as a distribution strategy: meet developers where they already worked and reduce switching between the IDE, terminal, and browser.
                 </p>
             </section>
 
@@ -95,12 +101,18 @@
             <section class="content-block reveal">
                 <span class="content-label">Foundation: Positioning</span>
                 <p class="content-statement">
-                    Placement was one of those decisions. So I decided to compartmentalize: the <strong>grid</strong> is how we set positioning. Users could place components inside 12 columns, and their height would meet a strict rectangular-blocks system that ensured different heights would still keep alignment.
+                    Placement was one of those decisions. The <strong>grid</strong> handled positioning: users could place components within 12 columns, while a rectangular block system kept components of different heights aligned.
                 </p>
                 <p class="content-paragraph">
                     This separated choosing where a widget belonged from adjusting the space inside it.
                 </p>
             </section>
+
+            <div class="project-image-full reveal" style="background: #e8e8e8">
+                <video autoplay muted loop playsinline controls preload="none" aria-label="Placing a header on the Abstra grid">
+                    <source src="assets/videos/abstra/composer-add-header.mp4" type="video/mp4" />
+                </video>
+            </div>
 
             <div class="project-image-bleed reveal" style="background: #d9d9d9">
                 <img src="assets/imgs/abstra/positioning.png" alt="The Abstra canvas showing the positioning grid and aligned navigation regions" width="1702" height="1306" loading="lazy" decoding="async" style="width: 100%; height: auto; max-width: 100%; max-height: none;" />
@@ -109,10 +121,10 @@
             <section class="content-block reveal">
                 <span class="content-label">Foundation: Spacing</span>
                 <p class="content-statement">
-                    While the grid was only responsible for placement, components were responsible for padding (the space between components). All of them had an 8px internal margin; that made sure they’d connect well enough when placed near, and would not be associated when placed into different columns.
+                    While the grid handled placement, each component carried its own spacing. An 8px internal margin helped nearby components read as a group without making content in separate columns feel connected.
                 </p>
                 <p class="content-paragraph">
-                    The component decisions introduced one of the biggest visual tradeoffs of this project. In some situations, it introduced uncomfortable column spacing between content blocks. But because our goal was to validate product-market fit, I decided to leave it as a future improvement.
+                    This introduced a visual tradeoff: some compositions had uncomfortable space between columns. Because the immediate goal was to validate product-market fit, I left that refinement for a later iteration.
                 </p>
             </section>
 
@@ -123,7 +135,7 @@
             <section class="content-block reveal">
                 <span class="content-label">Components behavior</span>
                 <p class="content-statement">
-                    Components were flexible in their purpose and restrained in their styling. The system aimed to make Abstra recognizable through consistent composition while leaving room for the client’s brand. For the original builder, interviews with the implemented version were used to look for blind spots and inform revisions.
+                    Components were flexible in purpose and restrained in styling. Their consistent composition made Abstra recognizable while leaving room for the client’s brand. I used interviews with users of the original builder to find blind spots and guide revisions.
                 </p>
             </section>
 
@@ -145,6 +157,12 @@
                 <div class="project-image-pair-item" style="width: 100%; aspect-ratio: 946 / 1312; padding: 0; background: #d9d9d9;">
                     <img src="assets/imgs/abstra/containers-2.png" alt="The sidebar selected for editing inside the Abstra canvas" width="946" height="1312" loading="lazy" decoding="async" style="width: 100%; height: auto; max-width: 100%; max-height: none;" />
                 </div>
+            </div>
+
+            <div class="project-image-full reveal" style="background: #e8e8e8">
+                <video autoplay muted loop playsinline controls preload="none" aria-label="Adding components to the Abstra sidebar">
+                    <source src="assets/videos/abstra/composer-sidebar-items.mp4" type="video/mp4" />
+                </video>
             </div>
 
             <section class="content-block reveal">
@@ -179,13 +197,6 @@
             </div>
 
             <section class="content-block reveal">
-                <!-- Notion editorial note: "Provavelmente remover" marks the following paragraph for possible removal. Its copy is retained pending an editorial decision. -->
-                <p class="content-paragraph">
-                    Widget states were part of the same responsibility. The later interaction specifications covered button hover and click states, text-input selection, errors and clearing, and corresponding selector behavior. A clean default appearance was only useful if the component remained understandable when someone interacted with it.
-                </p>
-            </section>
-
-            <section class="content-block reveal">
                 <span class="content-label">Interfaces composed with Abstra's VS Code Plugin</span>
             </section>
 
@@ -200,13 +211,10 @@
             <section class="content-block reveal">
                 <span class="content-label">Outcome</span>
                 <p class="content-statement">
-                    We launched on Product Hunt and VS Code and the plugin recorded 7,000 downloads on its first day. A YouTube overview spread organically, and VS Code featured Abstra on the Marketplace homepage for two weeks.
+                    We launched on Product Hunt and the VS Code Marketplace. The plugin recorded 7,000 downloads in its first week. A YouTube overview spread organically, and VS Code featured Abstra on the Marketplace homepage for two weeks.
                 </p>
                 <p class="content-paragraph">
-                    Although we had a strong point of view, I conducted user interviews and user testing while designing the interactions.
-                </p>
-                <p class="content-paragraph">
-                    The design addressed the interaction part, the effort of building an internal interface. The business team now had a working tool to demonstrate on sales calls, and a consistent and high-quality answer to “how does it work?”
+                    The design reduced the interaction work involved in building an internal tool. It also gave the business team a working product to demonstrate on sales calls and a consistent, high-quality answer to “how does it work?”
                 </p>
             </section>
 
@@ -214,7 +222,7 @@
         </main>
 
         <footer class="footer">
-            <span>✢ Victória Molgado 2026</span>
+            <span>✢ Victoria Molgado 2026</span>
             <nav class="footer-links">
                 <a href="index.html">Projects</a>
                 <a href="https://www.linkedin.com/in/victoria-molgado/">LinkedIn</a>
