@@ -1028,6 +1028,99 @@ button:focus-visible,
     border-radius: 8px;
 }
 
+/* Abstra case — media placeholders and foundation cards */
+.abstra-media-placeholder {
+    background: var(--color-surface);
+    color: var(--color-gray);
+    font-size: var(--font-size-caption);
+    text-align: center;
+}
+
+.abstra-media-placeholder span {
+    padding: var(--space-s);
+}
+
+.abstra-media-pair {
+    align-items: stretch;
+    overflow: visible;
+}
+
+.abstra-media-figure {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+}
+
+.abstra-media-figure .project-image-pair-item {
+    aspect-ratio: 1 / 1;
+}
+
+.abstra-media-figure .image-subtitle {
+    margin-top: var(--space-s);
+}
+
+.abstra-media-figure .abstra-input-panel {
+    aspect-ratio: 617 / 720;
+    padding: 0;
+}
+
+.abstra-media-figure .abstra-input-panel img {
+    width: 85%;
+    height: 85%;
+    max-width: 85%;
+    max-height: 85%;
+}
+
+.abstra-media-figure .abstra-input-panel--commands {
+    align-items: flex-start;
+    padding-top: 4%;
+}
+
+.abstra-media-figure .abstra-input-panel--commands img {
+    width: 61%;
+    height: auto;
+    max-width: none;
+    max-height: none;
+}
+
+.abstra-design-system img {
+    height: auto;
+}
+
+.content-block.abstra-foundation-intro {
+    padding-bottom: var(--space-m);
+}
+
+.abstra-foundation-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    gap: var(--space-m);
+    margin: var(--space-m) var(--page-padding);
+}
+
+.abstra-foundation-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--space-m);
+    padding: var(--space-m);
+    min-height: 16rem;
+    border-radius: var(--border-radius);
+    background: var(--color-surface);
+}
+
+.abstra-foundation-card h2 {
+    font-size: var(--font-size-body-lg);
+    font-weight: var(--font-weight-body-lg);
+    line-height: var(--line-height-body-lg);
+    color: var(--color-gray);
+}
+
+.abstra-foundation-card p {
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+}
+
 /* Hero carousel */
 .hero-carousel {
     position: relative;

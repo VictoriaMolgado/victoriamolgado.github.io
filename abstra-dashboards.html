@@ -16,7 +16,7 @@
             href="assets/imgs/marciano-favicon.ico"
             type="image/x-icon"
         />
-        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="styles.css?v=abstra-media-2" />
     </head>
     <body class="case-study">
         <nav class="nav">
@@ -29,8 +29,7 @@
 
         <header class="project-header">
             <h1 class="project-header-title">
-                A low-code tool for developers: composing internal applications
-                in VS Code with Python
+                Turning Abstra’s vision into a distribution-ready product with 7k downloads in the first week
             </h1>
             <p class="project-meta">Product designer: Victoria Molgado</p>
             <p class="project-meta">
@@ -38,236 +37,197 @@
             </p>
         </header>
 
-        <div
-            class="project-image-full reveal"
-            style="background: #d9d9d9"
-            aria-label="Placeholder for the finished internal tool composed in VS Code"
-        ></div>
+        <div class="project-image-full reveal abstra-media-placeholder" role="img" aria-label="Image placeholder: Abstra visual builder inside VS Code with its canvas, component library, and Inspector" data-figma-node="2501:210916"><span>Image placeholder</span></div>
 
         <main class="project-content">
-            <section class="content-block reveal">
+            <section class="content-block reveal" data-figma-node="2498:159237">
                 <span class="content-label">Context</span>
-                <p class="content-statement">
-                    In search of product-market fit, Abstra was exploring
-                    whether a low-code tool could help developers build internal
-                    applications with less interface work.
-                </p>
-                <p class="content-paragraph">
-                    The thesis was that internal tools carry complex
-                    interactions, but developers often build them without
-                    dedicated design support. Abstra could take on that work
-                    through widgets that already accounted for layout, styling,
-                    and interaction states.
-                </p>
+                <p class="content-statement">In search of product-market fit, Abstra was exploring whether a simpler way to build complex internal tools would drive developer adoption.</p>
+                <p class="content-paragraph">As the product designer, I worked on the product concept, user testing, and interaction specifications, in order to contribute with the search for product-market fit.</p>
             </section>
 
-            <div
-                class="project-image-bleed reveal"
-                style="aspect-ratio: 16 / 9; background: #d9d9d9"
-                aria-label="Placeholder for a finished dashboard built with Abstra"
-            ></div>
+            <section class="content-block reveal" data-figma-node="2498:159244">
+                <span class="content-label">Problem</span>
+                <p class="content-statement">Internal tools have complex interactions and a direct effect on companies’ productivity. Developers often build them without dedicated design support.</p>
+                <p class="content-paragraph">Abstra could take on much of that design work through a system that already accounted for layout, styling, and interaction states while keeping layout assembly simple.</p>
+            </section>
 
-            <section class="content-block reveal">
+            <section class="content-block reveal" data-figma-node="2498:159253">
                 <span class="content-label">Scope</span>
-                <p class="content-statement">
-                    Abstra Dashboards was a VS Code plugin for composing
-                    interfaces from ready-made widgets, connecting them to
-                    business rules in Python, and deploying internal tools
-                    within the developer's coding workflow.
-                </p>
-                <p class="content-paragraph">
-                    The visual builder had to reduce interface work without
-                    limiting how engineers wrote business logic. The design
-                    question was where to give developers control and where the
-                    system should make a decision for them.
-                </p>
+                <p class="content-statement">Abstra was a VS Code plugin for composing interfaces from ready-made widgets, connecting them to business rules in Python, and deploying internal tools within the developer’s coding workflow.</p>
+                <p class="content-paragraph">The CEO proposed VS Code as a distribution strategy to meet developers where they already worked and reduce switching between the IDE, terminal, and browser.</p>
             </section>
 
-            <div
-                class="project-image-full reveal"
-                style="background: #d9d9d9"
-                aria-label="Placeholder for the workflow from empty canvas to a deployed internal tool"
-            ></div>
+            <div class="project-image-full reveal abstra-media-placeholder" role="img" aria-label="Image placeholder: Abstra visual builder overview" data-figma-node="2498:159260"><span>Image placeholder</span></div>
 
-            <section class="content-block reveal">
-                <span class="content-label">Specificity</span>
-                <p class="content-statement">
-                    The design system was the widgets' main specification. It
-                    had to define how components behaved together, so
-                    developers could assemble a complex tool without designing
-                    every interaction themselves.
-                </p>
-                <p class="content-paragraph">
-                    Placement was one of those decisions. Free positioning made
-                    layout errors easy to introduce. The grid was responsible
-                    for positioning, while components carried their own
-                    spacing, including 8px internal padding. This separated
-                    choosing where a widget belonged from adjusting the space
-                    inside it.
-                </p>
-                <p class="content-paragraph">
-                    Containers needed their own rules. A sidebar could act as a
-                    canvas, but it did not have the same purpose or room as the
-                    main workspace. Later interaction specifications made that
-                    boundary explicit: a smaller set of components could be
-                    dropped into a sidebar, while modals had three canvas
-                    sizes. Reusing the composition model still required
-                    defining what each container could accept.
-                </p>
-                <p class="content-paragraph">
-                    Those specifications also separated editing from testing.
-                    In editing, selecting a widget would expose its properties
-                    in the Inspector, with changes reflected on the canvas. In
-                    testing, the canvas would respond as the finished tool,
-                    with a way back to editing. The same click needed a clear
-                    meaning in each mode: configure the component or use it.
-                </p>
+            <section class="content-block reveal" data-figma-node="2498:159262">
+                <span class="content-label">Scope</span>
+                <p class="content-statement">The visual builder had to reduce interface work without limiting how engineers wrote the business rules.</p>
+                <p class="content-paragraph">The design challenge was to define where to give developers control and where the system should make a decision for them.</p>
             </section>
 
             <div class="image-captioned reveal">
-                <div
-                    class="project-image-full"
-                    style="background: #d9d9d9"
-                    aria-label="Placeholder for placing a widget and inspecting its spacing"
-                ></div>
-                <p class="image-subtitle">
-                    The grid handled placement while each component preserved
-                    its own internal spacing.
-                </p>
+                <div class="project-image-full abstra-media-placeholder" role="img" aria-label="Image placeholder: Python input in the right-hand panel" data-figma-node="2501:167295"><span>Image placeholder</span></div>
+                <p class="image-subtitle">The right-hand panel allowed users to enter simple Python.</p>
             </div>
 
-            <div class="image-captioned reveal">
-                <div
-                    class="project-image-pair"
-                    aria-label="Placeholders comparing the main canvas with constrained containers"
-                >
-                    <div
-                        class="project-image-pair-item"
-                        style="aspect-ratio: 1 / 1; background: #d9d9d9"
-                        aria-label="Placeholder for the main canvas and sidebar"
-                    ></div>
-                    <div
-                        class="project-image-pair-item"
-                        style="aspect-ratio: 1 / 1; background: #d9d9d9"
-                        aria-label="Placeholder for modal canvas sizes"
-                    ></div>
-                </div>
-                <div class="image-subtitle-pair">
-                    <p>
-                        The sidebar reused the composition model with a smaller
-                        set of accepted components.
-                    </p>
-                    <p>
-                        Three modal sizes made the available canvas explicit.
-                    </p>
-                </div>
+            <div class="project-image-pair abstra-media-pair reveal">
+                <figure class="abstra-media-figure">
+                    <div class="project-image-pair-item abstra-input-panel abstra-input-panel--commands" style="background: #1e1e1e" data-figma-node="2501:168448">
+                        <img src="assets/imgs/abstra/input-area-1.webp" width="377" height="695" loading="lazy" decoding="async" alt="Python variable and event fields with expandable command inputs" />
+                    </div>
+                    <figcaption class="image-subtitle">The UI guides users to use short commands, expanding if needed.</figcaption>
+                </figure>
+                <figure class="abstra-media-figure">
+                    <div class="project-image-pair-item abstra-input-panel" style="background: #bd545b" data-figma-node="2501:168458">
+                        <img src="assets/imgs/abstra/input-area-2.webp" width="543" height="587" loading="lazy" decoding="async" alt="Number slider properties labeled with their accepted Python value types" />
+                    </div>
+                    <figcaption class="image-subtitle">Each input area was labeled with the kind of value accepted.</figcaption>
+                </figure>
             </div>
 
-            <div class="image-captioned reveal">
-                <div
-                    class="project-image-full"
-                    style="background: #d9d9d9"
-                    aria-label="Placeholder for selecting a widget, editing its label, and testing it"
-                ></div>
-                <p class="image-subtitle">
-                    Editing connected the selected widget to the Inspector;
-                    testing let the same interface behave like the finished
-                    tool.
-                </p>
-            </div>
-
-            <section class="content-block reveal">
-                <span class="content-label">Specificity</span>
-                <p class="content-statement">
-                    The theme settings gave developers a small set of meaningful
-                    decisions. One HEX value was enough to define a brand color;
-                    the system would derive the variations needed for links,
-                    buttons, selections, and light or dark interfaces.
-                </p>
-                <p class="content-paragraph">
-                    That color had to work across surfaces and states. The later
-                    theme specification kept light and dark surfaces fixed and
-                    required the generated colors to preserve contrast with
-                    backgrounds and labels. Developers could bring their brand
-                    without having to assemble and maintain a palette
-                    themselves.
-                </p>
-                <p class="content-paragraph">
-                    Widget states were part of the same responsibility. The
-                    later interaction specifications covered button hover and
-                    click states, text-input selection, errors and clearing,
-                    and corresponding selector behavior. A clean default
-                    appearance was only useful if the component remained
-                    understandable when someone interacted with it.
-                </p>
-                <p class="content-paragraph">
-                    Components were flexible in their purpose and restrained in
-                    their styling. The system aimed to make Abstra recognizable
-                    through consistent composition while leaving room for the
-                    client's brand. For the original builder, interviews with
-                    the implemented version were used to look for blind spots
-                    and inform revisions.
-                </p>
+            <section class="content-block reveal" data-figma-node="2498:159269">
+                <span class="content-label">Foundation</span>
+                <p class="content-statement">The design system was the product. It defined how components behaved as a system, abstracting the front-end layer.</p>
             </section>
 
-            <div
-                class="project-image-full reveal"
-                style="background: #d9d9d9"
-                aria-label="Placeholder showing one HEX value applied across light and dark surfaces"
-            ></div>
-
-            <div class="image-captioned reveal">
-                <div
-                    class="project-image-pair"
-                    aria-label="Placeholders for input and selector interaction states"
-                >
-                    <div
-                        class="project-image-pair-item"
-                        style="aspect-ratio: 1 / 1; background: #d9d9d9"
-                        aria-label="Placeholder for text input selection, error, and cleared states"
-                    ></div>
-                    <div
-                        class="project-image-pair-item"
-                        style="aspect-ratio: 1 / 1; background: #d9d9d9"
-                        aria-label="Placeholder for corresponding selector states"
-                    ></div>
-                </div>
-                <div class="image-subtitle-pair">
-                    <p>
-                        Inputs remained legible through selection, error, and
-                        clearing states.
-                    </p>
-                    <p>
-                        Selectors followed the same interaction logic and visual
-                        hierarchy.
-                    </p>
-                </div>
+            <div class="project-image-bleed abstra-design-system reveal" style="background: #1e1e1e" data-figma-node="2501:170168">
+                <img src="assets/imgs/abstra/design-system-overview.webp" width="1302" height="723" loading="lazy" decoding="async" alt="Abstra design system specifications showing input, dropdown, and table components with their variants" />
             </div>
 
-            <section class="content-block reveal">
+            <section class="content-block reveal abstra-foundation-intro" data-figma-node="2498:159276">
+                <span class="content-label">Foundation</span>
+                <p class="content-statement">Size, placement, and spacing were given by different pieces of the foundation set. Each was responsible for its own scope to ensure a good UI composition.</p>
+            </section>
+
+            <div class="abstra-foundation-cards reveal">
+                <div class="abstra-foundation-card"><h2>Grid</h2><p>Placing widgets on a 12‑column canvas.</p></div>
+                <div class="abstra-foundation-card"><h2>Spacing</h2><p>An 8px inner margin keeps compositions consistent.</p></div>
+                <div class="abstra-foundation-card"><h2>Components</h2><p>Define each widget’s purpose and behavior.</p></div>
+            </div>
+
+            <section class="content-block reveal" data-figma-node="2498:159294">
+                <span class="content-label">Foundation</span>
+                <p class="content-statement">The grid is a canvas and it establishes where the components can be placed.</p>
+                <p class="content-paragraph">Users could place components inside 12 columns, and their height would follow a strict rectangular-block system that ensured different heights would still keep alignment.</p>
+                <p class="content-paragraph">This decision separated choosing where a widget belonged from adjusting it&#x27;s margin and padding.</p>
+            </section>
+
+            <div class="image-captioned reveal" id="abstra-grid-video">
+                <div class="project-image-full" style="background: #bd545b" data-figma-node="2501:210810">
+                    <video
+                        width="1930"
+                        height="1086"
+                        muted
+                        loop
+                        playsinline
+                        controls
+                        preload="metadata"
+                        data-loop-when-visible
+                        aria-label="Placing and aligning multiple components on the Abstra grid"
+                    >
+                        <source src="assets/videos/abstra/grid-video-1.mp4?v=d9d78b25" type="video/mp4" />
+                        <a href="assets/videos/abstra/grid-video-1.mp4?v=d9d78b25">Watch the Abstra grid demonstration</a>
+                    </video>
+                </div>
+                <p class="image-subtitle">Video: placing multiple components on the screen.</p>
+            </div>
+
+            <section class="content-block reveal" data-figma-node="2498:159305">
+                <span class="content-label">Foundation</span>
+                <p class="content-statement">While the grid handled placement, each component carried its own spacing.</p>
+                <p class="content-paragraph">An 8px internal margin helped nearby components read as a group without making content in separate columns feel connected.</p>
+                <p class="content-paragraph">This introduced a visual tradeoff: some compositions had uncomfortable space between columns. Because the immediate goal was to validate product-market fit, I left that refinement for a later iteration.</p>
+            </section>
+
+            <section class="content-block reveal" data-figma-node="2498:159314">
+                <span class="content-label">Foundation</span>
+                <p class="content-statement">Components were flexible in their purpose and restrained in their styling.</p>
+                <p class="content-paragraph">The styling aimed to make Abstra recognizable through consistent composition while leaving room for the client’s brand.</p>
+                <p class="content-paragraph">My major reference was Notion.</p>
+            </section>
+
+            <div class="image-captioned reveal">
+                <div class="project-image-full abstra-media-placeholder" role="img" aria-label="Image placeholder: Alternating from the grid to the layout" data-figma-node="2501:210821"><span>Image placeholder</span></div>
+                <p class="image-subtitle">Video: ALTERNATING FROM THE GRID TO THE LAYOUT</p>
+            </div>
+
+            <section class="content-block reveal" data-figma-node="2498:159323">
+                <span class="content-label">Scope</span>
+                <p class="content-statement">For more complex interfaces, containers needed their own rules. The sidebar, for example, could receive components just as a canvas but with a restricted area.</p>
+                <p class="content-paragraph">Later interaction specifications made that boundary explicit: a smaller set of components could be dropped into a sidebar, while modals had three canvas sizes. Reusing the composition model still required defining what each container could accept.</p>
+            </section>
+
+            <div class="project-image-pair abstra-media-pair reveal">
+                <figure class="abstra-media-figure">
+                    <div class="project-image-pair-item abstra-media-placeholder" role="img" aria-label="Image placeholder: Sidebar components" data-figma-node="2501:210841"><span>Image placeholder</span></div>
+                    <figcaption class="image-subtitle">List, divider, and external links were the sidebar&#x27;s components.</figcaption>
+                </figure>
+                <figure class="abstra-media-figure">
+                    <div class="project-image-pair-item abstra-media-placeholder" role="img" aria-label="Image placeholder: Dialog canvas" data-figma-node="2501:210846"><span>Image placeholder</span></div>
+                    <figcaption class="image-subtitle">Dialog received any component as a canvas itself.</figcaption>
+                </figure>
+            </div>
+
+            <section class="content-block reveal" data-figma-node="2498:159336">
+                <p class="content-statement">The tool separated editing from testing, allowing a switch with keyboard keys.</p>
+                <p class="content-paragraph">In editing, selecting a widget would expose its properties in the Inspector, with changes reflected on the canvas. In testing, the canvas would respond as the finished tool, with a way back to editing. The same click needed a clear meaning in each mode: configure the component or use it.</p>
+            </section>
+
+            <div class="image-captioned reveal">
+                <div class="project-image-full abstra-media-placeholder" role="img" aria-label="Image placeholder: Alternating between editing and testing" data-figma-node="2501:210856"><span>Image placeholder</span></div>
+                <p class="image-subtitle">Video: ALTERNATING between edit and test</p>
+            </div>
+
+            <section class="content-block reveal" data-figma-node="2498:159345">
+                <span class="content-label">Color and themes</span>
+                <p class="content-statement">Developers could bring their brand by entering a single hexadecimal value for a light and dark theme.</p>
+                <p class="content-paragraph">The palette derived from that color had to work across surfaces and states. The later theme specification kept light and dark surfaces fixed and required the generated colors to preserve contrast with backgrounds and labels.</p>
+            </section>
+
+            <div class="image-captioned reveal">
+                <div class="project-image-full abstra-media-placeholder" role="img" aria-label="Image placeholder: Applying different theme colors" data-figma-node="2501:210881"><span>Image placeholder</span></div>
+                <p class="image-subtitle">Video: ready interface, applying different colors and showing it change.</p>
+            </div>
+
+            <section class="content-block reveal" data-figma-node="2501:210874">
+                <span class="content-label">Output</span>
+                <p class="content-statement">Interfaces composed with Abstra VS Code</p>
+            </section>
+
+            <div class="project-image-pair abstra-media-pair reveal">
+                <figure class="abstra-media-figure">
+                    <div class="project-image-pair-item abstra-media-placeholder" role="img" aria-label="Image placeholder: Interface composed with Abstra VS Code, example 1" data-figma-node="2501:210890"><span>Image placeholder</span></div>
+                </figure>
+                <figure class="abstra-media-figure">
+                    <div class="project-image-pair-item abstra-media-placeholder" role="img" aria-label="Image placeholder: Interface composed with Abstra VS Code, example 2" data-figma-node="2501:210895"><span>Image placeholder</span></div>
+                </figure>
+            </div>
+
+            <div class="project-image-pair abstra-media-pair reveal">
+                <figure class="abstra-media-figure">
+                    <div class="project-image-pair-item abstra-media-placeholder" role="img" aria-label="Image placeholder: Interface composed with Abstra VS Code, example 3" data-figma-node="2501:210909"><span>Image placeholder</span></div>
+                </figure>
+                <figure class="abstra-media-figure">
+                    <div class="project-image-pair-item abstra-media-placeholder" role="img" aria-label="Image placeholder: Interface composed with Abstra VS Code, example 4" data-figma-node="2501:210913"><span>Image placeholder</span></div>
+                </figure>
+            </div>
+
+            <section class="content-block reveal" data-figma-node="2498:159367">
                 <span class="content-label">Outcome</span>
-                <p class="content-statement">
-                    At launch, the plugin recorded 7,000 downloads on its first
-                    day. A YouTube overview spread organically, and VS Code
-                    featured Abstra on the Marketplace homepage for two weeks.
-                </p>
-                <p class="content-paragraph">
-                    The launch brought visibility, but left the commercial
-                    question open: would the developers using the tool also buy
-                    it? The design addressed the effort of building an internal
-                    interface; finding a sustainable market also depended on
-                    understanding who would pay for that work.
-                </p>
+                <p class="content-statement">We launched on Product Hunt and the VS Code Marketplace. The plugin recorded 7,000 downloads in its first week.</p>
+                <p class="content-paragraph">A YouTube overview spread organically, and VS Code featured Abstra on the Marketplace homepage for two weeks.</p>
+                <p class="content-paragraph">The design reduced the effort of building an internal tool&#x27;s interface. It also gave the business team a working product to demonstrate on sales calls and a consistent, high-quality answer to “how does it work?”</p>
             </section>
 
             <p class="project-thanks">✢ ✢ ✢</p>
         </main>
 
         <footer class="footer">
-            <span>✢ Victória Molgado 2026</span>
+            <span>✢ Victoria Molgado 2026</span>
             <nav class="footer-links">
                 <a href="index.html">Projects</a>
-                <a href="#">Linkedin</a>
+                <a href="https://www.linkedin.com/in/victoria-molgado/">LinkedIn</a>
                 <a href="https://github.com/VictoriaMolgado">GitHub</a>
             </nav>
         </footer>
