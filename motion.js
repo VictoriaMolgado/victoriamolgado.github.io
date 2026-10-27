@@ -68,6 +68,80 @@ function startReveal() {
 
 startReveal();
 
+(function () {
+  var videos = document.querySelectorAll("video[data-loop-when-visible]");
+  if (!videos.length || !("IntersectionObserver" in window)) return;
+
+  var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  var visibleVideos = new Set();
+
+  function loadVideo(video) {
+    var sources = video.querySelectorAll("source[data-src]");
+    if (!sources.length) return;
+    sources.forEach(function (source) {
+      var useLarge = false;
+      if (source.dataset.srcLarge) {
+        var frame = video.parentElement.getBoundingClientRect();
+        var style = window.getComputedStyle(video);
+        var frameStyle = window.getComputedStyle(video.parentElement);
+        var frameWidth = frame.width - parseFloat(frameStyle.paddingLeft) - parseFloat(frameStyle.paddingRight);
+        var frameHeight = frame.height - parseFloat(frameStyle.paddingTop) - parseFloat(frameStyle.paddingBottom);
+        var widthLimit = style.maxWidth === "none" ? frameWidth : frameWidth * parseFloat(style.maxWidth) / 100;
+        var heightLimit = style.maxHeight === "none" ? frameHeight : frameHeight * parseFloat(style.maxHeight) / 100;
+        var displayWidth = Math.min(
+          video.width,
+          widthLimit,
+          heightLimit * video.width / video.height,
+        );
+        var requiredWidth = displayWidth * (window.devicePixelRatio || 1);
+        var saveData = navigator.connection && navigator.connection.saveData;
+        useLarge = requiredWidth > Number(source.dataset.srcWidth) && !saveData;
+      }
+      source.src = useLarge ? source.dataset.srcLarge : source.dataset.src;
+      source.removeAttribute("data-src");
+    });
+    video.preload = "metadata";
+    video.load();
+  }
+
+  function updatePlayback(video) {
+    if (visibleVideos.has(video) && !document.hidden && !reducedMotion.matches) {
+      loadVideo(video);
+      video.play().catch(function () {});
+    } else {
+      video.pause();
+    }
+  }
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.1) visibleVideos.add(entry.target);
+      else visibleVideos.delete(entry.target);
+      updatePlayback(entry.target);
+    });
+  }, { threshold: 0.1 });
+
+  var loadObserver = new IntersectionObserver(function (entries) {
+    if (reducedMotion.matches || document.hidden) return;
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      loadVideo(entry.target);
+      loadObserver.unobserve(entry.target);
+    });
+  }, { rootMargin: "300px 0px" });
+
+  videos.forEach(function (video) {
+    observer.observe(video);
+    loadObserver.observe(video);
+  });
+  document.addEventListener("visibilitychange", function () {
+    videos.forEach(updatePlayback);
+  });
+  reducedMotion.addEventListener("change", function () {
+    videos.forEach(updatePlayback);
+  });
+})();
+
 /* Homepage scroll-to-top action. */
 (function () {
   var scrollTop = document.querySelector(".home-scroll-top");
