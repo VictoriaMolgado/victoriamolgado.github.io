@@ -1036,10 +1036,6 @@ button:focus-visible,
     clip-path: inset(0 round 8px);
 }
 
-#abstra-overview-video video {
-    clip-path: inset(0 0 0 2px round 8px);
-}
-
 .abstra-media-figure .abstra-input-panel img {
     border-radius: 16px;
     clip-path: inset(0 round 16px);
