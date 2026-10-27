@@ -79,7 +79,10 @@ startReveal();
     var sources = video.querySelectorAll("source[data-src]");
     if (!sources.length) return;
     sources.forEach(function (source) {
-      source.src = source.dataset.src;
+      var requiredWidth = video.getBoundingClientRect().width * (window.devicePixelRatio || 1);
+      var saveData = navigator.connection && navigator.connection.saveData;
+      var useLarge = source.dataset.srcLarge && requiredWidth > Number(source.dataset.srcWidth) && !saveData;
+      source.src = useLarge ? source.dataset.srcLarge : source.dataset.src;
       source.removeAttribute("data-src");
     });
     video.preload = "metadata";
