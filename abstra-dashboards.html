@@ -16,7 +16,8 @@
             href="assets/imgs/marciano-favicon.ico"
             type="image/x-icon"
         />
-        <link rel="stylesheet" href="styles.css?v=abstra-media-2" />
+        <link rel="preload" as="image" href="assets/imgs/abstra/posters/abstra-overview.webp" fetchpriority="high" />
+        <link rel="stylesheet" href="styles.css?v=abstra-media-19" />
     </head>
     <body class="case-study">
         <nav class="nav">
@@ -37,13 +38,18 @@
             </p>
         </header>
 
-        <div class="project-image-full reveal abstra-media-placeholder" role="img" aria-label="Image placeholder: Abstra visual builder inside VS Code with its canvas, component library, and Inspector" data-figma-node="2501:210916"><span>Image placeholder</span></div>
+        <div class="project-image-full abstra-contained-video reveal" id="abstra-overview-video" style="background: #bd545b" data-figma-node="2501:210916">
+            <video poster="assets/imgs/abstra/posters/abstra-overview.webp" loading="lazy" width="1514" height="828" muted loop playsinline preload="none" data-loop-when-visible aria-label="Overview of the Abstra visual builder inside VS Code">
+                <source data-src="assets/videos/abstra/abstra-overview.mp4?v=ca842e3a" type="video/mp4" />
+                <a href="assets/videos/abstra/abstra-overview.mp4?v=ca842e3a">Watch the Abstra overview</a>
+            </video>
+        </div>
 
         <main class="project-content">
             <section class="content-block reveal" data-figma-node="2498:159237">
                 <span class="content-label">Context</span>
                 <p class="content-statement">In search of product-market fit, Abstra was exploring whether a simpler way to build complex internal tools would drive developer adoption.</p>
-                <p class="content-paragraph">As the product designer, I worked on the product concept, user testing, and interaction specifications, in order to contribute with the search for product-market fit.</p>
+                <p class="content-paragraph">As the product designer, I worked on the product concept, user testing, and interaction specifications, in order to contribute to the search for product-market fit.</p>
             </section>
 
             <section class="content-block reveal" data-figma-node="2498:159244">
@@ -58,18 +64,18 @@
                 <p class="content-paragraph">The CEO proposed VS Code as a distribution strategy to meet developers where they already worked and reduce switching between the IDE, terminal, and browser.</p>
             </section>
 
-            <div class="project-image-full reveal" id="abstra-entering-values" style="background: #bd545b" data-figma-node="2498:159260">
-                <video
+            <div class="project-image-full abstra-contained-video reveal" id="abstra-entering-values" style="background: #bd545b" data-figma-node="2498:159260">
+                <video poster="assets/imgs/abstra/posters/abstra-entering-values.webp" loading="lazy"
                     width="1420"
                     height="780"
                     muted
                     loop
                     playsinline
-                    preload="metadata"
+                    preload="none"
                     data-loop-when-visible
                     aria-label="Entering values in the Abstra visual builder"
                 >
-                    <source src="assets/videos/abstra/abstra-entering-values.mp4?v=198c560a" type="video/mp4" />
+                    <source data-src="assets/videos/abstra/abstra-entering-values.mp4?v=198c560a" type="video/mp4" />
                     <a href="assets/videos/abstra/abstra-entering-values.mp4?v=198c560a">Watch the Abstra entering values demonstration</a>
                 </video>
             </div>
@@ -81,7 +87,21 @@
             </section>
 
             <div class="image-captioned reveal">
-                <div class="project-image-full abstra-media-placeholder" role="img" aria-label="Image placeholder: Python input in the right-hand panel" data-figma-node="2501:167295"><span>Image placeholder</span></div>
+                <div class="project-image-full abstra-contained-video" id="abstra-selector-component" style="background: #bd545b" data-figma-node="2501:167295">
+                    <video poster="assets/imgs/abstra/posters/selector-component-abstra.webp" loading="lazy"
+                        width="1518"
+                        height="834"
+                        muted
+                        loop
+                        playsinline
+                        preload="none"
+                        data-loop-when-visible
+                        aria-label="Setting up a selector component in the Abstra visual builder"
+                    >
+                        <source data-src="assets/videos/abstra/selector-component-abstra.mp4?v=a0159470" type="video/mp4" />
+                        <a href="assets/videos/abstra/selector-component-abstra.mp4?v=a0159470">Watch the Abstra selector component demonstration</a>
+                    </video>
+                </div>
                 <p class="image-subtitle">The right-hand panel allowed users to enter simple Python.</p>
             </div>
 
@@ -105,7 +125,7 @@
                 <p class="content-statement">The design system was the product. It defined how components behaved as a system, abstracting the front-end layer.</p>
             </section>
 
-            <div class="project-image-bleed abstra-design-system reveal" style="background: #1e1e1e" data-figma-node="2501:170168">
+            <div class="project-image-bleed abstra-design-system reveal" id="abstra-design-system" style="background: #1e1e1e" data-figma-node="2501:170168">
                 <img src="assets/imgs/abstra/design-system-overview.webp" width="1302" height="723" loading="lazy" decoding="async" alt="Abstra design system specifications showing input, dropdown, and table components with their variants" />
             </div>
 
@@ -124,24 +144,23 @@
                 <span class="content-label">Foundation</span>
                 <p class="content-statement">The grid is a canvas and it establishes where the components can be placed.</p>
                 <p class="content-paragraph">Users could place components inside 12 columns, and their height would follow a strict rectangular-block system that ensured different heights would still keep alignment.</p>
-                <p class="content-paragraph">This decision separated choosing where a widget belonged from adjusting it&#x27;s margin and padding.</p>
+                <p class="content-paragraph">This decision separated choosing where a widget belonged from adjusting its margin and padding.</p>
             </section>
 
             <div class="image-captioned reveal" id="abstra-grid-video">
-                <div class="project-image-full" style="background: #bd545b" data-figma-node="2501:210810">
-                    <video
-                        width="1930"
-                        height="1086"
+                <div class="project-image-full abstra-contained-video" style="background: #bd545b" data-figma-node="2501:210810">
+                    <video poster="assets/imgs/abstra/posters/composition.webp" loading="lazy"
+                        width="2242"
+                        height="1284"
                         muted
                         loop
                         playsinline
-                        controls
-                        preload="metadata"
+                        preload="none"
                         data-loop-when-visible
                         aria-label="Placing and aligning multiple components on the Abstra grid"
                     >
-                        <source src="assets/videos/abstra/grid-video-1.mp4?v=d9d78b25" type="video/mp4" />
-                        <a href="assets/videos/abstra/grid-video-1.mp4?v=d9d78b25">Watch the Abstra grid demonstration</a>
+                        <source data-src="assets/videos/abstra/composition.mp4?v=279be3e9" type="video/mp4" />
+                        <a href="assets/videos/abstra/composition.mp4?v=279be3e9">Watch the Abstra grid demonstration</a>
                     </video>
                 </div>
                 <p class="image-subtitle">Video: placing multiple components on the screen.</p>
@@ -172,25 +191,72 @@
                 <p class="content-paragraph">Later interaction specifications made that boundary explicit: a smaller set of components could be dropped into a sidebar, while modals had three canvas sizes. Reusing the composition model still required defining what each container could accept.</p>
             </section>
 
-            <div class="project-image-pair abstra-media-pair reveal">
-                <figure class="abstra-media-figure">
-                    <div class="project-image-pair-item abstra-media-placeholder" role="img" aria-label="Image placeholder: Sidebar components" data-figma-node="2501:210841"><span>Image placeholder</span></div>
+            <div class="project-image-pair abstra-media-pair abstra-container-videos reveal">
+                <figure class="abstra-media-figure" id="abstra-sidebar-video">
+                    <div class="project-image-pair-item abstra-video-pair-item abstra-video-pair-item--sidebar" data-figma-node="2501:210841">
+                        <div class="abstra-video-frame">
+                            <video poster="assets/imgs/abstra/posters/sidebar.webp" loading="lazy"
+                                width="1070"
+                                height="1288"
+                                muted
+                                loop
+                                playsinline
+                                preload="none"
+                                data-loop-when-visible
+                                aria-label="Adding list, divider, and external links to the Abstra sidebar"
+                            >
+                                <source data-src="assets/videos/abstra/sidebar.mp4?v=da25fa3d" type="video/mp4" />
+                                <a href="assets/videos/abstra/sidebar.mp4?v=da25fa3d">Watch the Abstra sidebar demonstration</a>
+                            </video>
+                        </div>
+                    </div>
                     <figcaption class="image-subtitle">List, divider, and external links were the sidebar&#x27;s components.</figcaption>
                 </figure>
-                <figure class="abstra-media-figure">
-                    <div class="project-image-pair-item abstra-media-placeholder" role="img" aria-label="Image placeholder: Dialog canvas" data-figma-node="2501:210846"><span>Image placeholder</span></div>
+                <figure class="abstra-media-figure" id="abstra-dialog-video">
+                    <div class="project-image-pair-item abstra-video-pair-item abstra-video-pair-item--dialog" data-figma-node="2501:210846">
+                        <div class="abstra-video-frame">
+                            <video poster="assets/imgs/abstra/posters/dialog-area.webp" loading="lazy"
+                                width="1470"
+                                height="1280"
+                                muted
+                                loop
+                                playsinline
+                                preload="none"
+                                data-loop-when-visible
+                                aria-label="Adding components to a dialog canvas in Abstra"
+                            >
+                                <source data-src="assets/videos/abstra/dialog-area.mp4?v=a2f07470" type="video/mp4" />
+                                <a href="assets/videos/abstra/dialog-area.mp4?v=a2f07470">Watch the Abstra dialog demonstration</a>
+                            </video>
+                        </div>
+                    </div>
                     <figcaption class="image-subtitle">Dialog received any component as a canvas itself.</figcaption>
                 </figure>
             </div>
 
-            <section class="content-block reveal" data-figma-node="2498:159336">
+            <section class="content-block reveal" id="abstra-edit-test-scope" data-figma-node="2498:159336">
+                <span class="content-label">Scope</span>
                 <p class="content-statement">The tool separated editing from testing, allowing a switch with keyboard keys.</p>
                 <p class="content-paragraph">In editing, selecting a widget would expose its properties in the Inspector, with changes reflected on the canvas. In testing, the canvas would respond as the finished tool, with a way back to editing. The same click needed a clear meaning in each mode: configure the component or use it.</p>
             </section>
 
-            <div class="image-captioned reveal">
-                <div class="project-image-full abstra-media-placeholder" role="img" aria-label="Image placeholder: Alternating between editing and testing" data-figma-node="2501:210856"><span>Image placeholder</span></div>
-                <p class="image-subtitle">Video: ALTERNATING between edit and test</p>
+            <div class="image-captioned reveal" id="abstra-edit-test-video">
+                <div class="project-image-full abstra-contained-video" style="background: #bd545b" data-figma-node="2501:210856">
+                    <video poster="assets/imgs/abstra/posters/alternating-testing-edit.webp" loading="lazy"
+                        width="2250"
+                        height="1284"
+                        muted
+                        loop
+                        playsinline
+                        preload="none"
+                        data-loop-when-visible
+                        aria-label="Switching between editing and testing in Abstra"
+                    >
+                        <source data-src="assets/videos/abstra/alternating-testing-edit.mp4?v=c5225b92" type="video/mp4" />
+                        <a href="assets/videos/abstra/alternating-testing-edit.mp4?v=c5225b92">Watch the Abstra edit and test demonstration</a>
+                    </video>
+                </div>
+                <p class="image-subtitle">Switching between editing and testing.</p>
             </div>
 
             <section class="content-block reveal" data-figma-node="2498:159345">
@@ -199,9 +265,23 @@
                 <p class="content-paragraph">The palette derived from that color had to work across surfaces and states. The later theme specification kept light and dark surfaces fixed and required the generated colors to preserve contrast with backgrounds and labels.</p>
             </section>
 
-            <div class="image-captioned reveal">
-                <div class="project-image-full abstra-media-placeholder" role="img" aria-label="Image placeholder: Applying different theme colors" data-figma-node="2501:210881"><span>Image placeholder</span></div>
-                <p class="image-subtitle">Video: ready interface, applying different colors and showing it change.</p>
+            <div class="image-captioned reveal" id="abstra-theme-video">
+                <div class="project-image-full abstra-contained-video" style="background: #bd545b" data-figma-node="2501:210881">
+                    <video poster="assets/imgs/abstra/posters/theme-switcher.webp" loading="lazy"
+                        width="2246"
+                        height="1282"
+                        muted
+                        loop
+                        playsinline
+                        preload="none"
+                        data-loop-when-visible
+                        aria-label="Applying a brand color to light and dark themes in Abstra"
+                    >
+                        <source data-src="assets/videos/abstra/theme-switcher.mp4?v=36805253" type="video/mp4" />
+                        <a href="assets/videos/abstra/theme-switcher.mp4?v=36805253">Watch the Abstra theme demonstration</a>
+                    </video>
+                </div>
+                <p class="image-subtitle">Applying a brand color to light and dark themes.</p>
             </div>
 
             <section class="content-block reveal" data-figma-node="2501:210874">
@@ -209,22 +289,27 @@
                 <p class="content-statement">Interfaces composed with Abstra VS Code</p>
             </section>
 
-            <div class="project-image-pair abstra-media-pair reveal">
+            <div class="project-image-pair abstra-media-pair abstra-output-pair reveal" id="abstra-output-examples">
                 <figure class="abstra-media-figure">
-                    <div class="project-image-pair-item abstra-media-placeholder" role="img" aria-label="Image placeholder: Interface composed with Abstra VS Code, example 1" data-figma-node="2501:210890"><span>Image placeholder</span></div>
+                    <div class="project-image-pair-item abstra-output-media" data-figma-node="2501:210890">
+                        <video poster="assets/imgs/abstra/posters/green-theme.webp" loading="lazy" width="2262" height="1284" muted loop playsinline preload="none" data-loop-when-visible aria-label="Interface composed with Abstra using a green theme">
+                            <source data-src="assets/videos/abstra/green-theme.mp4?v=ed29f6f6" type="video/mp4" />
+                            <a href="assets/videos/abstra/green-theme.mp4?v=ed29f6f6">Watch the green theme demonstration</a>
+                        </video>
+                    </div>
                 </figure>
                 <figure class="abstra-media-figure">
-                    <div class="project-image-pair-item abstra-media-placeholder" role="img" aria-label="Image placeholder: Interface composed with Abstra VS Code, example 2" data-figma-node="2501:210895"><span>Image placeholder</span></div>
+                    <div class="project-image-pair-item abstra-output-media" data-figma-node="2501:210895">
+                        <video poster="assets/imgs/abstra/posters/yellow-theme.webp" loading="lazy" width="2258" height="1284" muted loop playsinline preload="none" data-loop-when-visible aria-label="Interface composed with Abstra using a yellow theme">
+                            <source data-src="assets/videos/abstra/yellow-theme.mp4?v=61c1e9e8" type="video/mp4" />
+                            <a href="assets/videos/abstra/yellow-theme.mp4?v=61c1e9e8">Watch the yellow theme demonstration</a>
+                        </video>
+                    </div>
                 </figure>
             </div>
 
-            <div class="project-image-pair abstra-media-pair reveal">
-                <figure class="abstra-media-figure">
-                    <div class="project-image-pair-item abstra-media-placeholder" role="img" aria-label="Image placeholder: Interface composed with Abstra VS Code, example 3" data-figma-node="2501:210909"><span>Image placeholder</span></div>
-                </figure>
-                <figure class="abstra-media-figure">
-                    <div class="project-image-pair-item abstra-media-placeholder" role="img" aria-label="Image placeholder: Interface composed with Abstra VS Code, example 4" data-figma-node="2501:210913"><span>Image placeholder</span></div>
-                </figure>
+            <div class="project-image-full abstra-output-media reveal" id="abstra-credit-requests" data-figma-node="2501:210909">
+                <img src="assets/imgs/abstra/credit-requests.png?v=a0d3f361" width="2034" height="1115" loading="lazy" decoding="async" alt="Credit Requests interface built with Abstra, showing a searchable table, document links, scores, and pagination" />
             </div>
 
             <section class="content-block reveal" data-figma-node="2498:159367">
@@ -245,7 +330,7 @@
                 <a href="https://github.com/VictoriaMolgado">GitHub</a>
             </nav>
         </footer>
-        <script src="motion.js" defer></script>
+        <script src="motion.js?v=abstra-media-1" defer></script>
         <script src="analytics.js" defer></script>
     </body>
 </html>

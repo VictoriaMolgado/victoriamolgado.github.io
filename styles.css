@@ -988,6 +988,21 @@ button:focus-visible,
     border-radius: 8px;
 }
 
+.abstra-contained-video video {
+    width: auto;
+    height: auto;
+    max-width: 92.5%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 8px;
+    clip-path: inset(0 round 8px);
+}
+
+.abstra-media-figure .abstra-input-panel img {
+    border-radius: 16px;
+    clip-path: inset(0 round 16px);
+}
+
 /* Pattern 2 — Bleed: content fills container, no internal padding */
 .project-image-bleed {
     background: var(--color-placeholder);
@@ -1066,7 +1081,7 @@ button:focus-visible,
 
 .abstra-media-figure .abstra-input-panel img {
     width: 85%;
-    height: 85%;
+    height: auto;
     max-width: 85%;
     max-height: 85%;
 }
@@ -1083,8 +1098,87 @@ button:focus-visible,
     max-height: none;
 }
 
-.abstra-design-system img {
+.abstra-container-videos .project-image-pair-item {
+    aspect-ratio: 617 / 720;
+}
+
+.abstra-container-videos .abstra-video-pair-item--sidebar {
+    padding: 8%;
+    background: #1e1e1e;
+}
+
+.abstra-container-videos .abstra-video-pair-item--dialog {
+    padding: 8%;
+    background: #bd545b;
+}
+
+.abstra-video-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 8px;
+    clip-path: inset(0 round 8px);
+}
+
+.abstra-video-pair-item--sidebar .abstra-video-frame {
+    width: auto;
+    height: 100%;
+    max-height: 1288px;
+    aspect-ratio: 1070 / 1288;
+}
+
+.abstra-video-pair-item--dialog .abstra-video-frame {
+    width: 100%;
     height: auto;
+    max-width: 1470px;
+    aspect-ratio: 1470 / 1280;
+}
+
+.abstra-container-videos .abstra-video-frame video {
+    flex: none;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+    border-radius: 0;
+    clip-path: none;
+}
+
+.abstra-design-system {
+    display: block;
+    padding: 3.2% 0 0;
+    box-sizing: border-box;
+}
+
+.abstra-design-system img {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    object-fit: contain;
+    clip-path: inset(0 0 0 1px);
+}
+
+.abstra-output-pair .abstra-media-figure .project-image-pair-item {
+    aspect-ratio: 16 / 9;
+}
+
+.case-study .abstra-output-media {
+    padding: 4%;
+    box-sizing: border-box;
+    background: #1e1e1e;
+}
+
+.case-study .abstra-output-media video,
+.case-study .abstra-output-media img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    clip-path: inset(0 round 8px);
 }
 
 .content-block.abstra-foundation-intro {
