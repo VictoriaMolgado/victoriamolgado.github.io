@@ -1020,6 +1020,12 @@ button:focus-visible,
     border-radius: 8px;
 }
 
+.case-study .project-image-full.abstra-contained-video {
+    max-width: calc(var(--abstra-native-width) / var(--abstra-pixel-ratio, 1) / 0.925);
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .abstra-contained-video video {
     width: auto;
     height: auto;
