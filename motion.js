@@ -79,9 +79,24 @@ startReveal();
     var sources = video.querySelectorAll("source[data-src]");
     if (!sources.length) return;
     sources.forEach(function (source) {
-      var requiredWidth = video.getBoundingClientRect().width * (window.devicePixelRatio || 1);
-      var saveData = navigator.connection && navigator.connection.saveData;
-      var useLarge = source.dataset.srcLarge && requiredWidth > Number(source.dataset.srcWidth) && !saveData;
+      var useLarge = false;
+      if (source.dataset.srcLarge) {
+        var frame = video.parentElement.getBoundingClientRect();
+        var style = window.getComputedStyle(video);
+        var frameStyle = window.getComputedStyle(video.parentElement);
+        var frameWidth = frame.width - parseFloat(frameStyle.paddingLeft) - parseFloat(frameStyle.paddingRight);
+        var frameHeight = frame.height - parseFloat(frameStyle.paddingTop) - parseFloat(frameStyle.paddingBottom);
+        var widthLimit = style.maxWidth === "none" ? frameWidth : frameWidth * parseFloat(style.maxWidth) / 100;
+        var heightLimit = style.maxHeight === "none" ? frameHeight : frameHeight * parseFloat(style.maxHeight) / 100;
+        var displayWidth = Math.min(
+          video.width,
+          widthLimit,
+          heightLimit * video.width / video.height,
+        );
+        var requiredWidth = displayWidth * (window.devicePixelRatio || 1);
+        var saveData = navigator.connection && navigator.connection.saveData;
+        useLarge = requiredWidth > Number(source.dataset.srcWidth) && !saveData;
+      }
       source.src = useLarge ? source.dataset.srcLarge : source.dataset.src;
       source.removeAttribute("data-src");
     });
