@@ -316,6 +316,37 @@ button:focus-visible,
     font-weight: inherit;
 }
 
+.home-intro-copy .home-tooltip-wrap > a {
+    position: relative;
+    display: inline-block;
+}
+
+.home-intro-copy .home-tooltip-wrap > a::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0.08em;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .home-intro-copy .home-tooltip-wrap > a::after {
+        transition: transform 150ms ease-out;
+    }
+
+    .home-intro-copy .home-tooltip-wrap > a:hover::after {
+        transform: scaleX(1);
+    }
+}
+
+.home-intro-copy .home-tooltip-wrap > a:focus-visible::after {
+    transform: scaleX(1);
+    transition: none;
+}
+
 .home-company {
     color: var(--color-gray);
     font-weight: inherit;
@@ -341,11 +372,12 @@ button:focus-visible,
     box-shadow: 0 4px 20px rgb(17 17 17 / 16%);
     color: #ffffff;
     font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 400;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.03em;
     line-height: 1.5;
     text-align: left;
+    text-wrap: pretty;
     white-space: normal;
     opacity: 0;
     visibility: hidden;
@@ -1868,6 +1900,7 @@ body {
     body,
     .hero,
     .js .reveal,
+    .home-intro-copy .home-tooltip-wrap > a::after,
     .home-tooltip-panel,
     .project::before,
     .project-title,
