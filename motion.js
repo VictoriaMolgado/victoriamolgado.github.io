@@ -78,6 +78,7 @@ startReveal();
   function loadVideo(video) {
     var sources = video.querySelectorAll("source[data-src]");
     if (!sources.length) return;
+    var changed = false;
     sources.forEach(function (source) {
       var useLarge = false;
       if (source.dataset.srcLarge) {
@@ -97,9 +98,18 @@ startReveal();
         var saveData = navigator.connection && navigator.connection.saveData;
         useLarge = requiredWidth > Number(source.dataset.srcWidth) && !saveData;
       }
-      source.src = useLarge ? source.dataset.srcLarge : source.dataset.src;
-      source.removeAttribute("data-src");
+      var nextSource = useLarge ? source.dataset.srcLarge : source.dataset.src;
+      if (source.getAttribute("src") === source.dataset.srcLarge || source.getAttribute("src") === nextSource) return;
+      source.src = nextSource;
+      changed = true;
     });
+    if (!changed) return;
+    var playbackTime = video.currentTime;
+    if (playbackTime) {
+      video.addEventListener("loadedmetadata", function () {
+        video.currentTime = Math.min(playbackTime, video.duration);
+      }, { once: true });
+    }
     video.preload = "metadata";
     video.load();
   }
@@ -133,6 +143,19 @@ startReveal();
   videos.forEach(function (video) {
     observer.observe(video);
     loadObserver.observe(video);
+  });
+  var resizeTimer;
+  window.addEventListener("resize", function () {
+    document.documentElement.style.setProperty("--abstra-pixel-ratio", window.devicePixelRatio || 1);
+    window.clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(function () {
+      videos.forEach(function (video) {
+        if (video.currentSrc && visibleVideos.has(video) && !document.hidden && !reducedMotion.matches) {
+          loadVideo(video);
+          updatePlayback(video);
+        }
+      });
+    }, 150);
   });
   document.addEventListener("visibilitychange", function () {
     videos.forEach(updatePlayback);
